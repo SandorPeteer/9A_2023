@@ -1,0 +1,127 @@
+body {
+    background-color: darkblue;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+a:any-link {
+    text-decoration: none;
+    color:#00cc00;
+}
+
+.menu {
+    float: left;
+    width: 15%;
+    justify-content: center;
+    text-align: center;
+    background: #008080;
+}
+
+.aktualis {
+    background-color:#728676;
+    padding: 8px;
+    margin-top: 7px;
+    display: block;
+    width: 100%;
+    color: black;
+}
+
+.main {
+    float: left;
+    width: 65%;
+}
+
+.right {
+    float: left;
+    width: 20%;
+}
+
+.aktualis {
+    color: red;
+}
+
+h1 {
+    text-align: center;
+    color: darkorange;
+}
+
+h2 {
+    color: lightblue;
+}
+
+.keszito {
+    color: lightsalmon;
+}
+
+.div1 {
+    margin: 25px 100px;
+    width: 200px;
+    height: 200px;
+    transition: 0.5s;
+    float: left;
+}
+
+.div2 {
+    margin: 25px 100px;
+    width: 200px;
+    height: 200px;
+    transition: 0.5s;
+    float: left;
+} 
+
+.div3 {
+    margin: 25px 100px;
+    width: 200px;
+    height: 200px;
+    transition: 0.5s;
+    float: left;
+    position: relative;
+}
+
+.div4 {
+    margin: 25px 100px;
+    width: 200px;
+    height: 200px;
+    transition: 0.5s;
+    float: left;
+}
+
+.div1:hover {
+    transform: scale(1.1);
+}
+
+.div2:hover {
+    transform: scale(1.1);
+}
+
+.div3:hover {
+    transform: scale(1.1);
+}
+
+.div4:hover {
+    transform: scale(1.1);
+}
+
+.kep a img{
+    float: left;
+    margin: 25px 100px;
+    width: 10%;
+    border: 1px solid yellow;
+}
+
+.footer {
+position: fixed;
+left: 0;
+bottom: 0;
+width: 100%;
+}
+
+@media only screen and (max-width: 620px) {
+    /* For mobile phones: */
+    .menu, .main, .right {
+      width: 100%;
+    }
+  }
+
+ 
+
+
