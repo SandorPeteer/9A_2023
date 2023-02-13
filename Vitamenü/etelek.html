@@ -34,17 +34,13 @@
         
         <br><br>
         
-        <form name="rendelés"></form>
         <div class="row">
             <div class="col p-5 bg-white text-black">  <div class="container mt-3"><img class="img-fluid" src="pizza.jpg" alt="New York" width="510" height="250"> </div> <br> <h1>Kandó pizza</h1> </div>
-            <div class="col p-7 bg-white text-black"> <br><br><br> <h1 class="display-1">A pizza, mindenki egyik kedvenc étele </h1> <br><input type="button" name="Rendelés" id="rend" value=" Rendelés" onclick="rendelesp()"></div>
+            <div class="col p-7 bg-white text-black"> <br><br><br> <h1 class="display-1">A pizza, mindenki egyik kedvenc étele</h1></div>
             </div><div class="row">
             </div>
 
-            <input type="text" name="gomb" id="1" value="Kosár:" readonly>    
-            <input type="reset" name="törlés" id="torles" value="Törlés">
-            <input type="submit" name="rendelés" id="rendeles" value="Rendelés">
-        
+            <input type="text" name="gomb" id="1" value="Kosár:">    
 
 <script>
 
@@ -56,25 +52,12 @@ function rendelesb(){
    
   var x = document.createElement("INPUT");
   x.setAttribute("type", "text");
-  x.setAttribute("value", "1 Kandó burger" );
+  x.setAttribute("value", "Hello World!");
   document.body.appendChild(x);
 }
 
-function rendelesp(){
-
-
-   
-var x = document.createElement("INPUT");
-x.setAttribute("type", "text");
-x.setAttribute("value", "1 Kandó pizza" );
-document.body.appendChild(x);
-}
-
-
-
-
 </script>
-</form>
+
 
 
 </body>
