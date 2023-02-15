@@ -1,12 +1,10 @@
 .main{
     text-align: center;
     margin-top: 35px;
-    border: solid rgb(32, 100, 0) 2px;
     height: unset;
     width: 888px;
     margin: auto;
     height: 987px;
-    background-color: rgba(136, 255, 125, 0.651);
 }
 
 
@@ -29,4 +27,8 @@ fieldset{
 
 body{
     background-color: rgba(0, 0, 0, 0.575);
+}
+
+a{
+    text-decoration: none;
 }

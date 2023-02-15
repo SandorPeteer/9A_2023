@@ -6,7 +6,7 @@
 
 .menu a{
     text-decoration: none;
-    background-color: #ffffff;
+    background-color: rgba(153, 153, 153, 0.082);
     padding: 8px;
     margin-top: 7px;
     display: block;
@@ -17,8 +17,9 @@
 }
 
 body{
-    background-color: #ffffff9c;
+    background-color: rgba(153, 153, 153, 0.144);
 }
+
 
 .hirek{
     top: 0cm;
@@ -41,12 +42,12 @@ a img{
 }
 
 a img:hover{
-    transform: scale(1.2);
+    transform: scale(1.1);
     transition: 1s;
 }
 
 img:hover + h3{
-    font-size: xx-large;
+    font-size: x-large;
     transition: 1s;
 }
 
