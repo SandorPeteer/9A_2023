@@ -1,0 +1,52 @@
+.menu { 
+    position: fixed;
+    width: 9%;
+    float: left;
+}
+
+.menu a{
+    text-decoration: none;
+    background-color: #ffffff;
+    padding: 8px;
+    margin-top: 7px;
+    display: block;
+    width: 100%;
+    color: rgb(0, 0, 0);
+    border-bottom: solid black 1px;
+    font-size: large;
+}
+
+body{
+    background-color: #ffffff9c;
+}
+
+.hirek{
+    top: 0cm;
+    height: 3%;
+    text-align: center;
+    border-bottom: solid black 3px;
+}
+
+.hirek p{
+    font-size: 125%;
+}
+
+.main{
+    margin-left: 11%;
+    float: left;
+    margin-top: 2%;
+}
+
+a img{
+    width: 12%;
+}
+
+a img:hover{
+    transform: scale(1.2);
+    transition: 1s;
+}
+
+a{
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
