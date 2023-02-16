@@ -17,7 +17,7 @@
 }
 
 body{
-    background-color: rgba(153, 153, 153, 0.144);
+    background-color: rgba(197, 197, 197, 0.349);
 }
 
 
@@ -38,7 +38,8 @@ body{
 }
 
 a img{
-    width: 225px;
+    width: 205px;
+    box-shadow: 12px;
 }
 
 a img:hover{
