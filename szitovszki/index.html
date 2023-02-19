@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Bejelentkezés</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        outline: none;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        background: linear-gradient(rgba(0, 0, 0, 0.20), rgba(0, 0, 0, 0.20)), url(img/loginhatter.jpg) no-repeat;
+        background-size:100vw 200vh;;
+        background-position:center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 4.5vh;
+        color: white;
+        line-height: 5vh;
+        
+      }
+
+      h3 {
+        color: rgb(255, 255, 255);
+        margin-top: 1.5vh;
+      }
+
+      .login {
+        padding: 0.5vw 1.5vh;
+        position: relative;
+        width: 21.8vw;
+        height: 54vh;
+        background: linear-gradient(rgba(255, 255, 255, 0.658), rgba(0, 0, 0, 0.39));
+        border: 0.1vw solid white;
+        border-radius: 5%;
+        text-align: left;
+       
+      }
+
+      .hasab input {
+        font-weight: 700;
+        font-size: 1.5vh;
+        margin-top: 0.5vh;
+        padding: 0vw 1vh;
+        text-align: left;
+        width: 19.7vw;
+        height: 5vh;
+        background: linear-gradient(141deg, rgba(255, 255, 255, 0.658), rgba(0, 0, 0, 0.123));
+        border: 0.15vw solid white;
+        border-radius: 3vh;
+      }
+
+      .button {
+        margin-top: 1vh;
+        background: linear-gradient( rgba(255, 255, 255, 0.658), rgba(255, 255, 255, 0.658));
+        border: 0.05vw solid white;
+        border-radius: 5%;
+        cursor: pointer;
+        font-size: 2vh;
+        font-weight: 600;
+        width: 5.2vw;
+        height: 3.5vh;
+        text-align: center;
+        margin-left: 7.8vw;
+      }
+      .button:hover {
+        background: linear-gradient( rgba(43, 43, 43, 0.658), rgba(43, 43, 43, 0.658));
+        color: white;
+      }
+    </style>
+</head>
+<body>
+    <div class="main">
+      <h1>Kandó büfé</h1>
+      <br>
+      <div class="login">
+        <div class="hasab">
+          <h3>Vezetéknév</h3>
+          <input type="text">
+        </div>
+
+        <div class="hasab">
+          <h3>Keresztnév</h3>
+          <input type="text">
+        </div>
+
+        <div class="hasab">
+          <h3>E-mail</h3>
+          <input type="email">
+        </div>
+
+        <div class="hasab">
+          <h3>Jelszó</h3>
+          <input type="password">
+        </div>
+
+        <div class="hasab">
+          <h3>Jelszó megerősítése</h3>
+          <input type="password">
+        </div>
+
+        <form action="asd.html">
+        <div class="submit">
+          <input type="submit" class="button" value="Tovább">
+        </div>
+       </form>
+      </div>
+    </div>
+</body> 
+</html>

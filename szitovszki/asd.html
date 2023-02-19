@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+.dropbtn {
+  background-color: #202020;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  margin-left:-60px;
+  cursor: pointer;
+  width: 125px;
+  height: 50px;
+}
+
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #3e8b8e;
+}
+
+
+.dropdown {
+  display: inline-block;
+  position:absolute;
+}
+
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 225px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+  z-index: 1;
+  text-align: center;
+  right: -47px;
+  margin-top: 20px;
+ 
+}
+
+
+
+.dropdown-content a {
+  margin-top: 50px;
+  color: black;
+  padding: 20px 2px;
+  text-decoration: none;
+  display: block;
+  
+}
+
+
+
+.dropdown a:hover {background-color: #ddd;}
+
+
+
+.show {display: block;}
+
+    </style>
+   
+</head>
+<body>
+  <div class="topbar">
+    <h1>Topbar</h1>
+  </div>
+
+  <div class="sidebarfunction">
+  <button id="toggleButton">
+    <img id="image" src="oda.png" />
+  </button>
+</div>
+
+<div class="design">
+
+</div>
+
+<div class="sidebar">
+  <p>
+  <h2>Menü</h2>
+  </p>
+  <div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">Ételek</button>
+    <div id="myDropdown" class="dropdown-content">
+      <h2>kaja</h2>
+      <a href="#home">sdfgfgd</a>
+      <a href="#about">gdfdfggdf</a>
+      <a href="#contact">gfdgdf</a>
+    </div>
+  </div>
+
+</div>
+
+  
+  <script>
+    const toggleButton = document.getElementById("toggleButton");
+    const image = document.getElementById("image");
+  
+    let position = "first";
+  
+    toggleButton.addEventListener("click", function() {
+      
+      if (position === "first") {
+        toggleButton.style.position = "absolute";
+        toggleButton.style.top = "-1px";
+        toggleButton.style.left = "240px";
+        image.src = "vissza.png";
+        position = "second";
+      } else {
+        toggleButton.style.position = "initial";
+        toggleButton.style.top = "initial";
+        toggleButton.style.left = "initial";
+        image.src = "oda.png";
+        position = "first";
+      }
+    });
+
+
+    const Button = document.querySelector('.sidebarfunction');
+    const sidebar = document.querySelector('.sidebar');
+
+     Button.addEventListener('click', function() {
+      if (sidebar.style.transform === 'translateX(0%)') {
+        sidebar.style.transform = 'translateX(-100%)';
+      } else {
+        sidebar.style.transform = 'translateX(0%)';
+      }
+    });
+
+    function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+  </script>
+</body>
+</html>
