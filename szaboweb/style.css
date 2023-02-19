@@ -18,10 +18,10 @@ a:any-link {
 
 .aktualis {
     background-color:#728676;
-    padding: 8px;
+    padding: 5px;
     margin-top: 7px;
     display: block;
-    width: 100%;
+    width: 95,5%;
     color: black;
 }
 
@@ -35,13 +35,10 @@ a:any-link {
     width: 20%;
 }
 
-.aktualis {
-    color: red;
-}
-
 h1 {
     text-align: center;
     color: darkorange;
+    background-color: darkslateblue;
 }
 
 h2 {
@@ -49,29 +46,29 @@ h2 {
 }
 
 .keszito {
-    color: lightsalmon;
+    color: greenyellow;
 }
 
 .div1 {
     margin: 25px 100px;
-    width: 200px;
-    height: 200px;
+    width: 50px;
+    height: 50px;
     transition: 0.5s;
     float: left;
 }
 
 .div2 {
     margin: 25px 100px;
-    width: 200px;
-    height: 200px;
+    width: 5px;
+    height: 5px;
     transition: 0.5s;
     float: left;
 } 
 
 .div3 {
     margin: 25px 100px;
-    width: 200px;
-    height: 200px;
+    width: 5px;
+    height: 5px;
     transition: 0.5s;
     float: left;
     position: relative;
@@ -79,8 +76,8 @@ h2 {
 
 .div4 {
     margin: 25px 100px;
-    width: 200px;
-    height: 200px;
+    width: 5px;
+    height: 5px;
     transition: 0.5s;
     float: left;
 }
@@ -101,10 +98,9 @@ h2 {
     transform: scale(1.1);
 }
 
-.kep a img{
+.kep{
     float: left;
-    margin: 25px 100px;
-    width: 10%;
+    margin: 25px 2px;
     border: 1px solid yellow;
 }
 
@@ -122,6 +118,55 @@ width: 100%;
     }
   }
 
- 
+.title {
+    text-align-last: center;
+}
 
+.meret {
+    margin: 25px 100px;
+    width: 20px;
+    height: 250px;
+    transition: 0.5s;
+    float: left;
+}
+
+#narancsle{
+    margin: 25px 100px;
+    width: 250px;
+    height: 250px;
+    transition: 0.5s;
+    float: left;
+}
+
+#almale {
+    margin: 25px 100px;
+    width: 250px;
+    height: 165px;
+    transition: 0.5s;
+    float: left;
+}
+
+
+#fanta {
+    margin: 25px 100px;
+    height: 165px;
+    width: 250px;
+    transition: 0.5s;
+    float: left;
+}
+
+#viz {
+    margin: 25px 100px;
+    height: 166px;
+    width: 250px;
+    transition: 0.5s;
+    float: left;
+}
+
+.nasik {
+    float: left;
+    margin: 25px 100px;
+    width: 25%;
+    border: 1px solid yellow;
+}
 
