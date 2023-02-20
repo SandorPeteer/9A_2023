@@ -21,17 +21,6 @@ body{
 }
 
 
-.hirek{
-    top: 0cm;
-    height: 3%;
-    text-align: center;
-    border-bottom: solid black 3px;
-}
-
-.hirek p{
-    font-size: 125%;
-}
-
 .main{
     margin-left: 11%;
     margin-top: 2%;
@@ -63,4 +52,121 @@ img:hover + h3{
 }
 
 
+.modal{
+    --bs-modal-zindex:1055;
+    --bs-modal-width:715px;
+    --bs-modal-padding:1rem;
+    --bs-modal-margin:0.5rem;
+    --bs-modal-color: ;
+    --bs-modal-bg:#fff;
+    --bs-modal-border-color:var(--bs-border-color-translucent);
+    --bs-modal-border-width:1px;
+    --bs-modal-border-radius:0.5rem;
+    --bs-modal-box-shadow:0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    --bs-modal-inner-border-radius:calc(0.5rem - 1px);
+    --bs-modal-header-padding-x:1rem;
+    --bs-modal-header-padding-y:1rem;
+    --bs-modal-header-padding:1rem 1rem;
+    --bs-modal-header-border-color:var(--bs-border-color);
+    --bs-modal-header-border-width:1px;
+    --bs-modal-title-line-height:1.5;
+    --bs-modal-footer-gap:0.5rem;
+    --bs-modal-footer-bg: ;
+    --bs-modal-footer-border-color:var(--bs-border-color);
+    --bs-modal-footer-border-width: 1px;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:var(--bs-modal-zindex);
+    display:none;
+    width: 100%;
+    height: 100%;
+    overflow-x:hidden;
+    overflow-y:auto;
+    outline:0
+}
 
+.center{
+    align-items: center;
+    text-align: center;
+}
+
+
+
+
+.polaroid {
+    width: 225px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    float: left;
+    padding: 15px;
+    float: left;
+}
+  
+.container {
+    padding: 10px;
+}
+
+.polaroid img{
+    width: 200px;
+    height: 185px;
+}
+
+.polaroid:hover{
+    transform: scale(1.05);
+    transition: 1s;
+    font-size: large;
+}
+
+.pluszminuszcit{
+    border: solid #ffbf60 1px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: white;
+}
+
+.textareacit{
+    width: 65px;
+    margin: 15px;
+    text-align: center;
+    border: solid #ffbf60 1px;
+    padding: 5px;
+}
+
+.boxcit{
+    border: solid #ffbf60 1px;
+    box-shadow: 7px 7px 25px #ffbf60;
+    padding: 6px;
+    width: 55%;
+    margin: auto;
+    margin-top: 12px;
+}
+
+
+
+
+.pluszminuszbar{
+    border: solid #ffa011 1px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: white;
+}
+
+.textareabar{
+    width: 65px;
+    margin: 15px;
+    text-align: center;
+    border: solid #ffa011 1px;
+    padding: 5px;
+}
+
+.boxbar{
+    border: solid #ffa011 1px;
+    box-shadow: 7px 7px 25px #ffa011;
+    padding: 6px;
+    width: 55%;
+    margin: auto;
+    margin-top: 12px;
+}
