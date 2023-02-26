@@ -24,22 +24,73 @@
           <button type="submit" class="btn btn-success" onclick="login()">Bejelentkezés</button>
           <br><br>
           <p>Még nincs fiókja? <a href="registration.html">Hozzon létre egyet!</a></p>
+          <div class="alert alert-danger alert-dismissible fade show" role="alert" id="hiba-alert" style="display:none;">
+            <strong>Hiba!</strong> Hibás bejelentkezési adatok!
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+          <div class="alert alert-danger alert-dismissible fade show" role="alert" id="jelszo-alert" style="display:none;">
+            <strong>Hiba!</strong> Hibás jelszó.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+          <div class="alert alert-danger alert-dismissible fade show" role="alert" id="nev-alert" style="display:none;">
+            <strong>Hiba!</strong> Felhasználónév nem található.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+          <div class="alert alert-success alert-dismissible fade show" role="alert" id="siker-alert" style="display:none;">
+            <strong>Siker!</strong> Sikeres Bejelentkezés!
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+          <div  style="display: flex; justify-content: center; ">
+            <div id="spinner" style="display:none;" class="spinner-grow text-success"></div>
+            </div>
+          </div>
       </div>
       <script>
         function login(){
           var taroltnev = localStorage.getItem("username");
           var taroltpass = localStorage.getItem("pass");
-
+          var spinner=document.getElementById("spinner")
           var usern=document.getElementById("usern");
           var passw=document.getElementById("passw");
+          var sikerAlert=document.getElementById("siker-alert");
+          var hibaAlert=document.getElementById("hiba-alert");
+          var nevAlert=document.getElementById("nev-alert");
+          var jelszoAlert=document.getElementById("jelszo-alert");
 
-          if(taroltnev !== usern.value || taroltpass !== passw.value){
-            alert("Valami nem jo gec");
+         
+          if (taroltnev!==usern.value){
+            nevAlert.style.display = "block";
+            nevAlert.innerHTML = "<strong>Hiba!</strong> Felhasználónév nem található.";
+            setTimeout(function(){
+              nevAlert.style.display = "none";
+              }, 5000);
+          }
+          else if (taroltpass!==passw.value){
+            jelszoAlert.style.display = "block";
+            jelszoAlert.innerHTML = "<strong>Hiba!</strong> Hibás jelszó.";
+            setTimeout(function(){
+              jelszoAlert.style.display = "none";
+              }, 5000);
+          }
+          else if(taroltnev !== usern.value || taroltpass !== passw.value){
+            hibaAlert.style.display = "block";
+            hibaAlert.innerHTML = "<strong>Hiba!</strong> Hibás bejelentkezési adatok!";
+              setTimeout(function(){
+                hibaAlert.style.display = "none";
+                }, 5000);
           }
           else{
-            alert("fasza");
-          }
+            sikerAlert.style.display = "block";
+            sikerAlert.innerHTML = "<strong>Siker!</strong> Sikeres Bejelentkezés!";
+            spinner.style.display="block";
+              setTimeout(function(){
+                sikerAlert.style.display = "none";
+                spinner.style.display="none";
+                window.location.href='index.html'
+                }, 3000);
         }
+          }
+        
       </script>
 </body>
 </html>
