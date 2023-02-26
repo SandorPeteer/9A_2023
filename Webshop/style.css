@@ -1,0 +1,25 @@
+body{
+    background-color: aqua;
+    text-align: center;
+}
+.box1{
+    float: left;
+}
+.box2{
+    float: left;
+}
+.box3{
+    float: left;
+}
+.box4{
+    float: left;
+}
+img{
+    width: 300px;
+    height: 300px;
+    border-radius: 5%;
+    margin: 50px;
+}
+p{
+    font-size: large;
+}
