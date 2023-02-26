@@ -56,17 +56,17 @@
                             </div>
 
                             <div class="alert alert-danger alert-dismissible fade show" role="alert" id="jalert" style="display:none;">
-                              <strong>Hiba!</strong> Hibás jelszó.
+                              <strong>Hibás jelszó! Próbálja újra.</strong>
                               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                             </div>
                             
                             <div class="alert alert-danger alert-dismissible fade show" role="alert" id="ealert" style="display:none;">
-                              <strong>Hiba!</strong> Töltse ki a mezőket!
+                              <strong>Töltse ki a mezőket!</strong>
                               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                             </div>
 
                             <div class="alert alert-success alert-dismissible fade show" role="alert" id="salert" style="display:none;">
-                              <strong>Siker!</strong> Sikeres Bejelentkezés!
+                              <strong>Sikeres Bejelentkezés!</strong>
                               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                             </div>
                             <div  style="display: flex; justify-content: center; ">
@@ -107,7 +107,7 @@
 
           else if (userName1.value.length==0 || userName2.value.length == 0 || userPw.value.length == 0){
           emailAlert.style.display = "block";
-          emailAlert.innerHTML = "<strong>Hiba!</strong> Töltse ki a mezőket!";
+          emailAlert.innerHTML = " <strong>Töltse ki a mezőket!</strong>";
           setTimeout(function(){
               emailAlert.style.display = "none";
            }, 5000);
@@ -131,7 +131,7 @@
 
           else {
         sikerAlert.style.display = "block";
-        sikerAlert.innerHTML = "<strong>Siker!</strong> Sikeres regisztráció!";
+        sikerAlert.innerHTML = "<strong>Siker!</strong> Sikeres bejelentkezés!";
         spinner.style.display="block";
         setTimeout(function(){
         sikerAlert.style.display = "none";

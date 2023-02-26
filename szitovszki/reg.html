@@ -68,17 +68,17 @@
 
                            
                             <div class="alert alert-danger alert-dismissible fade show" role="alert" id="jalert" style="display:none;">
-                              <strong>Hiba!</strong> Hibás jelszó.
+                              <strong>A jelszó nem egyezik meg! Próbálja újra.</strong>
                               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                             </div>
                             
                             <div class="alert alert-danger alert-dismissible fade show" role="alert" id="ealert" style="display:none;">
-                              <strong>Hiba!</strong> Töltse ki a mezőket!
+                              <strong>Töltse ki a mezőket!</strong>
                               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                             </div>
 
                             <div class="alert alert-success alert-dismissible fade show" role="alert" id="salert" style="display:none;">
-                              <strong>Siker!</strong> Sikeres Bejelentkezés!
+                              <strong>Sikeres Regisztráció!</strong>
                               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                             </div>
                             <div  style="display: flex; justify-content: center; ">
@@ -115,7 +115,7 @@
   
           if( jelszo.value !== jelszo2.value) {
           jelszoAlert.style.display = "block";
-          jelszoAlert.innerHTML = "<strong>Hiba!</strong> A jelszó nem egyezik meg!";
+          jelszoAlert.innerHTML = "<strong>A jelszó nem egyezik meg! Próbálja újra.</strong>";
           setTimeout(function(){
           jelszoAlert.style.display = "none";
               }, 5000);
@@ -123,7 +123,7 @@
 
           else if (vezeteknev.value.length==0 || keresztnev.value.length == 0 || email.value.length == 0 || jelszo.value.length == 0 || jelszo2.value.length == 0){
           emailAlert.style.display = "block";
-          emailAlert.innerHTML = "<strong>Hiba!</strong> Töltse ki a mezőket!";
+          emailAlert.innerHTML = "<strong>Töltse ki a mezőket!</strong>";
           setTimeout(function(){
               emailAlert.style.display = "none";
            }, 5000);
@@ -134,7 +134,7 @@
         localStorage.setItem('fname', vezeteknev.value);
         localStorage.setItem('lname', keresztnev.value);
         sikerAlert.style.display = "block";
-        sikerAlert.innerHTML = "<strong>Siker!</strong> Sikeres regisztráció!";
+        sikerAlert.innerHTML = "<strong> Sikeres regisztráció!</strong>";
         spinner.style.display="block";
         setTimeout(function(){
         sikerAlert.style.display = "none";
