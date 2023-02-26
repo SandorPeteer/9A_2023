@@ -30,15 +30,71 @@
         </form>
           <br><br>
           <p>Már van fiókja? <a href="login.html">Jelentkezzen be!</a></p>
+          <div class="alert alert-danger alert-dismissible fade show" role="alert" id="nev-alert" style="display:none;">
+            <strong>Hiba!</strong> Adjon meg egy felhasználónevet!
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+          <div class="alert alert-danger alert-dismissible fade show" role="alert" id="email-alert" style="display:none;">
+            <strong>Hiba!</strong> Adjon meg egy E-mailt!
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+          <div class="alert alert-danger alert-dismissible fade show" role="alert" id="jelszo-alert" style="display:none;">
+            <strong>Hiba!</strong> Adjon meg egy jelszavat!
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+          <div class="alert alert-success alert-dismissible fade show" role="alert" id="siker-alert" style="display:none;">
+            <strong>Siker!</strong> Sikeres regisztráció!
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+          <div  style="display: flex; justify-content: center; ">
+            <div id="spinner" style="display:none;" class="spinner-grow text-success"></div>
+            </div>
+          
+          </div>
       </div>
       <script>
         function reg(){
         var username = document.getElementById("username");
         var pass = document.getElementById("passt");
+        var nevAlert = document.getElementById("nev-alert");
+        var emailAlert = document.getElementById("email-alert");
+        var jelszoAlert = document.getElementById("jelszo-alert");
+        var sikerAlert=document.getElementById("siker-alert");
+        var spinner=document.getElementById("spinner")
 
+        if (username.value.length==0){
+          nevAlert.style.display = "block";
+          nevAlert.innerHTML = "<strong>Hiba!</strong> Adjon meg egy felhasználónevet!";
+            setTimeout(function(){
+              nevAlert.style.display = "none";
+              }, 5000);
+        }
+        else if (email.value.length==0){
+          emailAlert.style.display = "block";
+          emailAlert.innerHTML = "<strong>Hiba!</strong> Adjon meg egy érvényes e-mail címet!";
+          setTimeout(function(){
+              emailAlert.style.display = "none";
+              }, 5000);
+        }
+        else if (pass.value.length==0){
+          jelszoAlert.style.display = "block";
+          jelszoAlert.innerHTML = "<strong>Hiba!</strong> Adjon meg egy jelszót!";
+          setTimeout(function(){
+              jelszoAlert.style.display = "none";
+              }, 5000);
+        }
+        else{
         localStorage.setItem('username', username.value);
         localStorage.setItem('pass', pass.value);
-        alert("Fiók sikeresen létrehozva!");
+        sikerAlert.style.display = "block";
+        sikerAlert.innerHTML = "<strong>Siker!</strong> Sikeres regisztráció!";
+        spinner.style.display="block";
+        setTimeout(function(){
+              sikerAlert.style.display = "none";
+              spinner.style.display="none";
+              window.location.href='login.html'
+              }, 3000);
+        }
     }
       </script>
 </body>
