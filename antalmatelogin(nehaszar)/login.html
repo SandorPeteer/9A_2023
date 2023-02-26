@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bejelentkezés</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <div class="container p-5 my-5 bg-dark text-white text-center" >
+        <h1>Bejelentkezés</h1>
+        <p>Kérjük töltse ki a mezőket majd nyomjon a bejelentkezés gombra.</p>
+        <h4 class="text-start" >Felhasználónév</h4>
+        <form action="javascript:void(0);"></form>
+        <div class="input-group mb-3">
+            <input type="text" id="usern" class="form-control" placeholder="Felhasználónév" aria-label="Username" aria-describedby="basic-addon1" required >
+          </div>
+          <h4 class="text-start" >Jelszó</h4>
+          <div class="input-group mb-3">
+            <input type="text" id="passw" class="form-control" placeholder="Jelszó" aria-label="Password" aria-describedby="basic-addon1" required >
+          </div>
+          <button type="submit" class="btn btn-success" onclick="login()">Bejelentkezés</button>
+          <br><br>
+          <p>Még nincs fiókja? <a href="registration.html">Hozzon létre egyet!</a></p>
+      </div>
+      <script>
+        function login(){
+          var taroltnev = localStorage.getItem("username");
+          var taroltpass = localStorage.getItem("pass");
+
+          var usern=document.getElementById("usern");
+          var passw=document.getElementById("passw");
+
+          if(taroltnev !== usern.value || taroltpass !== passw.value){
+            alert("Valami nem jo gec");
+          }
+          else{
+            alert("fasza");
+          }
+        }
+      </script>
+</body>
+</html>
