@@ -1,101 +1,133 @@
 <!DOCTYPE html>
 <html lang="hu">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Regisztráció</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-</head>
-<body>
-    <div class="container p-5 my-5 bg-dark text-white text-center" >
-        <h1>Regisztráció</h1>
-        <p>Kérjük töltse ki a mezőket majd nyomjon a regisztráció gombra.</p>
-        <h4 class="text-start" >Felhasználónév</h4>
-        <form action="javascript:void(0);">
-        <div class="input-group mb-3">
-            <input type="text" id="username"  class="form-control" placeholder="Felhasználónév" required >
-          </div>
-        <h4 class="text-start" >Kandós e-mail</h4>
-        <div class="input-group mb-3">
-            <input type="text" id="email" class="form-control" placeholder="Kandós e-mail" required >
-            <span class="input-group-text" id="basic-addon2">@kkszki.hu</span>
-          </div>
-          <h4 class="text-start" >Jelszó</h4>
-          <div class="input-group mb-3">
-            <input type="password" id="passt" class="form-control"  placeholder="Jelszó" required >
-          </div>
-          <button type="submit" class="btn btn-success" onclick="reg()">Regisztráció</button>
-        </form>
-          <br><br>
-          <p>Már van fiókja? <a href="login.html">Jelentkezzen be!</a></p>
-          <div class="alert alert-danger alert-dismissible fade show" role="alert" id="nev-alert" style="display:none;">
-            <strong>Hiba!</strong> Adjon meg egy felhasználónevet!
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-          </div>
-          <div class="alert alert-danger alert-dismissible fade show" role="alert" id="email-alert" style="display:none;">
-            <strong>Hiba!</strong> Adjon meg egy E-mailt!
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-          </div>
-          <div class="alert alert-danger alert-dismissible fade show" role="alert" id="jelszo-alert" style="display:none;">
-            <strong>Hiba!</strong> Adjon meg egy jelszavat!
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-          </div>
-          <div class="alert alert-success alert-dismissible fade show" role="alert" id="siker-alert" style="display:none;">
-            <strong>Siker!</strong> Sikeres regisztráció!
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-          </div>
-          <div  style="display: flex; justify-content: center; ">
-            <div id="spinner" style="display:none;" class="spinner-grow text-success"></div>
-            </div>
-          
-          </div>
-      </div>
-      <script>
-        function reg(){
-        var username = document.getElementById("username");
-        var pass = document.getElementById("passt");
-        var nevAlert = document.getElementById("nev-alert");
-        var emailAlert = document.getElementById("email-alert");
-        var jelszoAlert = document.getElementById("jelszo-alert");
-        var sikerAlert=document.getElementById("siker-alert");
-        var spinner=document.getElementById("spinner")
 
-        if (username.value.length==0){
-          nevAlert.style.display = "block";
-          nevAlert.innerHTML = "<strong>Hiba!</strong> Adjon meg egy felhasználónevet!";
-            setTimeout(function(){
-              nevAlert.style.display = "none";
-              }, 5000);
-        }
-        else if (email.value.length==0){
-          emailAlert.style.display = "block";
-          emailAlert.innerHTML = "<strong>Hiba!</strong> Adjon meg egy érvényes e-mail címet!";
-          setTimeout(function(){
-              emailAlert.style.display = "none";
-              }, 5000);
-        }
-        else if (pass.value.length==0){
-          jelszoAlert.style.display = "block";
-          jelszoAlert.innerHTML = "<strong>Hiba!</strong> Adjon meg egy jelszót!";
-          setTimeout(function(){
-              jelszoAlert.style.display = "none";
-              }, 5000);
-        }
-        else{
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Regisztráció</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body class="bg-secondary">
+  <div class="container p-5 my-5 bg-dark text-white text-center rounded">
+    <h1>Regisztráció</h1>
+    <p>Kérjük töltse ki a mezőket majd nyomjon a regisztráció gombra.</p>
+    <h4 class="text-start">Felhasználónév</h4>
+    <form action="javascript:void(0);">
+      <div class="input-group mb-3">
+        <input type="text" id="username" class="form-control" placeholder="Felhasználónév" required>
+      </div>
+      <h4 class="text-start">Név</h4>
+      <div class="input-group mb-3">
+        <input type="text" id="veznev" class="form-control" placeholder="Vezetéknév" required>
+        <input type="text" id="knev" class="form-control" placeholder="Keresztnév" required>
+      </div>
+      
+      <h4 class="text-start">Kandós e-mail</h4>
+      <div class="input-group mb-3">
+        <input type="text" id="email" class="form-control" placeholder="Kandós e-mail" required>
+        <span class="input-group-text" id="basic-addon2">@kkszki.hu</span>
+      </div>
+      <h4 class="text-start">Jelszó</h4>
+      <div class="input-group mb-3">
+        <input type="password" id="passt" class="form-control" placeholder="Jelszó" required>
+      </div>
+      <button type="submit" class="btn btn-success" onclick="reg()">Regisztráció</button>
+    </form>
+    <br><br>
+    <p>Már van fiókja? <a href="login.html">Jelentkezzen be!</a></p>
+    <div class="alert alert-danger alert-dismissible fade show" role="alert" id="nev-alert" style="display:none;">
+      <strong>Hiba!</strong> Adjon meg egy felhasználónevet!
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <div class="alert alert-danger alert-dismissible fade show" role="alert" id="email-alert" style="display:none;">
+      <strong>Hiba!</strong> Adjon meg egy E-mailt!
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <div class="alert alert-danger alert-dismissible fade show" role="alert" id="jelszo-alert" style="display:none;">
+      <strong>Hiba!</strong> Adjon meg egy jelszavat!
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <div class="alert alert-danger alert-dismissible fade show" role="alert" id="veznev-alert" style="display:none;">
+      <strong>Hiba!</strong> Adjon meg egy vezetéknevet!
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <div class="alert alert-danger alert-dismissible fade show" role="alert" id="knev-alert" style="display:none;">
+      <strong>Hiba!</strong> Adjon meg egy keresztnevet!
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <div class="alert alert-success alert-dismissible fade show" role="alert" id="siker-alert" style="display:none;">
+      <strong>Siker!</strong> Sikeres regisztráció!
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <div style="display: flex; justify-content: center; ">
+      <div id="spinner" style="display:none;" class="spinner-grow text-success"></div>
+    </div>
+
+  </div>
+  </div>
+  <script>
+    function reg() {
+      var username = document.getElementById("username");
+      var pass = document.getElementById("passt");
+      var email=document.getElementById("email");
+      var veznev=document.getElementById("veznev");
+      var knev=document.getElementById("knev");
+      var nevAlert = document.getElementById("nev-alert");
+      var emailAlert = document.getElementById("email-alert");
+      var jelszoAlert = document.getElementById("jelszo-alert");
+      var sikerAlert = document.getElementById("siker-alert");
+      var veznevAlert = document.getElementById("veznev-alert");
+      var knevAlert = document.getElementById("knev-alert");
+      var spinner = document.getElementById("spinner");
+
+      if (username.value.length == 0) {
+        nevAlert.style.display = "block";
+        nevAlert.innerHTML = "<strong>Hiba!</strong> Adjon meg egy felhasználónevet!";
+        setTimeout(function () {
+          nevAlert.style.display = "none";
+        }, 5000);
+      }
+      else if (email.value.length == 0) {
+        emailAlert.style.display = "block";
+        emailAlert.innerHTML = "<strong>Hiba!</strong> Adjon meg egy érvényes e-mail címet!";
+        setTimeout(function () {
+          emailAlert.style.display = "none";
+        }, 5000);
+      }
+      else if (veznev.value.length == 0) {
+        veznevAlert.style.display = "block";
+        veznevAlert.innerHTML = "<strong>Hiba!</strong> Adjon meg egy vezetéknevet!";
+        setTimeout(function () {
+          veznevAlert.style.display = "none";
+        }, 5000);
+      }
+      else if (knev.value.length == 0) {
+        knevAlert.style.display = "block";
+        knevAlert.innerHTML = "<strong>Hiba!</strong> Adjon meg egy keresztnevet!";
+        setTimeout(function () {
+          knevAlert.style.display = "none";
+        }, 5000);
+      }
+      else {
         localStorage.setItem('username', username.value);
         localStorage.setItem('pass', pass.value);
+        localStorage.setItem('email', email.value);
+        localStorage.setItem('veznev', veznev.value);
+        localStorage.setItem('knev', knev.value);
         sikerAlert.style.display = "block";
         sikerAlert.innerHTML = "<strong>Siker!</strong> Sikeres regisztráció!";
-        spinner.style.display="block";
-        setTimeout(function(){
-              sikerAlert.style.display = "none";
-              spinner.style.display="none";
-              window.location.href='login.html'
-              }, 3000);
-        }
+        spinner.style.display = "block";
+        setTimeout(function () {
+          sikerAlert.style.display = "none";
+          spinner.style.display = "none";
+          window.location.href = 'login.html';
+        }, 3000);
+      }
     }
-      </script>
+  </script>
 </body>
+
 </html>
