@@ -32,29 +32,41 @@
                             <div class="mb-md-5 mt-md-4 pb-0">
 
                                 <h1 class="fw-bold mb-4 text-uppercase">Kandó büfé</h1>
-                              <form action="javascript:void(0);">
+                            <form action="javascript:void(0);"> 
                                 <div class="form-outline form-white mt-4">
-                                    <input type="text" placeholder="Vezetéknév" required id="userName1" class="form-control form-control-lg fw-bold " style="margin-top: 60px;" />
+                                    <input type="text" placeholder="Vezetéknév" required  id="vezeteknev" class="form-control form-control-lg fw-bold " style="margin-top: 60px;" />
                                 </div>
 
                                 <div class="form-outline form-white mt-4">
-                                    <input type="text" placeholder="Keresztnév" required id="userName2" class="form-control form-control-lg fw-bold" style="margin-top: 35px;" />  
+                                    <input type="text" placeholder="Keresztnév" required id="keresztnev" class="form-control form-control-lg fw-bold" style="margin-top: 40px;" />  
                                 </div>
 
                                 <div class="form-outline form-white mt-4">
-                                    <input type="password" placeholder="Jelszó" required id="userPw" class="form-control form-control-lg fw-bold " style="margin-top: 35px;"/>
+                                    <input type="email" placeholder="E-mail" required id="email" class="form-control form-control-lg fw-bold " style="margin-top: 40px;" />
                                 </div>
 
-                               
-                                <input type="submit" value="Bejelentkezés" class="btn btn-outline-light btn-lg px-5" style="margin-top: 50px;" type="submit" onclick="bejelentkez()">
-                              </form>
+
+                                <div class="form-outline form-white mt-4">
+                                    <input type="password" placeholder="Jelszó" required id="jelszo" class="form-control form-control-lg fw-bold " style="margin-top: 40px;"/>
+                                </div>
+
+                                <div class="form-outline form-white mt-4">
+                                    <input type="password" placeholder="Jelszó megerősítése" required id="jelszo2" class="form-control form-control-lg fw-bold " style="margin-top: 40px;"/>
+                                </div>
+
+                        
+                                <input type="submit" value="Regisztráció" class="btn btn-outline-light btn-lg px-5" style="margin-top: 50px;" type="submit" onclick="reg()">
+                            </form>
+
                         
                             </div>
 
+                            
                             <div>
-                                <p class="mb-1">Még nincsen fiókod? <a href="reg.html" class="text-white-50 fw-bold">Regisztrálj most!</a></p>
+                                <p class="mb-1">Már jártál nálunk? <a href="index.html" class="text-white-50 fw-bold">Jelentkezz be!</a></p>
                             </div>
 
+                           
                             <div class="alert alert-danger alert-dismissible fade show" role="alert" id="jalert" style="display:none;">
                               <strong>Hiba!</strong> Hibás jelszó.
                               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
@@ -73,7 +85,6 @@
                               <div id="spinner" style="display:none;" class="spinner-grow text-success"></div>
                               </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -82,65 +93,57 @@
     </section>
 
     <script>
-        function bejelentkez() {
-          var storedName1 = localStorage.getItem('vezeteknev');
-          var storedName2 = localStorage.getItem('keresztnev');
-          var storedPw1 = localStorage.getItem('jelszo');
-          
-  
-          var userName1 = document.getElementById('userName1');
-          var userName2 = document.getElementById('userName2');
-          var userPw = document.getElementById('userPw');
+        function reg() {
+          var fname = document.getElementById('vezeteknev');
+          var lname = document.getElementById('keresztnev');
+          var email = document.getElementById('email');
+          var pw1 = document.getElementById('jelszo');
+          var pw2 = document.getElementById('jelszo2'); 
 
           var sikerAlert=document.getElementById("salert");
           var jelszoAlert = document.getElementById("jalert");
           var spinner=document.getElementById("spinner");
           var emailAlert = document.getElementById("ealert");
   
-          if(storedName1 !== userName1.value){
-            jelszoAlert.style.display = "block";
-          jelszoAlert.innerHTML = "<strong>Hiba!</strong> Hibás felhasznlónév!";
+  
+  
+          localStorage.setItem('vezeteknev', vezeteknev.value);
+          localStorage.setItem('keresztnev', keresztnev.value);
+          localStorage.setItem('email', email.value);
+          localStorage.setItem('jelszo', jelszo.value);
+          localStorage.setItem('jelszo2', jelszo2.value);
+  
+          if( jelszo.value !== jelszo2.value) {
+          jelszoAlert.style.display = "block";
+          jelszoAlert.innerHTML = "<strong>Hiba!</strong> A jelszó nem egyezik meg!";
           setTimeout(function(){
           jelszoAlert.style.display = "none";
               }, 5000);
           }
 
-          else if (userName1.value.length==0 || userName2.value.length == 0 || userPw.value.length == 0){
+          else if (vezeteknev.value.length==0 || keresztnev.value.length == 0 || email.value.length == 0 || jelszo.value.length == 0 || jelszo2.value.length == 0){
           emailAlert.style.display = "block";
           emailAlert.innerHTML = "<strong>Hiba!</strong> Töltse ki a mezőket!";
           setTimeout(function(){
               emailAlert.style.display = "none";
            }, 5000);
         }
-          else if (storedName2 !== userName2.value) {
-          jelszoAlert.style.display = "block";
-          jelszoAlert.innerHTML = "<strong>Hiba!</strong> Hibás felhasznlónév!";
-          setTimeout(function(){
-          jelszoAlert.style.display = "none";
-              }, 5000);
-          }
-
-          else if (storedPw1 !== userPw.value) {
-            jelszoAlert.style.display = "block";
-          jelszoAlert.innerHTML = "<strong>Hiba!</strong> Hibás jelszó!";
-          setTimeout(function(){
-          jelszoAlert.style.display = "none";
-            }, 5000);
-          }
 
 
-          else {
+         else {
+        localStorage.setItem('fname', vezeteknev.value);
+        localStorage.setItem('lname', keresztnev.value);
         sikerAlert.style.display = "block";
         sikerAlert.innerHTML = "<strong>Siker!</strong> Sikeres regisztráció!";
         spinner.style.display="block";
         setTimeout(function(){
         sikerAlert.style.display = "none";
         spinner.style.display="none";
-        window.location.href='asd.html'
+        window.location.href='index.html'
             }, 3000);
         }
 
-        }
+      }
       </script>
 </body>
 </html>
