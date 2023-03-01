@@ -1,6 +1,7 @@
 body{
-    background-color: aqua;
+    background-color:antiquewhite;
     text-align: center;
+    margin: 0;
 }
 .box1{
     float: left;
@@ -23,3 +24,45 @@ img{
 p{
     font-size: large;
 }
+.topbar {
+    height: 70px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   border: 4px solid silver;
+   margin: 2px;
+  }
+  
+  .sidebar {
+    height: 100%;
+    width: 250px;
+    background-color: lightgray;
+    position: fixed;
+    left: 0;
+    top: 85px;
+    bottom: 0;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+  
+  }
+  
+  .sidebarfunction {
+    position: absolute;
+    top: 87px;
+    left: 10px;
+    cursor: pointer;
+  }
+  
+  #image {
+    height: 50px;
+    width: 50px;
+  }
+  .design {
+  background-color: silver;
+  float: left;
+  width: 10px;
+  height: 920px;
+  margin-top: 6px;
+  }
