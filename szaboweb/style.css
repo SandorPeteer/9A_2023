@@ -1,5 +1,5 @@
 body {
-    background-color: darkblue;
+    background-color: white;
     font-family: 'Times New Roman', Times, serif;
 }
 
@@ -13,7 +13,7 @@ a:any-link {
     width: 15%;
     justify-content: center;
     text-align: center;
-    background: #008080;
+    background-color: darkgray;
 }
 
 .aktualis {
@@ -33,16 +33,17 @@ a:any-link {
 .right {
     float: left;
     width: 20%;
+    color: black;
 }
 
 h1 {
     text-align: center;
-    color: darkorange;
-    background-color: darkslateblue;
+    color: black;
+
 }
 
 h2 {
-    color: lightblue;
+    color: rgb(0, 0, 0);
 }
 
 .keszito {
@@ -170,3 +171,10 @@ width: 100%;
     border: 1px solid yellow;
 }
 
+.card {
+    float: left;
+    width: 100px;
+    height: 122px;
+    transition: 0.5s;
+    margin: 25px 100px;
+}
