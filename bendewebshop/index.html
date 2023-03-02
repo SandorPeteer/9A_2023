@@ -13,148 +13,252 @@
 
 <body>
 
-    <div class="menu">
-        <a href="index.html">Menü</a>
-        <a href="italok.html">Üditők</a>
-        <a href="szendvics.html">Szendvicsek</a>
-    </div>
-    <div class="main">
-        <div class="felsorolas">
-
-            <a href="ribizlixixo.html">
-                <img src="img/ribizlixixo.jpg" alt="xixo" title="xixo">
-                <h3>Ribizlis xixo</h3>
-            </a>
-
-
-            <a href="zoldxixo.html">
-                <img src="img/zoldxixo.jpg" alt="xixo" title="xixo">
-                <h3>Zöld teás xixo</h3>
-            </a>
+    <div class="offcanvas offcanvas-start text-bg-dark" id="demo">
+        <div class="offcanvas-header">
+          <h1 class="offcanvas-title">Kandóbüfé</h1>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
         </div>
+        <div class="offcanvas-body">
+          <a href="menu.html"><h3>Menü</h3></a>
+          <a href="kaja.html">Kaják</a> <br>
+          <a href="innivalok.html">innivalok</a>
+        </div>
+      </div>
+      
+      <div class="container-fluid mt-3">
+        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+            Sidebar megnyitása
+        </button>
+      </div>
+      
 
-    </div>
 
 
-
-
-    
-    <div class="container mt-3">
-        <div class="polaroid">
-            <img src="img/barackosxixo.jpg" width="235px" alt="barackosxixo" data-bs-toggle="modal"
-                data-bs-target="#myModal">
-            <div class="container">
-                <p>Barackos xixo</p>
+    <div class="main">    
+        <div>
+            <div class="polaroid">
+                <img src="img/barackosxixo.jpg" width="235px" alt="barackosxixo" data-bs-toggle="modal"
+                    data-bs-target="#myModal">
+                <div class="container">
+                    <p>Barackos xixo</p>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- The Modal -->
-    <div class="modal" id="myModal">
-        <div class="modal-dialog">
-            <div class="modal-content">
+        <!-- The Modal -->
+        <div class="modal" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
 
-                <!-- Modal Header -->
-                <div class="modal-header">
-                    <h4 class="modal-title">Barackos xixo</h4>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Barackos xixo</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
 
-                <!-- Modal body -->
-                <div class="modal-body">
-                    <div class="center">
-                        <img src="img/barackosxixo.jpg" alt="barackos xixo" width="255px" class="modal-title">
-                        <br>
-                        <div class="boxbar">
-                            <label> <input type="radio" name="mennyiség"> 1L </label>
-                            <label> <input type="radio" name="mennyiség"> 0,33L </label>
-                        </div>
-                        <div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="center">
+                            <img src="img/barackosxixo.jpg" alt="barackos xixo" width="255px" class="modal-title">
                             <br>
-                            <h4>Darab:</h4>
-                            <input type="button" name="barxix" value="-" class="pluszminuszbar" onclick="dbbarxix.value = Number(dbbarxix.value) - 1">
-                            <input type="text" name="barxix" class="textareabar" id="dbbarxix" value="0">
-                            <input type="button" name="barxix" class="pluszminuszbar" value="+" onclick="dbbarxix.value = Number(dbbarxix.value) + 1">
-                            <br>
-                            <input type="submit" value="Kosárba" class="pluszminuszbar" onclick="ad('barackxixo', dbbarxix.value)">
-                            <br><br>
-                            <p>Ár: <span id="barackxixoar"></span></p>
+                            <div class="boxbar">
+                                <label> <input type="radio" name="mennyiség"> 1L </label>
+                                <label> <input type="radio" name="mennyiség"> 0,33L </label>
+                            </div>
+                            <div>
+                                <br>
+                                <h4>Darab:</h4>
+                                <input type="button" name="barxix" value="-" class="pluszminuszbar" onclick="dbbarxix.value = Number(dbbarxix.value) - 1">
+                                <input type="text" name="barxix" class="textareabar" id="dbbarxix" value="0">
+                                <input type="button" name="barxix" class="pluszminuszbar" value="+" onclick="dbbarxix.value = Number(dbbarxix.value) + 1">
+                                <br>
+                                <input type="submit" value="Kosárba" class="pluszminuszbar" onclick="ad('barackxixo', dbbarxix.value)">
+                                <br><br>
+                                <p>Ár: <span id="barackxixoar"></span></p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Modal footer -->
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Bezár</button>
-                </div>
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Bezár</button>
+                    </div>
 
+                </div>
             </div>
         </div>
-    </div>
 
 
 
 
-    <div class="container mt-3">
-        <div class="polaroid">
-            <img src="img/citromxixo.jpg" width="235px" alt="citromxixo" data-bs-toggle="modal"
-                data-bs-target="#myModal2">
-            <div class="container">
-                <p>Citromos xixo</p>
+        <div>
+            <div class="polaroid">
+                <img src="img/citromxixo.jpg" width="235px" alt="citromxixo" data-bs-toggle="modal"
+                    data-bs-target="#myModal2">
+                <div class="container">
+                    <p>Citromos xixo</p>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- The Modal -->
-    <div class="modal" id="myModal2">
-        <div class="modal-dialog">
-            <div class="modal-content">
+        <!-- The Modal -->
+        <div class="modal" id="myModal2">
+            <div class="modal-dialog">
+                <div class="modal-content">
 
-                <!-- Modal Header -->
-                <div class="modal-header">
-                    <h4 class="modal-title">Citromos xixo</h4>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Citromos xixo</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
 
-                <!-- Modal body -->
-                <div class="modal-body">
-                    <div class="center">
-                        <img src="img/citromxixo.jpg" alt="citromos xixo" width="255px" class="modal-title">
-                        <br>
-                        <div class="boxcit">
-                            <label> <input type="radio" name="mennyiség"> 1L </label>
-                            <label> <input type="radio" name="mennyiség"> 0,33L </label>
-                        </div>
-                        <div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="center">
+                            <img src="img/citromxixo.jpg" alt="citromos xixo" width="255px" class="modal-title">
                             <br>
-                            <h4>Darab:</h4>
-                            <input type="button" name="citxix" value="-" class="pluszminuszcit" onclick="dbcitxix.value = Number(dbcitxix.value) - 1">
-                            <input type="text" name="citxix" class="textareacit" id="dbcitxix" value="0">
-                            <input type="button" name="citxix" class="pluszminuszcit" value="+" onclick="dbcitxix.value = Number(dbcitxix.value) + 1">
-                            <br>
-                            <input type="submit" value="Kosárba" class="pluszminuszcit" onclick="ad('citromxixo', dbcitxix.value)">
-                            <br><br>
-                            <p>Ár: <span id="citromxixoar"></span></p>
+                            <div class="boxcit">
+                                <label> <input type="radio" name="mennyiség"> 1L </label>
+                                <label> <input type="radio" name="mennyiség"> 0,33L </label>
+                            </div>
+                            <div>
+                                <br>
+                                <h4>Darab:</h4>
+                                <input type="button" name="citxix" value="-" class="pluszminuszcit" onclick="dbcitxix.value = Number(dbcitxix.value) - 1">
+                                <input type="text" name="citxix" class="textareacit" id="dbcitxix" value="0">
+                                <input type="button" name="citxix" class="pluszminuszcit" value="+" onclick="dbcitxix.value = Number(dbcitxix.value) + 1">
+                                <br>
+                                <input type="submit" value="Kosárba" class="pluszminuszcit" onclick="ad('citromxixo', dbcitxix.value)">
+                                <br><br>
+                                <p>Ár: <span id="citromxixoar"></span></p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Modal footer -->
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Bezár</button>
-                </div>
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Bezár</button>
+                    </div>
 
+                </div>
+            </div>
+        </div>
+
+
+
+        
+        <div>
+            <div class="polaroid">
+                <img src="img/ribizlixixo.jpg" width="235px" alt="citromxixo" data-bs-toggle="modal"
+                    data-bs-target="#myModal3">
+                <div class="container">
+                    <p>Ribizlis xixo</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- The Modal -->
+        <div class="modal" id="myModal3">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Ribizlis xixo</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="center">
+                            <img src="img/ribizlixixo.jpg" alt="citromos xixo" width="255px" class="modal-title">
+                            <br>
+                            <div class="boxcit">
+                                <label> <input type="radio" name="mennyiség"> 1L </label>
+                                <label> <input type="radio" name="mennyiség"> 0,33L </label>
+                            </div>
+                            <div>
+                                <br>
+                                <h4>Darab:</h4>
+                                <input type="button" name="citxix" value="-" class="pluszminuszcit" onclick="dbribxix.value = Number(dbribxix.value) - 1">
+                                <input type="text" name="citxix" class="textareacit" id="dbcitxix" value="0">
+                                <input type="button" name="citxix" class="pluszminuszcit" value="+" onclick="dbribxix.value = Number(dbribxix.value) + 1">
+                                <br>
+                                <input type="submit" value="Kosárba" class="pluszminuszcit" onclick="ad('citromxixo', dbribxix.value)">
+                                <br><br>
+                                <p>Ár: <span id="ribizlixixoar"></span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Bezár</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="polaroid">
+                <img src="img/zoldxixo.jpg" width="235px" alt="zöld teás xixo" data-bs-toggle="modal"
+                    data-bs-target="#myModal4">
+                <div class="container">
+                    <p>Zöld teás xixo</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- The Modal -->
+        <div class="modal" id="myModal4">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Zöld teás xixo</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="center">
+                            <img src="img/zoldxixo.jpg" alt="Zöld tea xixo" width="255px" class="modal-title">
+                            <br>
+                            <div class="boxbar">
+                                <label> <input type="radio" name="mennyiség"> 1L </label>
+                                <label> <input type="radio" name="mennyiség"> 0,33L </label>
+                            </div>
+                            <div>
+                                <br>
+                                <h4>Darab:</h4>
+                                <input type="button" name="barxix" value="-" class="pluszminuszbar" onclick="dbzodxix.value = Number(dbzodxix.value) - 1">
+                                <input type="text" name="barxix" class="textareabar" id="dbbarxix" value="0">
+                                <input type="button" name="barxix" class="pluszminuszbar" value="+" onclick="dbzodxix.value = Number(dbzodxix.value) + 1">
+                                <br>
+                                <input type="submit" value="Kosárba" class="pluszminuszbar" onclick="ad('barackxixo', dbzodxix.value)">
+                                <br><br>
+                                <p>Ár: <span id="zoldteaxixoar"></span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Bezár</button>
+                    </div>
+
+                </div>
             </div>
         </div>
     </div>
-
 
 
 
 
     <script>
         var xixobar_ = 411;
-        var xixocit_ = 521;
 
         function ad(nev, ertek) {
             localStorage.setItem(nev, Number(ertek));

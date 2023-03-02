@@ -22,34 +22,9 @@ body{
 
 
 .main{
-    margin-left: 11%;
     margin-top: 2%;
 }
 
-a img{
-    width: 205px;
-    box-shadow: 12px;
-}
-
-a img:hover{
-    transform: scale(1.1);
-    transition: 1s;
-}
-
-img:hover + h3{
-    font-size: x-large;
-    transition: 1s;
-}
-
-.felsorolas a{
-    text-decoration: none;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: rgba(65, 74, 88, 0.842);
-    text-align: center;
-    float: left;
-    width: fit-content;
-    padding: 55px;
-}
 
 
 .modal{
@@ -74,7 +49,7 @@ img:hover + h3{
     --bs-modal-footer-bg: ;
     --bs-modal-footer-border-color:var(--bs-border-color);
     --bs-modal-footer-border-width: 1px;
-    position:fixed;
+    position: fixed;
     top:0;
     left:0;
     z-index:var(--bs-modal-zindex);
@@ -92,19 +67,18 @@ img:hover + h3{
 }
 
 
-
-
 .polaroid {
     width: 225px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
     float: left;
     padding: 15px;
-    float: left;
+    margin-left: 2vw;
 }
+
   
 .container {
-    padding: 10px;
+    padding: 15px;
 }
 
 .polaroid img{
@@ -143,9 +117,6 @@ img:hover + h3{
     margin-top: 12px;
 }
 
-
-
-
 .pluszminuszbar{
     border: solid #ffa011 1px;
     padding: 5px;
@@ -170,3 +141,30 @@ img:hover + h3{
     margin: auto;
     margin-top: 12px;
 }
+
+.valaszto{
+    padding: 25px;
+    text-align: center;
+    float: left;
+    margin: auto;
+}
+
+.valaszto img{
+    width: 25vw;
+    height: 21vh;
+}
+
+.valaszto a{
+    text-decoration: none;
+    color: rgb(61, 65, 122);
+}
+
+.valaszto:hover{
+    transform: scale(1.1);
+    transition: 1s;
+}
+
+.lol{
+    align-self: center;
+}
+
