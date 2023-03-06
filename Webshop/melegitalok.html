@@ -2,117 +2,72 @@
 <html lang="hu">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meleg italok</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        .dropbtn {
-            background-color: #202020;
-            color: white;
-            padding: 16px;
-            font-size: 16px;
-            border: none;
-            margin-left: -60px;
-            cursor: pointer;
-            width: 125px;
-            height: 50px;
-        }
-
-
-        .dropbtn:hover,
-        .dropbtn:focus {
-            background-color: #3e8b8e;
-        }
-
-
-        .dropdown {
-            display: inline-block;
-            position: absolute;
-        }
-
-
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #ffffff;
-            min-width: 225px;
-            overflow: auto;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
-            z-index: 1;
-            text-align: center;
-            right: -47px;
-            margin-top: 20px;
-
-        }
-
-
-
-        .dropdown-content a {
-            margin-top: 50px;
-            color: black;
-            padding: 20px 2px;
-            text-decoration: none;
-            display: block;
-
-        }
-
-
-
-        .dropdown a:hover {
-            background-color: #ddd;
-        }
-
-
-
-        .show {
-            display: block;
-        }
-    </style>
-
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meleg italok</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<div class="topbar">
+  <div class="topbar">
     <h1>Topbar</h1>
   </div>
 
   <div class="sidebarfunction">
-  <button id="toggleButton">
-    <img id="image" src="img/oda.jpg" />
-  </button>
-</div>
+    <button id="toggleButton">
+      <img id="image" src="img/oda.jpg" />
+    </button>
+  </div>
 
-<div class="design">
+  <div class="design">
 
-</div>
+  </div>
 
-<div class="sidebar">
-  <p>
-  <h2>Menü</h2>
-  </p>
-  <div class="dropdown">
-    <button onclick="myFunction()" class="dropbtn">Ételek</button>
-    <div id="myDropdown" class="dropdown-content">
-      <h2>kaja</h2>
-      <a href="#home">sdfgfgd</a>
-      <a href="#about">gdfdfggdf</a>
-      <a href="#contact">gfdgdf</a>
+  <div class="sidebar">
+    <p>
+    <h2>Menü</h2>
+    </p>
+    <div class="dropdown">
+      <button onclick="myFunction()" class="dropbtn">Ételek</button>
+      <div id="myDropdown" class="dropdown-content">
+        <h2>kaja</h2>
+        <a href="#home">sdfgfgd</a>
+        <a href="#about">gdfdfggdf</a>
+        <a href="#contact">gfdgdf</a>
+      </div>
+    </div>
+
+  </div>
+
+
+  <h1>Meleg italok</h1>
+  <br>
+  <div class="card">
+    <img src="img/A_small_cup_of_coffee.JPG" alt="Kávé">
+    <div class="container">
+      <h4><b>Kávé</b></h4>
+      <p>300Ft</p>
+      <input type="button" name="k" value="-" onclick="db.value=Number(db.value) -1">
+      <input type="text" name="k" id="db">
+      <input type="button" name="ö" value="+" onclick="db.value=Number(db.value) +1">
+      <input type="submit" value="kosarba" onclick="ad('kave',db.value)">
     </div>
   </div>
 
-</div>
 
-  
+
+
+
+
   <script>
     const toggleButton = document.getElementById("toggleButton");
     const image = document.getElementById("image");
-  
+
     let position = "first";
-  
-    toggleButton.addEventListener("click", function() {
-      
+
+    toggleButton.addEventListener("click", function () {
+
       if (position === "first") {
         toggleButton.style.position = "absolute";
         toggleButton.style.top = "-1px";
@@ -132,7 +87,7 @@
     const Button = document.querySelector('.sidebarfunction');
     const sidebar = document.querySelector('.sidebar');
 
-     Button.addEventListener('click', function() {
+    Button.addEventListener('click', function () {
       if (sidebar.style.transform === 'translateX(0%)') {
         sidebar.style.transform = 'translateX(-100%)';
       } else {
@@ -141,42 +96,26 @@
     });
 
     function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
 
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
+    window.onclick = function (event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
       }
     }
-  }
-}
+    var kave = 300
+    function ad(nev,eretek) {
+      localStorage.setItem(nev,Number(eretek));
+    }
   </script>
-
-
-    <h1>Meleg italok</h1>
-    <br>
-    <div class="box1">
-        <button type="button"><img src="img/A_small_cup_of_coffee.JPG" alt="cappucino"></button>
-        <p>Kávé</p>
-    </div>
-    <div class="box2">
-        <button type="button"><img src="img/Cappuccino_at_Sightglass_Coffee.jpg" alt="cappucino"></button>
-        <p>Capuccino</p>
-    </div>
-    <div class="box3">
-        <button type="button"><img src="img/tejeskave-ineedcoffee-web.jpg" alt="cappucino"></button>
-        <p>Tejeskávé</p>
-    </div>
-    <div class="box4">
-        <button type="button"><img src="img/lead_L_121298_forro-csoki02.jpg" alt="cappucino"></button>
-        <p>Forrócsoki</p>
-    </div>
 </body>
 
 </html>
