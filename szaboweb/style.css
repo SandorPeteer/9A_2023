@@ -1,107 +1,68 @@
 body {
-    background-color: white;
+    background-color: rgb(209, 205, 150);
     font-family: 'Times New Roman', Times, serif;
 }
 
 a:any-link {
     text-decoration: none;
-    color:#00cc00;
+    color:#90d22d;
 }
 
 .menu {
     float: left;
-    width: 15%;
-    justify-content: center;
+    width: 20%;
     text-align: center;
-    background-color: darkgray;
 }
 
-.aktualis {
-    background-color:#728676;
-    padding: 5px;
+.menu a {
+    background-color: antiquewhite;
+    padding: 8px;
     margin-top: 7px;
     display: block;
-    width: 95,5%;
+    width: 100%;
+    color: black;
+}
+
+.menu .aktualis {
+    background-color:#825902;
+    padding: 8px;
+    margin-top: 7px;
+    display: block;
+    width: 100%;
     color: black;
 }
 
 .main {
     float: left;
-    width: 65%;
+    width: 60%;
+    padding: 0 20px;
 }
 
 .right {
+    background-color: #9c5601;
     float: left;
     width: 20%;
-    color: black;
-}
+    padding: 15px;
+    margin-top: 7px;
+    text-align: center;
+  }
 
 h1 {
     text-align: center;
-    color: black;
-
+    color: #825902;
+    background-color: rgb(163, 128, 86);
 }
 
 h2 {
-    color: rgb(0, 0, 0);
+    color: lightblue;
 }
 
 .keszito {
     color: greenyellow;
 }
 
-.div1 {
-    margin: 25px 100px;
-    width: 50px;
-    height: 50px;
-    transition: 0.5s;
-    float: left;
-}
-
-.div2 {
-    margin: 25px 100px;
-    width: 5px;
-    height: 5px;
-    transition: 0.5s;
-    float: left;
-} 
-
-.div3 {
-    margin: 25px 100px;
-    width: 5px;
-    height: 5px;
-    transition: 0.5s;
-    float: left;
-    position: relative;
-}
-
-.div4 {
-    margin: 25px 100px;
-    width: 5px;
-    height: 5px;
-    transition: 0.5s;
-    float: left;
-}
-
-.div1:hover {
-    transform: scale(1.1);
-}
-
-.div2:hover {
-    transform: scale(1.1);
-}
-
-.div3:hover {
-    transform: scale(1.1);
-}
-
-.div4:hover {
-    transform: scale(1.1);
-}
-
 .kep{
-    float: left;
-    margin: 25px 2px;
+    float: none;
     border: 1px solid yellow;
 }
 
@@ -110,6 +71,7 @@ position: fixed;
 left: 0;
 bottom: 0;
 width: 100%;
+text-align: center;
 }
 
 @media only screen and (max-width: 620px) {
@@ -123,47 +85,6 @@ width: 100%;
     text-align-last: center;
 }
 
-.meret {
-    margin: 25px 100px;
-    width: 20px;
-    height: 250px;
-    transition: 0.5s;
-    float: left;
-}
-
-#narancsle{
-    margin: 25px 100px;
-    width: 250px;
-    height: 250px;
-    transition: 0.5s;
-    float: left;
-}
-
-#almale {
-    margin: 25px 100px;
-    width: 250px;
-    height: 165px;
-    transition: 0.5s;
-    float: left;
-}
-
-
-#fanta {
-    margin: 25px 100px;
-    height: 165px;
-    width: 250px;
-    transition: 0.5s;
-    float: left;
-}
-
-#viz {
-    margin: 25px 100px;
-    height: 166px;
-    width: 250px;
-    transition: 0.5s;
-    float: left;
-}
-
 .nasik {
     float: left;
     margin: 25px 100px;
@@ -172,9 +93,25 @@ width: 100%;
 }
 
 .card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 30%;
     float: left;
-    width: 100px;
-    height: 122px;
-    transition: 0.5s;
-    margin: 25px 100px;
-}
+    margin: 0%;
+    text-align: center;
+    margin-right: 20px;
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 20px 0 rgba(0,0,0,0.2);
+  }
+  
+  .container {
+    padding: 2px 16px;
+    text-align: center;
+  }  
+
+.ki {
+    font-size: 30px;
+    float: right;
+}  

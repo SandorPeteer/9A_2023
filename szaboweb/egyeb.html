@@ -2,50 +2,92 @@
 <html lang="hu">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Egyéb</title>
+    <title>Egyebek</title>
 </head>
-<body>
+<body> 
     <div class="title">
         <h1>Kandó Büfé</h1>
     </div>
+    
     <div class="menu">
         <a href="kaja.html">
-            <p>Kaja</p>
+            <p>Ennivalók</p>
         </a>
-
         <a href="pia.html">
-            <p>Pia</p>
+            <p>Innivalók</p>
         </a>
-
         <a href="nasi.html">
             <p>Nasi</p>
         </a>
-
         <a href="rago.html">
             <p>Rágó</p>
         </a>
-
-        <a href="egyeb.html">
-            <p>Egyebek</p> 
-         </a>
+        <a href="egyeb.html"  class="aktualis">
+            <p>Egyebek</p>
+        </a>
     </div>
-    <div class="card">
-        <img src="img/Hamburger_(black_bg).jpg" class="kep" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+        
+        
+       <div class="main"> 
+        <div class="card">
+          <img src="img/keksz.jpg" alt="keksz" class="kep">
+          <div class="container">
+            <div>
+                  <input type="text" name="k" id="db"> <br> <br>
+                  <input type="button" name="k" value="-" onclick="db.value=Number(db.value) - 1">
+                  <input type="button"  value="+" value="ö" onclick="db.value=Number(db.value) + 1">
+                  <input type="submit" value="kosárba" onclick="ad('_keksz', db.value)">
+            </div>
+            <h4><b>Keksz</b></h4> 
+            <p>300 Ft</p> 
+          </div>
         </div>
-      </div>
-    <div class="right">
-        <h2>Kiemelt ajánlataink!</h2>
-    </div>
-    <div class="footer">
-        <hr width="90%">
-    <footer align=center>
-        <p class="keszito">Készítő: Szabó Levente Balázs</p>
-    </footer>
+
+        <div class="card">
+            <img src="img/jóreggelt.jpg" alt="jóreggelt szelet" class="kep">
+            <div class="container">
+              <div>
+                <input type="text" name="k" id="db"> <br> <br>
+                <input type="button" name="k" value="-" onclick="db.value=Number(db.value) - 1">
+                <input type="button"  value="+" value="ö" onclick="db.value=Number(db.value) + 1">
+                <input type="submit" value="kosárba" onclick="ad('_joreggelt', db.value)"> 
+              </div>
+              <h4><b>Jóreggelt szelet</b></h4> 
+              <p>500 Ft</p> 
+            </div>
+          </div>
+
+        <div class="card">
+            <img src="img/negro.jpg" alt="negro" class="kep">
+            <div class="container">
+              <div> 
+                  <input type="text" name="k" id="db"> <br> <br>
+                  <input type="button" name="k" value="-" onclick="db.value=Number(db.value) - 1">
+                  <input type="button"  value="+" value="ö" onclick="db.value=Number(db.value) + 1">
+                  <input type="submit" value="kosárba" onclick="ad('_negro', db.value)"> 
+              </div>
+              <h4><b>Negro</b></h4> 
+              <p>800 Ft</p> 
+            </div>
+          </div>  
+        <div class="right">
+           <p class="ki">Kiemelt ajánlataink!</p> 
+        </div>
+        <footer class="footer">
+            <hr width="90%">
+            Készítő: Szabó Levente Balázs
+        </footer>
+
+       <script>
+        var _keksz = 300
+        var _joreggelt = 500
+        var _negro = 800
+        function ad(nev,ertek) {
+            localStorage.setItem(nev,Number(ertek));
+        }
+       </script>
 </body>
 </html>
