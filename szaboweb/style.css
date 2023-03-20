@@ -8,44 +8,48 @@ a:any-link {
     color:#90d22d;
 }
 
-.menu {
-    float: left;
-    width: 20%;
-    text-align: center;
-}
+*   {
+        box-sizing: border-box;
+    }
 
-.menu a {
-    background-color: antiquewhite;
-    padding: 8px;
-    margin-top: 7px;
-    display: block;
-    width: 100%;
-    color: black;
-}
+    .menu {
+        float: left;
+        width: 20%;
+        text-align: center;
+    }
 
-.menu .aktualis {
-    background-color:#825902;
-    padding: 8px;
-    margin-top: 7px;
-    display: block;
-    width: 100%;
-    color: black;
-}
+    .menu a {
+        background-color: antiquewhite;
+        padding: 8px;
+        margin-top: 7px;
+        display: block;
+        width: 100%;
+        color: black;
+    }
 
-.main {
-    float: left;
-    width: 60%;
-    padding: 0 20px;
-}
+    .menu .aktualis {
+        background-color:#825902;
+        padding: 8px;
+        margin-top: 7px;
+        display: block;
+        width: 100%;
+        color: black;
+    }
 
-.right {
-    background-color: #9c5601;
-    float: left;
-    width: 20%;
-    padding: 15px;
-    margin-top: 7px;
-    text-align: center;
-  }
+    .main {
+        float: left;
+        width: 60%;
+        padding: 0 20px;
+    }
+
+    .right {
+        background-color: #9c5601;
+        float: right;
+        width: 20%;
+        padding: 6px;
+        margin-top: 7px;
+        text-align: center;
+    }
 
 h1 {
     text-align: center;
@@ -54,7 +58,7 @@ h1 {
 }
 
 h2 {
-    color: lightblue;
+    color: rgb(54, 155, 192);
 }
 
 .keszito {
@@ -74,12 +78,12 @@ width: 100%;
 text-align: center;
 }
 
-@media only screen and (max-width: 620px) {
-    /* For mobile phones: */
-    .menu, .main, .right {
-      width: 100%;
+    @media only screen and (max-width: 620px) {
+        /* For mobile phones: */
+        .menu, .main, .right {
+        width: 100%;
+        }
     }
-  }
 
 .title {
     text-align-last: center;
@@ -99,7 +103,8 @@ text-align: center;
     float: left;
     margin: 0%;
     text-align: center;
-    margin-right: 20px;
+    margin-right: 15px;
+    margin-bottom: 15px;
   }
   
   .card:hover {
@@ -107,7 +112,7 @@ text-align: center;
   }
   
   .container {
-    padding: 2px 16px;
+    padding: 2px 20px;
     text-align: center;
   }  
 
@@ -115,3 +120,20 @@ text-align: center;
     font-size: 30px;
     float: right;
 }  
+
+#rago {
+    margin-top: 80px;
+    margin-bottom: 58px;
+}
+
+#chips {
+    width: 250px;
+    margin-top: 40px;
+    margin-bottom: 27px;
+}
+
+.hr {
+    width: 100%;
+    background-color: #825902;
+    position: fixed;
+}
