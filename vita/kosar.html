@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<a href="rendeles.html">vissza</a>
+
+
+
+
+
+
+
+
+
+
+<br><br>
+
+<script>
+
+var burger = localStorage.getItem("hamburger");
+
+if(burger > 0){
+
+
+
+
+document.write("hamburger mennyiség: ")
+document.write(burger)
+document.write("<br>");
+document.write("hamburger ár: ")
+document.write(burger*2000)
+}
+</script>
+
+<br><br>
+
+<script>
+
+    var pizza = localStorage.getItem("pizza");
+    
+    if(pizza > 0){
+    
+    document.write("pizza mennyiség: ")
+    document.write(pizza)
+    document.write("<br>");
+    document.write("pizza ár: ")
+    document.write(pizza*1500)
+    }
+    </script>
+<br><br>
+
+<script>
+
+    var msz = localStorage.getItem("msz");
+    
+    if(msz > 0){
+    
+    document.write("msz mennyiség: ")
+    document.write(msz)
+    document.write("<br>");
+    document.write("meleg szendvics ár: ")
+    document.write(msz*1800)
+    }
+    </script>
+
+<br><br>
+
+<script>
+
+    var szend = localStorage.getItem("szend");
+    
+    if(szend > 0){
+    
+    document.write("szend mennyiség: ")
+    document.write(szend)
+    document.write("<br>");
+    document.write("szendvics ár: ")
+    document.write(szend*1500)
+    }
+    </script>
+
+</body>
+</html>
