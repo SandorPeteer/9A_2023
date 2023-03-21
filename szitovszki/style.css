@@ -2,48 +2,23 @@ body {
   margin: 0;
 }
 
-
-.topbar {
-  height: 70px;
-  background-color: rgb(255, 255, 255);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
- border: 4px solid silver;
- margin: 2px;
-}
-
 .sidebar {
-  height: 100%;
-  width: 250px;
-  background-color: lightgray;
-  position: fixed;
-  left: 0;
-  top: 85px;
-  bottom: 0;
-  transform: translateX(-100%);
-  transition: transform 0.3s ease-in-out;
-  text-align: center;
 
+  width: 200px;
 }
 
-.sidebarfunction {
-  position: absolute;
-  top: 87px;
-  left: 10px;
-  cursor: pointer;
+#menu {
+  width: 100%;
+  border-radius: 5%;
 }
 
-#image {
-  height: 35px;
-  width: 35px;
+#cart:hover {
+  transform: scale(1.15);
+  transition: 0.5s;
 }
-.design {
-background-color: silver;
-float: left;
-width: 10px;
-height: 920px;
-margin-top: 6px;
+.sidebtn {
+  border: 2px solid rgb(44, 44, 44) ;
+   background-color: #4cdac2;
+    color: white;
 }
-
 
