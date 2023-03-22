@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="hu">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Kaják</title>
+    <title>Ennivalók</title>
 </head>
-
-<body>
+<body> 
     <div class="title">
         <h1>Kandó Büfé</h1>
     </div>
+    
     <div class="menu">
-        <a href="kaja.html" class="aktualis">
+        <a href="kaja.html"   class="aktualis">
             <p>Ennivalók</p>
         </a>
         <a href="pia.html">
@@ -30,29 +29,113 @@
             <p>Egyebek</p>
         </a>
     </div>
-    <div class="main">
-        <div class="div1">
-            <a href=""><img src="img/Hamburger_(black_bg).jpg" alt="Hamburger" class="kep" width="200px" height="150px"></a>
+        
+        
+       <div class="main"> 
+        <div class="card">
+          <img src="img/Hamburger_(black_bg).jpg" alt="marhaburger" class="hambi">
+          <div class="container">
+            <div>
+                  <input type="text" name="h" id="hambi1"> <br> <br>
+                  <input type="button" name="h" value="-" onclick="hambi1.value=Number(hambi1.value) - 1">
+                  <input type="button"  value="+" value="ö" onclick="hambi1.value=Number(hambi1.value) + 1"> <br>
+                  <input type="submit" value="kosárba" onclick="ad('_hamburger1', hambi1.value)">
+            </div>
+            <h4><b>Marhahúsos hamburger</b></h4> 
+            <p>1500 Ft</p> 
+          </div>
         </div>
-        <div class="div2">
-            <a href=""><img src="img/Masikburger.jpg" alt="Ez is hamburger" class="kep" width="200px" height="150px"></a>
-        </div>
-        <div class="div3">
-            <a href=""><img src="img/vmihambi.jpg" alt="Mégegy hamhurger" class="kep" width="200px" height="150px"></a>
-        </div>
-        <div class="div4">
-            <a href=""><img src="img/utolsóhambi.jpg" alt="Nem egy hamburger" class="kep" width="200px" height="150px"></a>
-        </div>
-    </div>
-    <div class="right">
-        <h2>Kiemelt ajánlataink!</h2>
-    </div>
-    <div class="footer">
-        <hr width="90%">
-        <footer align=center>
-            <p class="keszito">Készítő: Szabó Levente Balázs</p>
-        </footer>
-    </div>
-</body>
 
+        <div class="card">
+          <img src="img/Masikburger.jpg" alt="marhaburger zöldséggel" class="hambi">
+          <div class="container">
+            <div>
+                  <input type="text" name="j" id="hambi2"> <br> <br>
+                  <input type="button" name="j" value="-" onclick="hambi2.value=Number(hambi2.value) - 1">
+                  <input type="button"  value="+" value="i" onclick="hambi2.value=Number(hambi2.value) + 1"> <br>
+                  <input type="submit" value="kosárba" onclick="ad('_marha', hambi2.value)"> 
+            </div>
+            <h4><b>Marhahúsos burger zöldséggel</b></h4> 
+            <p>2000 Ft</p> 
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="img/vmihambi.jpg" alt="sajtos burger" class="hambi">
+          <div class="container">
+            <div> 
+                  <input type="text" name="s" id="sajtos"> <br> <br>
+                  <input type="button" name="s" value="-" onclick="sajtos.value=Number(sajtos.value) - 1">
+                  <input type="button"  value="+" value="ú" onclick="sajtos.value=Number(sajtos.value) + 1"> <br>
+                  <input type="submit" value="kosárba" onclick="ad('_sajt', sajtos.value)"> 
+            </div>
+            <h4><b>Sajtos hamburger</b></h4> 
+            <p>1000 Ft</p> 
+          </div>
+        </div> 
+      
+        <div class="card">
+          <img src="img/utolsóhambi.jpg" alt="füstölt burger" class="hambi">
+          <div class="container">
+            <div> 
+                  <input type="text" name="f" id="füstölt"> <br> <br>
+                  <input type="button" name="f" value="-" onclick="füstölt.value=Number(füstölt.value) - 1">
+                  <input type="button"  value="+" value="k" onclick="füstölt.value=Number(füstölt.value) + 1"> <br>
+                  <input type="submit" value="kosárba" onclick="ad('_füst', füstölt.value)"> 
+            </div>
+            <h4><b>Füstölt marhahúsos burger</b></h4> 
+            <p>2500 Ft</p> 
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="img/melegszendvics.jpeg" alt="melegszendvics" class="hambi">
+          <div class="container">
+            <div> 
+                  <input type="text" name="m" id="melegszendvics"> <br> <br>
+                  <input type="button" name="m" value="-" onclick="melegszendvics1.value=Number(melegszendvics.value) - 1">
+                  <input type="button"  value="+" value="m" onclick="melegszendvics.value=Number(melegszendvics.value) + 1"> <br>
+                  <input type="submit" value="kosárba" onclick="ad('_melegszendvics', melegszendvics.value)"> 
+            </div>
+            <h4><b>Melegszendvics</b></h4> 
+            <p>500 Ft</p> 
+          </div>
+        </div> 
+
+        <div class="card">
+          <img src="img/szendvics.jpg" alt="hideg" class="hambi">
+          <div class="container">
+            <div> 
+                  <input type="text" name="t" id="hideg"> <br> <br>
+                  <input type="button" name="t" value="-" onclick="hideg.value=Number(hideg.value) - 1">
+                  <input type="button"  value="+" value="h" onclick="hideg.value=Number(hideg.value) + 1"> <br>
+                  <input type="submit" value="kosárba" onclick="ad('_hideg', hideg.value)"> 
+            </div>
+            <h4><b>Szendvics</b></h4> 
+            <p>900 Ft</p> 
+          </div>
+        </div>
+      </div>
+
+      <div class="right">
+          <h2 class="ki">Heti kiemelt ajánlataink!</h2> 
+      </div>
+      <div>
+      <footer class="footer">
+          <hr class="hr"> <br>
+          Készítő: Szabó Levente Balázs
+      </footer>
+      </div>
+       <script>
+        var _hamburger1 = 1500
+        var _marha = 2000
+        var _sajt = 1000
+        var _füst = 2500
+        var _melegszendvics = 500
+        var _hideg = 900
+        function ad(nev,ertek) {
+            localStorage.setItem(nev,Number(ertek));
+        } 
+       </script>
+</body>
 </html>

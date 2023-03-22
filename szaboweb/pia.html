@@ -7,15 +7,16 @@
     <link rel="stylesheet" href="style.css">
     <title>Innivalók</title>
 </head>
-<body>
+<body> 
     <div class="title">
         <h1>Kandó Büfé</h1>
     </div>
+    
     <div class="menu">
         <a href="kaja.html">
             <p>Ennivalók</p>
         </a>
-        <a href="pia.html"  class="aktualis">
+        <a href="pia.html"   class="aktualis">
             <p>Innivalók</p>
         </a>
         <a href="nasi.html">
@@ -28,29 +29,113 @@
             <p>Egyebek</p>
         </a>
     </div>
+        
+        
+       <div class="main"> 
+        <div class="card">
+          <img src="img/keksz.jpg" alt="keksz" class="kep">
+          <div class="container">
+            <div>
+                  <input type="text" name="k" id="zacsko"> <br> <br>
+                  <input type="button" name="k" value="-" onclick="zacsko.value=Number(zacsko.value) - 1">
+                  <input type="button"  value="+" value="ö" onclick="zacsko.value=Number(zacsko.value) + 1"> <br>
+                  <input type="submit" value="kosárba" onclick="ad('_keksz', zacsko.value)">
+            </div>
+            <h4><b>Keksz</b></h4> 
+            <p>300 Ft</p> 
+          </div>
+        </div>
 
-    <div class="main">
-        <div class="div1">
-            <a href=""><img src="img/cola.png" alt="" class="kep"></a>
+        <div class="card">
+          <img src="img/jóreggelt.jpg" alt="jóreggelt szelet" class="kep">
+          <div class="container">
+            <div>
+                  <input type="text" name="j" id="doboz"> <br> <br>
+                  <input type="button" name="j" value="-" onclick="doboz.value=Number(doboz.value) - 1">
+                  <input type="button"  value="+" value="i" onclick="doboz.value=Number(doboz.value) + 1"> <br>
+                  <input type="submit" value="kosárba" onclick="ad('_joreggelt', doboz.value)"> 
+            </div>
+            <h4><b>Jóreggelt szelet</b></h4> 
+            <p>500 Ft</p> 
+          </div>
         </div>
-        <div class="div2">
-            <a href=""><img src="img/fanta.jpg" alt="" class="kep"></a>
+
+        <div class="card">
+          <img src="img/popcorn.jpg" alt="popcorn" class="kep">
+          <div class="container">
+            <div> 
+                  <input type="text" name="p" id="dobozoszacsko"> <br> <br>
+                  <input type="button" name="p" value="-" onclick="dobozoszacsko.value=Number(dobozoszacsko.value) - 1">
+                  <input type="button"  value="+" value="ú" onclick="dobozoszacsko.value=Number(dobozoszacsko.value) + 1"> <br>
+                  <input type="submit" value="kosárba" onclick="ad('_popcorn', dobozoszacsko.value)"> 
+            </div>
+            <h4><b>Popcorn</b></h4> 
+            <p>1000 Ft</p> 
+          </div>
+        </div> 
+      
+        <div class="card">
+          <img src="img/negro.jpg" alt="negro" class="kep">
+          <div class="container">
+            <div> 
+                  <input type="text" name="n" id="csomag"> <br> <br>
+                  <input type="button" name="n" value="-" onclick="csomag.value=Number(csomag.value) - 1">
+                  <input type="button"  value="+" value="ú" onclick="csomag.value=Number(csomag.value) + 1"> <br>
+                  <input type="submit" value="kosárba" onclick="ad('_negro', csomag.value)"> 
+            </div>
+            <h4><b>Negro</b></h4> 
+            <p>800 Ft</p> 
+          </div>
         </div>
-        <div class="div3">
-            <a href=""><img src="img/alma.jpg" alt="" class="kep"></a>
+
+        <div class="card">
+          <img src="img/rago1.png" alt="rágó" class="kep" id="rago">
+          <div class="container">
+            <div> 
+                  <input type="text" name="r" id="rago1"> <br> <br>
+                  <input type="button" name="r" value="-" onclick="rago1.value=Number(rago1.value) - 1">
+                  <input type="button"  value="+" value="á" onclick="rago1.value=Number(rago1.value) + 1"> <br>
+                  <input type="submit" value="kosárba" onclick="ad('_rago', rago1.value)"> 
+            </div>
+            <h4><b>Rágó</b></h4> 
+            <p>250 Ft</p> 
+          </div>
+        </div> 
+
+        <div class="card">
+          <img src="img/burgonya.jpg" alt="chips" class="kep" id="chips">
+          <div class="container">
+            <div> 
+                  <input type="text" name="t" id="tálas"> <br> <br>
+                  <input type="button" name="t" value="-" onclick="tálas.value=Number(tálas.value) - 1">
+                  <input type="button"  value="+" value="h" onclick="tálas.value=Number(tálas.value) + 1"> <br>
+                  <input type="submit" value="kosárba" onclick="ad('_chips', tálas.value)"> 
+            </div>
+            <h4><b>Chips</b></h4> 
+            <p>900 Ft</p> 
+          </div>
         </div>
-        <div class="div4">
-            <a href=""><img src="img/mizse1.jpg" alt="" class="kep"></a>
-        </div>
-    </div>
-    <div class="right">
-        <h2>Kiemelt ajánlataink!</h2>
-    </div>
-    <div class="footer">
-        <hr width="90%">
-        <footer align=center>
-            <p class="keszito">Készítő: Szabó Levente Balázs</p>
-        </footer>
-    </div>
+      </div>
+
+      <div class="right">
+          <h2 class="ki">Heti kiemelt ajánlataink!</h2> 
+      </div>
+      <div>
+      <footer class="footer">
+          <hr class="hr"> <br>
+          Készítő: Szabó Levente Balázs
+      </footer>
+      </div>
+       <script>
+        var _keksz = 300
+        var _joreggelt = 500
+        var _negro = 800
+        var _popcorn = 1000
+        var _rago = 250
+        var _chips = 900
+        function ad(nev,ertek) {
+            localStorage.setItem(nev,Number(ertek));
+        } 
+       </script>
 </body>
 </html>
