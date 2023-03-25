@@ -1,5 +1,144 @@
-.card-img-top
-{    
-width: 400px;
-height: 300px;    
+body {
+    background-color: rgb(209, 205, 150);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+a:any-link {
+    text-decoration: none;
+    color:#90d22d;
+}
+
+*   {
+        box-sizing: border-box;
+    }
+
+    .menu {
+        float: left;
+        width: 20%;
+        text-align: center;
+    }
+
+    .menu a {
+        background-color: antiquewhite;
+        padding: 8px;
+        margin-top: 7px;
+        display: block;
+        width: 100%;
+        color: black;
+    }
+
+    .menu .aktualis {
+        background-color:#825902;
+        padding: 8px;
+        margin-top: 7px;
+        display: block;
+        width: 100%;
+        color: black;
+    }
+
+    .main {
+        float: left;
+        width: 60%;
+        padding: 0 20px;
+    }
+
+    .right {
+        background-color: #9c5601;
+        float: right;
+        width: 20%;
+        padding: 6px;
+        margin-top: 7px;
+        text-align: center;
+    }
+
+h1 {
+    text-align: center;
+    color: #825902;
+    background-color: rgb(163, 128, 86);
+}
+
+h2 {
+    color: rgb(54, 155, 192);
+}
+
+.keszito {
+    color: greenyellow;
+}
+
+.kep{
+    float: none;
+    border: 1px solid yellow;
+    width: 250px;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+    @media only screen and (max-width: 620px) {
+        /* For mobile phones: */
+        .menu, .main, .right {
+        width: 100%;
+        }
+    }
+
+.title {
+    text-align-last: center;
+}
+
+.nasik {
+    float: left;
+    margin: 25px 100px;
+    width: 25%;
+    border: 1px solid yellow;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 30%;
+    float: left;
+    margin: 0%;
+    text-align: center;
+    margin-right: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 20px 0 rgba(0,0,0,0.2);
+  }
+  
+  .container {
+    padding: 2px 20px;
+    text-align: center;
+  }  
+
+.ki {
+    font-size: 30px;
+    float: right;
+}  
+
+#rago {
+    margin-top: 20px;
+}
+
+#chips {
+    width: 250px;
+    margin-top: 40px;
+    margin-bottom: 27px;
+}
+
+#szalveta {
+    margin-top: 2px;
+    margin-bottom: 0px;
+}
+
+.hr {
+    width: 100%;
+    background-color: #825902;
+    position: fixed;
 }
