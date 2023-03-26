@@ -4,15 +4,13 @@
     float: left;
 }
 
-.menu a{
+.offcanvas-body a{
     text-decoration: none;
     background-color: rgba(153, 153, 153, 0.082);
     padding: 8px;
-    margin-top: 7px;
     display: block;
     width: 100%;
-    color: rgb(0, 0, 0);
-    border-bottom: solid black 1px;
+    color: rgb(255, 255, 255);
     font-size: large;
 }
 
@@ -93,49 +91,21 @@ body{
 }
 
 .pluszminuszcit{
-    border: solid #ffbf60 1px;
     padding: 5px;
     padding-left: 10px;
     padding-right: 10px;
     background-color: white;
+    border: solid 1px gray;
 }
 
 .textareacit{
     width: 65px;
     margin: 15px;
     text-align: center;
-    border: solid #ffbf60 1px;
     padding: 5px;
 }
 
 .boxcit{
-    border: solid #ffbf60 1px;
-    box-shadow: 7px 7px 25px #ffbf60;
-    padding: 6px;
-    width: 55%;
-    margin: auto;
-    margin-top: 12px;
-}
-
-.pluszminuszbar{
-    border: solid #ffa011 1px;
-    padding: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    background-color: white;
-}
-
-.textareabar{
-    width: 65px;
-    margin: 15px;
-    text-align: center;
-    border: solid #ffa011 1px;
-    padding: 5px;
-}
-
-.boxbar{
-    border: solid #ffa011 1px;
-    box-shadow: 7px 7px 25px #ffa011;
     padding: 6px;
     width: 55%;
     margin: auto;
@@ -168,3 +138,6 @@ body{
     align-self: center;
 }
 
+.xd{
+    background-color: rgba(128, 128, 128, 0.377);
+}
