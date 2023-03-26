@@ -55,6 +55,43 @@
     </div>
   </div>
 
+  <div class="card">
+    <img src="img/Cappuccino_at_Sightglass_Coffee.jpg" alt="Cappuccino">
+    <div class="container">
+      <h4><b>Cappuccino</b></h4>
+      <p>400Ft</p>
+      <input type="button" name="k" value="-" onclick="db.value=Number(db.value) -1">
+      <input type="text" name="k" id="db">
+      <input type="button" name="ö" value="+" onclick="db.value=Number(db.value) +1">
+      <input type="submit" value="kosarba" onclick="ad('cappuccino',db.value)">
+    </div>
+  </div>
+
+    <div class="card">
+      <img src="img/lead_L_121298_forro-csoki02.jpg" alt="forocsoki">
+      <div class="container">
+        <h4><b>Forócsoki</b></h4>
+        <p>600Ft</p>
+        <input type="button" name="k" value="-" onclick="db.value=Number(db.value) -1">
+        <input type="text" name="k" id="db">
+        <input type="button" name="ö" value="+" onclick="db.value=Number(db.value) +1">
+        <input type="submit" value="kosarba" onclick="ad('forocsoki',db.value)">
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="img/tejeskave-ineedcoffee-web.jpg" alt="Tejeskave">
+      <div class="container">
+        <h4><b>Tejeskávé</b></h4>
+        <p>400Ft</p>
+        <input type="button" name="k" value="-" onclick="db.value=Number(db.value) -1">
+        <input type="text" name="k" id="db">
+        <input type="button" name="ö" value="+" onclick="db.value=Number(db.value) +1">
+        <input type="submit" value="kosarba" onclick="ad('tejeskave',db.value)">
+      </div>
+    </div>
+  
+
 
 
 
@@ -111,7 +148,10 @@
         }
       }
     }
-    var kave = 300
+    var _kave = 300
+    var _cappuccino = 400
+    var _forocsoki = 600
+    var _tejeskave = 400
     function ad(nev,eretek) {
       localStorage.setItem(nev,Number(eretek));
     }
