@@ -9,7 +9,7 @@
 </head>
 <body> 
     <div class="title">
-        <h1>Kandó Büfé</h1>
+        <h1>Kandó Büfé <a href="kosar.html"><img src="img/kosar.png" alt="kosár" class="kosar"></a></h1>
     </div>
     
     <div class="menu">
@@ -42,7 +42,7 @@
                   <input type="submit" value="kosárba" onclick="ad('_keksz', zacsko.value)">
             </div>
             <h4><b>Keksz</b></h4> 
-            <p>300 Ft</p> 
+            <p>800 Ft</p> 
           </div>
         </div>
 
@@ -56,7 +56,7 @@
                   <input type="submit" value="kosárba" onclick="ad('_joreggelt', doboz.value)"> 
             </div>
             <h4><b>Jóreggelt szelet</b></h4> 
-            <p>500 Ft</p> 
+            <p>900 Ft</p> 
           </div>
         </div>
 
@@ -70,7 +70,7 @@
                   <input type="submit" value="kosárba" onclick="ad('_popcorn', dobozoszacsko.value)"> 
             </div>
             <h4><b>Popcorn</b></h4> 
-            <p>1000 Ft</p> 
+            <p>800 Ft</p> 
           </div>
         </div> 
       
@@ -84,7 +84,7 @@
                   <input type="submit" value="kosárba" onclick="ad('_negro', csomag.value)"> 
             </div>
             <h4><b>Negro</b></h4> 
-            <p>800 Ft</p> 
+            <p>600 Ft</p> 
           </div>
         </div>
 
@@ -98,7 +98,7 @@
                   <input type="submit" value="kosárba" onclick="ad('_rago', rago1.value)"> 
             </div>
             <h4><b>Rágó</b></h4> 
-            <p>250 Ft</p> 
+            <p>350 Ft</p> 
           </div>
         </div> 
 
@@ -112,7 +112,7 @@
                   <input type="submit" value="kosárba" onclick="ad('_chips', tálas.value)"> 
             </div>
             <h4><b>Chips</b></h4> 
-            <p>900 Ft</p> 
+            <p>600 Ft</p> 
           </div>
         </div>
       </div>
@@ -120,19 +120,21 @@
       <div class="right">
           <h2 class="ki">Heti kiemelt ajánlataink!</h2> 
       </div>
-      <div>
-      <footer class="footer">
-          <hr class="hr"> <br>
-          Készítő: Szabó Levente Balázs
-      </footer>
+
+      <div class="main">
+        <footer class="footer">
+            <hr> <br>
+            Készítő: Szabó Levente Balázs
+        </footer>
       </div>
+
        <script>
-        var _keksz = 300
-        var _joreggelt = 500
-        var _negro = 800
-        var _popcorn = 1000
-        var _rago = 250
-        var _chips = 900
+        var _keksz = 800
+        var _joreggelt = 900
+        var _popcorn = 800
+        var _negro = 600
+        var _rago = 350
+        var _chips = 600
         function ad(nev,ertek) {
             localStorage.setItem(nev,Number(ertek));
         } 

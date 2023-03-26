@@ -54,11 +54,11 @@ a:any-link {
 h1 {
     text-align: center;
     color: #ccc16b; 
-    background-color: rgb(130, 89, 2);
+    background-color: hsl(41, 97%, 26%);
 }
 
 h2 {
-    color: hsl(53, 49%, 61%);
+    color: #ccc16b;
 }
 
 .keszito {
@@ -71,11 +71,11 @@ h2 {
 }
 
 .footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
+    mask-position: 0%;
     width: 100%;
+    color: black;
     text-align: center;
+    margin-left: 270px;
 }
 
     @media only screen and (max-width: 620px) {
@@ -105,7 +105,7 @@ h2 {
     text-align: center;
     margin-right: 15px;
     margin-bottom: 15px;
-    background-color: rgb(205, 194, 107);
+    background-color: #cdc26b;
   }
   
   .card:hover {
@@ -134,9 +134,10 @@ h2 {
 }
 
 .hr {
-    width: 100%;
+    width: 200%;
     background-color: #825902;
     position: fixed;
+    text-align: center;
 }
 
 .hambi { 
@@ -145,4 +146,17 @@ h2 {
     height: 190px;
     width: 230px;
     margin-top: 15px;
+}
+
+.kosar {
+    margin-right: 3px;
+    margin-top: 3px;
+    width: 0.9em;
+    float: right;
+}
+
+.nyíl {
+    float: left;
+    margin-left: 3px;
+    margin-top: -2px;
 }
