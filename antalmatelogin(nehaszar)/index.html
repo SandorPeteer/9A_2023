@@ -7,6 +7,31 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>cso</h1>
+    <form action="javascript:void(0);">
+        <p id="nev1">hamburger</p>
+        <input type="number" name="" id="szam1">
+        <input type="button" value="Hozzáad" onclick="ad(1)">
+    </form>
+    <form action="javascript:void(0);">
+        <p id="nev32">hotdog</p>
+        <input type="number" name="" id="szam32">
+        <input type="button" value="Hozzáad" onclick="ad(32)">
+    </form>
+    <form action="javascript:void(0);">
+        <p id="nev34312">ize</p>
+        <input type="number" name="" id="szam34312">
+        <input type="button" value="Hozzáad" onclick="ad(34312)">
+    </form>
+
+    <a href="kosar.html">kosár</a>
+   
+    <script>
+        function ad(formIndex){
+            var szam = document.getElementById("szam"+formIndex);
+            var nev = document.getElementById("nev"+formIndex).innerHTML;
+
+            localStorage.setItem(nev, szam.value)
+        }
+    </script>
 </body>
 </html>
