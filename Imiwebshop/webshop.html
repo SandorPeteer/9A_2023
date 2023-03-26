@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Meleg étel</title>
+</head>
+
+<body>
+    <div class="card" id="melegszendvics">
+        <img src="img/melegszendvics.png" alt="melegszendvics" style="width:100%">
+        <h1>Melegszendvics</h1>
+        <p class="ar">500 Ft</p>
+        <input type="button" name="m" value="-" onclick="meleg_db.value = Number(meleg_db.value) - 1">
+        <input type="text" name="m" id="meleg_db" value="1">
+        <input type="button" name="m" value="+" onclick="meleg_db.value = Number(meleg_db.value) + 1">
+        <input type="submit" value="Kosárba" onclick="ad('meleg', meleg_db.value)">
+    </div>
+    <div class="card">
+        <img src="img/melegszendvics.png" alt="melegszendvics" style="width:100%">
+        <h1>Melegszendvics</h1>
+        <p class="ar">500 Ft</p>
+        <input type="button" name="m" value="-" onclick="meleg_db.value = Number(meleg_db.value) - 1">
+        <input type="text" name="m" id="meleg_db" value="1">
+        <input type="button" name="m" value="+" onclick="meleg_db.value = Number(meleg_db.value) + 1">
+        <input type="submit" value="Kosárba" onclick="ad('meleg', meleg_db.value)">
+    </div>
+
+    <script>
+        var meleg = 0
+        function ad(nev, ertek) { 
+            localStorage.setItem(nev, Number(ertek));
+            document.getElementById('meleg_db').value
+        }
+    </script>
+</body>
+
+</html>
