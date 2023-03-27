@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Rendelés</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body background="kek.png">
 
 
 
@@ -38,8 +38,9 @@
         <div class="card-body">
           <h5 class="card-title">Kandó burger</h5>
           <img src="burger.jpg" alt="burger" width="200px" height="200px">
-          <p class="card-text">Egy ízletes burger egyenesen a kemencéből</p>
+          <p class="card-text">2000 Ft</p>
           <input type="number" name="Rendelés" id="hamburger" >  <input type="button" name="Rendelés" id="hamburgerrend" value="Kosárba" onclick="rendelesb()">
+  
         </div>
       </div>
     
@@ -91,9 +92,9 @@
     <div class="col-sm-6">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title"></h5>
+          <h5 class="card-title">Kandó Kóla</h5>
           <p class="card-text"></p>
-          <input type="number" name="Rendelés" id="hamburger" >  <input type="button" name="Rendelés" id="hamburgerrend" value="Kosárba" onclick="rendelesb()">
+          <input type="number" name="Rendelés" id="kola" >  <input type="button" name="Rendelés" id="kolarend" value="Kosárba" onclick="rendelesk()">
         </div>
       </div>
     
@@ -208,6 +209,18 @@
       alert("szép")}
   }
 
+
+  function rendelesk(){
+    
+    var kola = document.getElementById("kola")
+    localStorage.setItem('kola', kola.value);
+    
+    alert("Hozzáadva a kosárhoz!")
+
+
+    if(kola.value == 69){
+      alert("szép")}
+  }
 
 
 
