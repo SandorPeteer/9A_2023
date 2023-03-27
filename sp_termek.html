@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hover</title>
+    <style>
+        .box {
+            padding: 10px;
+            background-color: #ccc;
+            color: rgb(182, 28, 28);
+            position: relative;
+            z-index: 1;
+        }
+
+        .image-container {
+            display: inline-block;
+            overflow: hidden;
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0.664);
+            transition: 0.3s ease-out;
+        }
+
+        .image-container:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.664);
+        }
+
+        .image-container img {
+            display: block;
+            transition: 0.3s ease-out;
+        }
+
+        .image-container:hover img {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="image-container">
+            <img src="https://sandorpeteer.github.io/kandobufe/img/pizza.png" alt="Your image">
+            <div class="box">1500Ft</div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
