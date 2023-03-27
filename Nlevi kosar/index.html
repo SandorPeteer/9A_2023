@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Büfé</title>
+    <link rel="stylesheet" href="kosar.css">
+  </head>
+  <body>
+<div id="cart">
+  <h2>Kosár</h2>
+  <ul id="cart-items"></ul>
+  <p id="cart-total">Összesen: 0 Ft</p>
+  <button id="checkout-button">Véglegesítés</button>
+</div>
+
+<div id="products">
+  <h2>Termékek</h2>
+  <ul>
+    <li>
+      <span>Kávé</span>
+      <img class="sutik" src="kávé.JPG" alt="">
+      <button class="add-to-cart" data-name="Kávé" data-price="500">Kosárba</button>
+      
+    </li>
+    <li>
+      <span>Süti</span>
+      <img class="sutik" src="süti.jpg" alt="">
+      <button class="add-to-cart" data-name="Süti" data-price="300">Kosárba</button>
+      
+    </li>
+    <li>
+      <span>Szendvics</span>
+      <img class="sutik" src="szendvics.jpg" alt="">
+      <button class="add-to-cart" data-name="Szendvics" data-price="1000">Kosárba</button>
+      
+    </li>
+  </ul>
+</div>
+
+      
+    <script>
+const cart = {
+  items: [],
+  total: 0,
+  add(item) {
+    this.items.push(item);
+    this.total += item.price;
+  },
+  remove(index) {
+    const item = this.items[index];
+    this.items.splice(index, 1);
+    this.total -= item.price;
+  },
+  display() {
+    const cartItems = document.querySelector("#cart-items");
+    const cartTotal = document.querySelector("#cart-total");
+    cartItems.innerHTML = "";
+    this.items.forEach((item, index) => {
+      const li = document.createElement("li");
+      li.textContent = `${item.name} (${item.price} Ft)`;
+      const removeButton = document.createElement("button");
+      removeButton.classList.add("remove-from-cart");
+      removeButton.dataset.index = index;
+      removeButton.textContent = "Törlés";
+      li.appendChild(removeButton);
+      cartItems.appendChild(li);
+    });
+    cartTotal.textContent = `Összesen: ${this.total} Ft`;
+  },
+  clear() {
+    this.items = [];
+    this.total = 0;
+  }
+};
+
+const products = document.querySelectorAll(".add-to-cart");
+products.forEach(product => {
+  product.addEventListener("click", event => {
+    const name = event.target.dataset.name;
+    const price = Number(event.target.dataset.price);
+    const item = { name, price };
+    cart.add(item);
+    cart.display();
+  });
+});
+
+const cartItems = document.querySelector("#cart-items");
+cartItems.addEventListener("click", event => {
+  if (event.target.classList.contains("remove-from-cart")) {
+    const index = Number(event.target.dataset.index);
+    cart.remove(index);
+    cart.display();
+  }
+});
+
+const checkoutButton = document.querySelector("#checkout-button");
+checkoutButton.addEventListener("click", event => {
+  cart.clear();
+  cart.display();
+  alert("Sikeres vásárlás!");
+});
+
+
+
+
+    </script>
+  </body>
+</html>

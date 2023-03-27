@@ -1,0 +1,53 @@
+/* Kosár */
+#cart {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+#cart h2 {
+  margin-top: 0;
+}
+#cart ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#cart li {
+  margin-bottom: 5px;
+}
+#cart button {
+  display: block;
+  margin-top: 5px;
+}
+#cart #cart-total {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Termékek */
+#products ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#products li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+#products button {
+  padding: 5px;
+  background-color: #4caf50;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+.sutik {
+  width: 200px;
+  height: 150px;
+  border: 3px solid black;
+  transition: 2s;
+  margin: 20px;
+  border-radius: 10%;
+}
