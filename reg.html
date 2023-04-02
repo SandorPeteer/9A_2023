@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Bejelentkezés</title>
+    <style>
+        body {
+            min-height: 100vh;
+        }
+        .gradient-custom {
+           
+            background: linear-gradient(rgba(0, 0, 0, 0.20), rgba(0, 0, 0, 0.20)), url(img/loginhatter.jpg) no-repeat;
+            background-size:100vw 200vh;;
+        }
+
+    </style>
+</head>
+
+<body>
+    <section class="vh-100 gradient-custom">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                    <div class="card  text-white" style="border-radius: 1rem; border-color: white; background: linear-gradient(rgba(255, 255, 255, 0.658), rgba(0, 0, 0, 0.452));" >
+                        <div class="card-body p-5 text-center">
+
+                            <div class="mb-md-5 mt-md-4 pb-0">
+
+                                <h1 class="fw-bold mb-4 text-uppercase">Kandó büfé</h1>
+                            <form action="javascript:void(0);"> 
+                                <div class="form-outline form-white mt-4">
+                                    <input type="text" placeholder="Vezetéknév" required  id="vezeteknev" class="form-control form-control-lg fw-bold " style="margin-top: 60px;" />
+                                </div>
+
+                                <div class="form-outline form-white mt-4">
+                                    <input type="text" placeholder="Keresztnév" required id="keresztnev" class="form-control form-control-lg fw-bold" style="margin-top: 40px;" />  
+                                </div>
+
+                                <div class="form-outline form-white mt-4">
+                                    <input type="email" placeholder="E-mail" required id="email" class="form-control form-control-lg fw-bold " style="margin-top: 40px;" />
+                                </div>
+
+
+                                <div class="form-outline form-white mt-4">
+                                    <input type="password" placeholder="Jelszó" required id="jelszo" class="form-control form-control-lg fw-bold " style="margin-top: 40px;"/>
+                                </div>
+
+                                <div class="form-outline form-white mt-4">
+                                    <input type="password" placeholder="Jelszó megerősítése" required id="jelszo2" class="form-control form-control-lg fw-bold " style="margin-top: 40px;"/>
+                                </div>
+
+                        
+                                <input type="submit" value="Regisztráció" class="btn btn-outline-light btn-lg px-5" style="margin-top: 50px;" type="submit" onclick="reg()">
+                            </form>
+
+                        
+                            </div>
+
+                            
+                            <div>
+                                <p class="mb-1">Már jártál nálunk? <a href="index.html" class="text-white-50 fw-bold">Jelentkezz be!</a></p>
+                            </div>
+
+                           
+                            <div class="alert alert-danger alert-dismissible fade show" role="alert" id="jalert" style="display:none;">
+                              <strong>A jelszó nem egyezik meg! Próbálja újra.</strong>
+                              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                            
+                            <div class="alert alert-danger alert-dismissible fade show" role="alert" id="ealert" style="display:none;">
+                              <strong>Töltse ki a mezőket!</strong>
+                              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+
+                            <div class="alert alert-success alert-dismissible fade show" role="alert" id="salert" style="display:none;">
+                              <strong>Sikeres Regisztráció!</strong>
+                              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                            <div  style="display: flex; justify-content: center; ">
+                              <div id="spinner" style="display:none;" class="spinner-grow text-success"></div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function reg() {
+          var fname = document.getElementById('vezeteknev');
+          var lname = document.getElementById('keresztnev');
+          var email = document.getElementById('email');
+          var pw1 = document.getElementById('jelszo');
+          var pw2 = document.getElementById('jelszo2'); 
+
+          var sikerAlert=document.getElementById("salert");
+          var jelszoAlert = document.getElementById("jalert");
+          var spinner=document.getElementById("spinner");
+          var emailAlert = document.getElementById("ealert");
+  
+  
+  
+          localStorage.setItem('vezeteknev', vezeteknev.value);
+          localStorage.setItem('keresztnev', keresztnev.value);
+          localStorage.setItem('email', email.value);
+          localStorage.setItem('jelszo', jelszo.value);
+          localStorage.setItem('jelszo2', jelszo2.value);
+  
+          if( jelszo.value !== jelszo2.value) {
+          jelszoAlert.style.display = "block";
+          jelszoAlert.innerHTML = "<strong>A jelszó nem egyezik meg! Próbálja újra.</strong>";
+          setTimeout(function(){
+          jelszoAlert.style.display = "none";
+              }, 5000);
+          }
+
+          else if (vezeteknev.value.length==0 || keresztnev.value.length == 0 || email.value.length == 0 || jelszo.value.length == 0 || jelszo2.value.length == 0){
+          emailAlert.style.display = "block";
+          emailAlert.innerHTML = "<strong>Töltse ki a mezőket!</strong>";
+          setTimeout(function(){
+              emailAlert.style.display = "none";
+           }, 5000);
+        }
+
+
+         else {
+        localStorage.setItem('fname', vezeteknev.value);
+        localStorage.setItem('lname', keresztnev.value);
+        sikerAlert.style.display = "block";
+        sikerAlert.innerHTML = "<strong> Sikeres regisztráció!</strong>";
+        spinner.style.display="block";
+        setTimeout(function(){
+        sikerAlert.style.display = "none";
+        spinner.style.display="none";
+        window.location.href='index.html'
+            }, 3000);
+        }
+
+      }
+      </script>
+</body>
+</html>
