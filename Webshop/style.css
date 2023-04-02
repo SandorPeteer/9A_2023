@@ -117,8 +117,8 @@ p {
   float: left;
   margin: 0%;
   text-align: center;
-  margin-right: 25px;
-  margin-bottom: 50px;
+  margin-right: 10%;
+  margin-bottom: 10%;
   background-color:white;
 }
 .container {
@@ -131,20 +131,15 @@ p {
   transition: 1s;
   transform: scale(1.1)
 }
-
-.container {
-  padding: 20px;
-  text-align: center;
-}
 .kep{
-  height: 215px;
-  width: 254px;
+  height: 15vh;
+  width: 13.3vw;
 }
 .button{
   width: 25px;
 }
 #img{
-  width: 200px;
-  height: 600px;
+  width: 200vw;
+  height: 600vh;
   float: auto;
 }
