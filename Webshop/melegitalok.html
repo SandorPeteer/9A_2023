@@ -288,35 +288,112 @@
       </div>
     </div>
     <br><br><br><br>
-    <div class="card">
-      <img src="img/A_small_cup_of_coffee.JPG" alt="kávé" class="kep">
-      <div class="container">
-        <div> 
-              <input type="text" name="t" id="tálas"> <br> <br>
-              <input class="button" type="button" name="t" value="-" onclick="tálas.value=Number(tálas.value) - 1">
-              <input class="button" type="button"  value="+" value="h" onclick="tálas.value=Number(tálas.value) + 1"> <br>
-              <input type="submit" value="kosárba" onclick="ad('_kave', tálas.value)"> 
+
+    <div>
+      <div class="polaroid">
+          <img src="img/A_small_cup_of_coffee.JPG" width="235px" alt="kave" data-bs-toggle="modal"
+              data-bs-target="#myModal">
+          <div class="container">
+              <p>Kávé</p>
+          </div>
+      </div>
+  </div>
+
+  <!-- The Modal -->
+  <div class="modal" id="myModal">
+      <div class="modal-dialog">
+          <div class="modal-content">
+
+              <!-- Modal Header -->
+              <div class="modal-header">
+                  <h4 class="modal-title">Kávé</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+
+              <!-- Modal body -->
+              <div class="modal-body">
+                  <div class="center">
+                      <img src="img/A_small_cup_of_coffee.JPG" alt="kave" width="255px" class="modal-title">
+                      <br><br>
+                      <div class="boxbar">
+                          <label> <input type="radio" name="Tej"> Tej </label>
+                          <label> <input type="radio" name="Cukor"> Cukor </label>
+                      </div>
+                      <div>
+                          <br>
+                          <h4>Darab:</h4>
+                          <input type="button" name="kave" value="-" class="pluszminuszcit" onclick="dbkave.value = Number(dbkave.value) - 1">
+                          <input type="text" name="kave" class="textareacit" id="dbkave" value="0">
+                          <input type="button" name="kave" class="pluszminuszcit" value="+" onclick="dbkave.value = Number(dbkave.value) + 1">
+                          <br>
+                          <input type="submit" value="Kosárba" class="pluszminuszbar" onclick="ad('_kave', dbkave.value)">
+                          <br><br>
+                          <p>Ár: <span id="kavear">0Ft</span></p>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Bezár</button>
+              </div>
+
+          </div>
+      </div>
+  </div>
+
+  <div>
+    <div class="polaroid">
+        <img src="img/Cappuccino_at_Sightglass_Coffee.jpg" width="235px" alt="cappocino" data-bs-toggle="modal"
+            data-bs-target="#myModal">
+        <div class="container">
+            <p>Kávé</p>
         </div>
-        <h4><b>Kávé</b></h4> 
-        <p>600 Ft</p> 
-      </div>
     </div>
-  </div>
-  <div class="card">
-    <img src="img/Cappuccino_at_Sightglass_Coffee.jpg" alt="cappuccino" class="kep">
-    <div class="container">
-      <div> 
-            <input type="text" name="t" id="kálás"> <br> <br>
-            <input class="button" type="button" name="t" value="-" onclick="kálás.value=Number(kálás.value) - 1">
-            <input class="button" type="button"  value="+" value="h" onclick="kálás.value=Number(kálás.value) + 1"> <br>
-            <input type="submit" value="kosárba" onclick="ad('_cappuccino', kálás.value)"> 
-      </div>
-      <h4><b>Cappuccino</b></h4> 
-      <p>500 Ft</p> 
-    </div>
-  </div>
 </div>
 
+<!-- The Modal -->
+<div class="modal" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Cappocino</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="center">
+                    <img src="img/Cappuccino_at_Sightglass_Coffee.jpg" alt="cappocino" width="255px" class="modal-title">
+                    <br><br>
+                    <div class="boxbar">
+                        <label> <input type="radio" name="Tej"> Tej </label>
+                        <label> <input type="radio" name="Cukor"> Cukor </label>
+                    </div>
+                    <div>
+                        <br>
+                        <h4>Darab:</h4>
+                        <input type="button" name="cappocino" value="-" class="pluszminuszcit" onclick="dbcapp.value = Number(dbcapp.value) - 1">
+                        <input type="text" name="cappocino" class="textareacit" id="dbcapp" value="0">
+                        <input type="button" name="cappocino class="pluszminuszcit" value="+" onclick="dbcapp.value = Number(dbcapp.value) + 1">
+                        <br>
+                        <input type="submit" value="Kosárba" class="pluszminuszbar" onclick="ad('_kave', dbcapp.value)">
+                        <br><br>
+                        <p>Ár: <span id="cappar">0Ft</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Bezár</button>
+            </div>
+
+        </div>
+    </div>
+</div>
 
 <div class="card">
   <img src="img/lead_L_121298_forro-csoki02.jpg" alt="forrócsoki" class="kep">
