@@ -105,7 +105,7 @@
         <form class="d-flex w-50">
           <div class="input-group">
             <input class="form-control border-end-0 border rounded-pill" type="search" placeholder="Kereső"
-              id="example-search-input">
+              id="search-input">
             <span class="input-group-append">
               <button class="btn btn-outline-secondary bg-white border-bottom-0 border rounded-pill ms-n5"
                 type="button">
@@ -485,6 +485,26 @@
 
 
   </div>
+
+  <script>
+    // Termék keresés
+    var searchInput = document.querySelector('#search-input');
+    var productCards = document.querySelectorAll('.card');
+
+    searchInput.addEventListener('input', function () {
+      var searchTerm = searchInput.value.trim().toLowerCase();
+      productCards.forEach(function (card) {
+        var title = card.querySelector('.card-title1').textContent.trim().toLowerCase();
+        var description = card.querySelector('.card-text').textContent.trim().toLowerCase();
+        if (title.indexOf(searchTerm) !== -1 || description.indexOf(searchTerm) !== -1) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }); 0
+  </script>
+
 </body>
 
 </html>
