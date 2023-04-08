@@ -63,6 +63,20 @@
             color: black;
             transition: 0.3s;
         }
+
+        .card:hover {
+            box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+            -moz-box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+            -webkit-box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+            -o-box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+            transition: 0.3s;
+            transform: scale(1.05);  
+        }
+
+        .img:hover {
+            transition: 0.3s;
+            transform: scale(1.05); 
+        }
     </style>
 
 </head>
@@ -122,28 +136,142 @@
     <h2 class="text-center" style="color: white; margin-top: 2%;">Egyebek</h2>
     <div class="container-fluid mt-5 mb-3 fo" style=" max-width: 85%; max-height: 70%;">
         <div class="row">
-            <div class="col-sm-4 d-flex justify-content-center align-items-end mb-5">
+            <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center align-items-end mb-5">
                 <section class="mx-auto my-5" style="max-width: 23rem;">
-      
                     <div class="card">
                       <div class="bg-image hover-overlay ripple">
-                        <img src="img/szalveta.jpg" class="img-fluid" style="border-radius: 15%;"/>
+                        <img src="img/szalveta.jpg" class="img-fluid">
                         <a href="#!">
                           <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
                         </a>
                       </div>
-                      <div class="card-body">
+                      <div class="card-body" id="igazito">
                         <h5 class="card-title font-weight-bold"><a>Csomagos szalvéta</a></h5>
                         <p class="mb-2 raktar">Raktáron</p>
                         <p class="card-text">
                          Mindenféle színben, mintázatban elérhető, jó minőségű papírszalvéta.
                         </p>
                         <hr class="my-4" />
-                        <p class="lead"><strong>710Ft</strong></p>
-                        <input type="submit" class="btn link-secondary  kosargomb" value="Kosárba">
+                        <p class="lead"><strong>710Ft/csomag</strong></p>
+                        <input type="number" class="btn link-secondary kosargomb" placeholder="db" id="szalveta">
+                        <input type="submit" class="btn link-secondary  kosargomb" value="Kosárba" onclick="ad('_szalveta', szalveta.value)">
                       </div>
                     </div>
-                    
+                  </section>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center align-items-end mb-5">
+                <section class="mx-auto my-5" style="max-width: 23rem;">
+                    <div class="card" style="width: 370px;">
+                      <div class="bg-image hover-overlay ripple">
+                        <img src="img/egyeb/alufolia.jpg">
+                        <a href="#!">
+                          <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                        </a>
+                      </div>
+                      <div class="card-body" id="igazito">
+                        <h5 class="card-title font-weight-bold"><a>Alufólia</a></h5>
+                        <p class="mb-2 raktar">Raktáron</p>
+                        <p class="card-text">
+                         Ha marad ennivalód és később szeretnéd elfogyasztani akkor elcsomagolhatod.
+                        </p>
+                        <hr class="my-4" />
+                        <p class="lead"><strong>400Ft/csomagolás</strong></p>
+                        <input type="number" class="btn link-secondary kosargomb" placeholder="db" id="alu">
+                        <input type="submit" class="btn link-secondary  kosargomb" value="Kosárba" onclick="ad('_alu', alu.value)">
+                      </div>
+                    </div>
+                  </section>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center align-items-end mb-5">
+                <section class="mx-auto my-5" style="max-width: 23rem;">
+                    <div class="card" style="width: 370px;">
+                      <div class="bg-image hover-overlay ripple">
+                        <img src="img/egyeb/evoeszkoz2.jpg" class="img-fluid" style="border-radius: 15%; margin-top: 62px; margin-left: 45px; margin-bottom: 55px;"/>
+                        <a href="#!">
+                          <div class="mask" style="background-color: rgba(251, 251, 251, 0.15); padding-top:23px;"></div>
+                        </a>
+                      </div>
+                      <div class="card-body" id="igazito">
+                        <h5 class="card-title font-weight-bold"><a>Műanyag evőeszközök</a></h5>
+                        <p class="mb-2 raktar">Raktáron</p>
+                        <p class="card-text">
+                         Hogy el tudd fogyasztani az ebédedet.
+                        </p>
+                        <hr class="my-4" />
+                        <p class="lead"><strong>800Ft/készlet(kanál, kés, villa)</strong></p>
+                        <input type="number" class="btn link-secondary kosargomb" placeholder="db" id="evo">
+                        <input type="submit" class="btn link-secondary  kosargomb" value="Kosárba" onclick="ad('_evo', evo.value)">
+                      </div>
+                    </div>
+                  </section>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center align-items-end mb-5">
+                <section class="mx-auto my-5" style="max-width: 23rem;">
+                    <div class="card" style="height: 655px; width: 370px;">
+                      <div class="bg-image hover-overlay ripple negyzet">
+                        <img src="img/egyeb/micro.jpg" class="img-fluid" style="border-radius: 15%; width: 100%;"/>
+                        <a href="#!">
+                          <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                        </a>
+                      </div>
+                      <div class="card-body" id="igazito">
+                        <h5 class="card-title font-weight-bold"><a>Melegítés</a></h5>
+                        <p class="mb-2 raktar">Raktáron</p>
+                        <p class="card-text">
+                         Ha hideg lenne ételed.
+                        </p>
+                        <hr class="my-4" />
+                        <p class="lead"><strong>200Ft/melegítés</strong></p>
+                        <input type="number" class="btn link-secondary kosargomb" placeholder="db" id="micro">
+                        <input type="submit" class="btn link-secondary  kosargomb" value="Kosárba" onclick="ad('_micro', micro.value)">
+                      </div>
+                    </div>
+                  </section>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center align-items-end mb-5">
+                <section class="mx-auto my-5" style="max-width: 23rem;">
+                    <div class="card" style="width: 370px;">
+                      <div class="bg-image hover-overlay ripple" style="padding-top:10px;"> 
+                        <img src="img/egyeb/szivo.webp" class="img-fluid" style="border-radius: 15%;"/>
+                        <a href="#!">
+                          <div class="mask" style="background-color: rgba(251, 251, 251, 0.15); padding-top:24px;"></div>
+                        </a>
+                      </div>
+                      <div class="card-body" id="igazito">
+                        <h5 class="card-title font-weight-bold"><a>Szívószál</a></h5>
+                        <p class="mb-2 raktar">Raktáron</p>
+                        <p class="card-text">
+                         Mindenféle színben, műanyag szívószál.
+                        </p>
+                        <hr class="my-4" />
+                        <p class="lead"><strong>100Ft/db</strong></p>
+                        <input type="number" class="btn link-secondary kosargomb" placeholder="db" id="szivo">
+                        <input type="submit" class="btn link-secondary  kosargomb" value="Kosárba" onclick="ad('_szivo', szivo.value)">
+                      </div>
+                    </div>
+                  </section>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center align-items-end mb-5">
+                <section class="mx-auto my-5" style="max-width: 23rem;">
+                    <div class="card" style="width: 370px;">
+                      <div class="bg-image hover-overlay ripple">
+                        <img src="img/egyeb/zsepi2.jpg" class="img-fluid" style="border-radius: 15%; padding-top: 33px;"/>
+                        <a href="#!">
+                          <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                        </a>
+                      </div>
+                      <div class="card-body" id="igazito">
+                        <h5 class="card-title font-weight-bold"><a>Zsebkendő</a></h5>
+                        <p class="mb-2 raktar">Raktáron</p>
+                        <p class="card-text">
+                         10db-os zsebkendő.
+                        </p>
+                        <hr class="my-4" />
+                        <p class="lead"><strong>200Ft/csomag(10db)</strong></p>
+                        <input type="number" class="btn link-secondary kosargomb" placeholder="db" id="zsepi">
+                        <input type="submit" class="btn link-secondary  kosargomb" value="Kosárba" onclick="ad('_zsepi', zsepi.value)">
+                      </div>
+                    </div>
                   </section>
             </div>
         </div>
@@ -236,6 +364,18 @@
 
 
         </div>
+
+        <script>
+            var _szalveta = 710
+            var _alu = 400
+            var _evo = 800
+            var _micro = 200
+            var _szivo = 100
+            var _zsepi = 200
+            function ad(nev,ertek) {
+                localStorage.setItem(nev,Number(ertek));
+            }
+        </script>
 </body>
 
 </html>
