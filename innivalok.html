@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Innivaló picker</title>
+    <title>Innivalók</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <style>
+        @import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap);
         * {
             margin: 0;
             padding: 0;
@@ -39,13 +40,18 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.664);
         }
 
+        .container{
+            margin: auto;
+        }
+
+
         .image-container img {
             display: block;
             transition: 0.3s ease-out;
-            max-width: 40vh;
-            min-width: 40vh;
-            max-height: 20vh;
-            min-height: 20vh;
+            max-width: 30vh;
+            min-width: 30vh;
+            max-height: 15vh;
+            min-height: 15vh;
             object-fit: cover;
         }
 
@@ -134,6 +140,172 @@
             font-family: "Playfair Display";
             letter-spacing: 5px;
         }
+        a {
+            text-decoration: none;
+        }
+
+        .food-card {
+            background: #fff;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            -webkit-box-shadow: 0 2px 10px rgba(150, 0, 0, 0.431);
+            box-shadow: 0 2px 10px rgba(150, 0, 0, 0.432);
+            -webkit-transition: 0.1s;
+            transition: 0.1s;
+        }
+
+        .food-card:hover {
+            -webkit-box-shadow: 0 5px 20px rgba(210, 197, 197, 0.35);
+            box-shadow: 0 5px 20px rgba(216, 209, 209, 0.35);
+        }
+
+        .food-card .food-card_img {
+            display: block;
+            position: relative;
+        }
+
+        .food-card .food-card_img img {
+            width: 100%;
+            height: 300px;
+            -o-object-fit: cover;
+            object-fit: cover;
+        }
+
+        .food-card .food-card_img i {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: #fff;
+            font-size: 25px;
+            -webkit-transition: all 0.1s;
+            transition: all 0.1s;
+        }
+
+        .food-card .food-card_img i:hover {
+            top: 18px;
+            right: 28px;
+            font-size: 29px;
+        }
+
+        .food-card .food-card_content {
+            padding: 15px;
+        }
+
+        .food-card .food-card_content .food-card_title-section {
+            height: 100px;
+            overflow: hidden;
+        }
+
+        .food-card .food-card_content .food-card_title-section .food-card_title {
+            font-size: 24px;
+            color: #333;
+            font-weight: 500;
+            display: block;
+            line-height: 1.3;
+            margin-bottom: 8px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .food-card .food-card_content .food-card_title-section .food-card_author {
+            font-size: 15px;
+            display: block;
+        }
+
+        .food-card .food-card_content .food-card_bottom-section .space-between {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            min-height: 100%;
+        }
+
+        .food-card .food-card_content .food-card_bottom-section .food-card_subscribers {
+            margin-left: 17px;
+        }
+
+        .food-card .food-card_content .food-card_bottom-section .food-card_subscribers img,
+        .food-card .food-card_content .food-card_bottom-section .food-card_subscribers .food-card_subscribers-count {
+            height: 45px;
+            width: 45px;
+            border-radius: 45px;
+            border: 3px solid #fff;
+            margin-left: -17px;
+            float: left;
+            background: #f5f5f5;
+        }
+
+        .food-card .food-card_content .food-card_bottom-section .food-card_subscribers .food-card_subscribers-count {
+            position: relative;
+        }
+
+        .food-card .food-card_content .food-card_bottom-section .food-card_subscribers .food-card_subscribers-count span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            font-size: 13px;
+        }
+
+        .food-card .food-card_content .food-card_bottom-section .food-card_price {
+            font-size: 28px;
+            font-weight: 500;
+            color: #F47A00;
+        }
+
+        .food-card .food-card_content .food-card_bottom-section .food-card_order-count {
+            width: 130px;
+        }
+
+        .food-card .food-card_content .food-card_bottom-section .food-card_order-count input {
+            background: #f5f5f5;
+            border-color: #f5f5f551;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            text-align: center;
+        }
+
+        .food-card .food-card_content .food-card_bottom-section .food-card_order-count button {
+            border-color: #f5f5f5;
+            border-width: 3px;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+
+        .add-bin {
+            background-color: peachpuff;
+        }
+
+        .valami{
+            border-radius: 25px;
+            border: 2px solid #000000;
+            padding: 5px;
+        }
+
+        @media (min-width: 992px) {
+            .food-card--vertical {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                position: relative;
+                height: 235px;
+            }
+
+            .food-card--vertical .food-card_img img {
+                width: 200px;
+                height: 100%;
+                -o-object-fit: cover;
+                object-fit: cover;
+            }
+        }
+
     </style>
 </head>
 
@@ -149,10 +321,10 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav me-auto mb-2 mb-md-0">
                     <li class="nav-item">
-                        <a class="nav-link"  href="index.html">Főoldal</a>
+                        <a class="nav-link"  href="https://sandorpeteer.github.io/9A_2023_BUFE_SHOP/menu.html">Főoldal</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="innivalok.html">Innivalók</a>
+                        <a class="nav-link active" aria-current="page" href="https://sandorpeteer.github.io/9A_2023_BUFE_SHOP/innivalok.html">Innivalók</a>
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
@@ -184,8 +356,105 @@
             <div style="background-color: #88FF00;  color: black;" class="box text-center">Egyebek</div>
         </div>
 
+
+
+
+
+        <div class="row">
+
+            <div class="col-sm-6 col-md-6 col-lg-6">
+                <div class="food-card food-card--vertical">
+                    <div class="food-card_img">
+                        <img src="https://sandorpeteer.github.io/9A_2023_BUFE_SHOP/bendewebshop/img/citromxixo.jpg" alt="">
+                        <a href="#!"><i class="fa-solid fa-heart"></i></a>
+                    </div>
+                    <div class="food-card_content">
+                        <div class="food-card_title-section">
+                            <a href="#!" class="food-card_title">Xixo</a>
+                            <a href="#!" class="food-card_author">Hamburger</a>
+                        </div>
+                        <div class="food-card_bottom-section">
+                            <div class="space-between">
+                                <div class="valami">
+                                    <input type="radio" name="xixo">Barackos
+                                </div>
+                                <div class="valami">
+                                    <input type="radio" name="xixo">Zöld teás
+                                </div>
+                                <div class="valami">
+                                    <input type="radio" name="xixo">Ribizlis
+                                </div>
+                                <div class="valami">
+                                    <input type="radio" name="xixo">Citromos 
+                                </div>
+                                <div class="valami">
+                                    <input type="radio" name="xixo">Epres
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="space-between">
+                                <div class="food-card_price">
+                                    <span class="ar_xixo">...</span>
+                                </div>
+                                <div class="food-card_order-count">
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <button class="btn btn-outline-secondary minus-btn" type="button"
+                                                id="button-addon1"
+                                                onclick="xixo.value = Number(xixo.value) - 1; ad('xixo',xixo.value)"><i
+                                                    class="fa fa-minus"></i></button>
+                                        </div>
+                                        <input type="text" id="xixo" class="form-control input-manulator"
+                                            placeholder="" aria-label="darab" aria-describedby="button-addon1"
+                                            value="1">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-outline-secondary add-btn" type="button"
+                                                id="button-addon1"
+                                                onclick="xixo.value = Number(xixo.value) + 1; ad('xixo',xixo.value)"><i
+                                                    class="fa fa-plus"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food-card-button">
+                                    <input type="submit" class="add-bin" value="KÉREM"
+                                        onclick="ad('xixo',xixo.value)" data-bs-toggle="modal"
+                                        data-bs-target="#e1">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
     </main>
 
-</body>
+    <script>
+        var _xixo = 300
 
+        function ar_update() {
+            
+
+            if (localStorage.getItem('xixo') != null) {
+                const collection = document.getElementsByClassName("ar_xixo");
+                collection[0].innerHTML = _xixo * Number(localStorage.getItem('xixo')) + "HUF";
+                collection[1].innerHTML = _xixo * Number(localStorage.getItem('xixo')) + "HUF";
+                collection[0].style.color = "#F47A00";
+                document.getElementById('xixo').value = localStorage.getItem('xixo');
+                document.getElementById('kosarban').innerHTML = Number(localStorage.getItem('pizza1')) + Number(localStorage.getItem('xixo'));
+            } else {
+                const collection = document.getElementsByClassName("ar_xixo");
+                collection[0].innerHTML = _xixo + "HUF";
+                collection[1].innerHTML = _xixo + "HUF";
+                collection[0].style.color = "grey";
+            }
+        }
+    </script>
+</body>
 </html>
