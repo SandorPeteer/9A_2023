@@ -12,10 +12,10 @@
     <script src="script.js"></script>
 
     <style>
-
         body {
             background: linear-gradient(#528791, #3c195e);
         }
+
         .nav2 {
             background: radial-gradient(#190a22, #05042e, #141414);
         }
@@ -51,16 +51,16 @@
             color: green;
         }
 
-        .kosargomb {
+        .kosar {
             border-color: #1c2331;
-            background-color: #6f5fca49;
-            color: black;
+            background-color: #ffffff38;
+            color: rgb(255, 255, 255);
             font-weight: bold;
         }
 
-        .kosargomb:hover {
+        .kosar:hover {
             border-color: #1c233148;
-            color: black;
+            color: rgb(255, 255, 255);
             transition: 0.3s;
         }
 
@@ -70,12 +70,12 @@
             -webkit-box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
             -o-box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
             transition: 0.3s;
-            transform: scale(1.05);  
+            transform: scale(1.03);
         }
 
         .img:hover {
             transition: 0.3s;
-            transform: scale(1.05); 
+            transform: scale(1.05);
         }
     </style>
 
@@ -139,243 +139,290 @@
             <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center align-items-end mb-5">
                 <section class="mx-auto my-5" style="max-width: 23rem;">
                     <div class="card">
-                      <div class="bg-image hover-overlay ripple">
-                        <img src="img/egyeb/szalveta.jpg" class="img-fluid">
-                        <a href="#!">
-                          <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                        </a>
-                      </div>
-                      <div class="card-body" id="igazito">
-                        <h5 class="card-title font-weight-bold"><a>Csomagos szalvéta</a></h5>
-                        <p class="mb-2 raktar">Raktáron</p>
-                        <p class="card-text">
-                         Mindenféle színben, mintázatban elérhető, jó minőségű papírszalvéta.
-                        </p>
-                        <hr class="my-4" />
-                        <p class="lead"><strong>700Ft/csomag</strong></p>
-                        <input type="number" class="btn link-secondary kosargomb" placeholder="db" id="szalveta">
-                        <input type="submit" class="btn link-secondary  kosargomb" value="Kosárba" onclick="ad('_szalveta', szalveta.value)">
-                      </div>
+                        <div class="bg-image hover-overlay ripple">
+                            <img src="img/egyeb/szalveta.jpg" class="img-fluid">
+                            <a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                            </a>
+                        </div>
+                        <div class="card-body" id="igazito">
+                            <h5 class="card-title font-weight-bold"><a>Csomagos szalvéta</a></h5>
+                            <p class="mb-2 raktar">Raktáron</p>
+                            <p class="card-text">
+                                Mindenféle színben, mintázatban elérhető, jó minőségű papírszalvéta.
+                            </p>
+                            <hr class="my-4" />
+                            <div class="d-flex justify-content-between align-items-center">
+                                <p class="lead"><strong>700Ft/csomag</strong></p>
+                                <div class="d-flex align-items-center">
+                                    <input type="number" class="btn link-secondary mr-2 mb-2" placeholder="db"
+                                        id="szalveta">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <input type="submit" class="btn link-secondary mt-2 kosar" value="Kosárba"
+                                    name="Kosárba" onclick="ad('_szalveta', szalveta.value)">
+                            </div>
+                        </div>
                     </div>
-                  </section>
+                </section>
             </div>
             <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center align-items-end mb-5">
                 <section class="mx-auto my-5" style="max-width: 23rem;">
                     <div class="card">
-                      <div class="bg-image hover-overlay ripple">
-                        <img src="img/egyeb/alufolia.jpg" class="img-fluid">
-                        <a href="#!">
-                          <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                        </a>
-                      </div>
-                      <div class="card-body" id="igazito">
-                        <h5 class="card-title font-weight-bold"><a>Alufólia</a></h5>
-                        <p class="mb-2 raktar">Raktáron</p>
-                        <p class="card-text">
-                         Csomagold el nem elfogyasztott ételed, mint hogy galacsint gyúrsz belőle.
-                        </p>
-                        <hr class="my-4" />
-                        <p class="lead"><strong>200Ft/csomagolás</strong></p>
-                        <input type="number" class="btn link-secondary kosargomb" placeholder="db" id="alu">
-                        <input type="submit" class="btn link-secondary  kosargomb" value="Kosárba" onclick="ad('_alu', alu.value)">
-                      </div>
+                        <div class="bg-image hover-overlay ripple">
+                            <img src="img/egyeb/alufolia.jpg" class="img-fluid">
+                            <a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                            </a>
+                        </div>
+                        <div class="card-body" id="igazito">
+                            <h5 class="card-title font-weight-bold"><a>Alufólia</a></h5>
+                            <p class="mb-2 raktar">Raktáron</p>
+                            <p class="card-text">
+                                Csomagold el nem elfogyasztott ételed, mint hogy galacsint gyúrsz belőle.
+                            </p>
+                            <hr class="my-4" />
+                            <div class="d-flex justify-content-between align-items-center">
+                                <p class="lead"><strong>200Ft/csomagolás</strong></p>
+                                <div class="d-flex align-items-center">
+                                    <input type="number" class="btn link-secondary mr-2 mb-2" placeholder="db"
+                                        placeholder="db" id="alu">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <input type="submit" class="btn link-secondary mt-2 kosar" value="Kosárba"
+                                    onclick="ad('_alu', alu.value)">
+                            </div>
+                        </div>
                     </div>
-                  </section>
+                </section>
             </div>
             <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center align-items-end mb-5">
                 <section class="mx-auto my-5" style="max-width: 23rem;">
                     <div class="card">
-                      <div class="bg-image hover-overlay ripple">
-                        <img src="img/egyeb/evoeszkoz3.jpg" class="img-fluid">
-                        <a href="#!">
-                          <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                        </a>
-                      </div>
-                      <div class="card-body" id="igazito">
-                        <h5 class="card-title font-weight-bold"><a>Fa evőeszköz</a></h5>
-                        <p class="mb-2 raktar">Raktáron</p>
-                        <p class="card-text">
-                         Fogyaszd ebéded jó minőségű fa evőeszközzel. (villa, kés, kanál)  
-                        </p>
-                        <hr class="my-4" />
-                        <p class="lead"><strong>600Ft/csomag</strong></p>
-                        <input type="number" class="btn link-secondary kosargomb" placeholder="db" id="evo">
-                        <input type="submit" class="btn link-secondary  kosargomb" value="Kosárba" onclick="ad('_evo', evo.value)">
-                      </div>
+                        <div class="bg-image hover-overlay ripple">
+                            <img src="img/egyeb/evoeszkoz3.jpg" class="img-fluid">
+                            <a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                            </a>
+                        </div>
+                        <div class="card-body" id="igazito">
+                            <h5 class="card-title font-weight-bold"><a>Fa evőeszköz</a></h5>
+                            <p class="mb-2 raktar">Raktáron</p>
+                            <p class="card-text">
+                                Fogyaszd ebéded jó minőségű fa evőeszközzel. (villa, kés, kanál)
+                            </p>
+                            <hr class="my-4" />
+                            <div class="d-flex justify-content-between align-items-center">
+                                <p class="lead"><strong>600Ft/csomag</strong></p>
+                                <div class="d-flex align-items-center">
+                                    <input type="number" class="btn link-secondary mr-2 mb-2" placeholder="db" id="evo">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <input type="submit" class="btn link-secondary mt-2 kosar" value="Kosárba"
+                                    onclick="ad('_evo', evo.value)">
+                            </div>
+                        </div>
                     </div>
-                  </section>
+                </section>
             </div>
             <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center align-items-end mb-5">
                 <section class="mx-auto my-5" style="max-width: 23rem;">
                     <div class="card">
-                      <div class="bg-image hover-overlay ripple">
-                        <img src="img/egyeb/szivoszal5.jpg" class="img-fluid">
-                        <a href="#!">
-                          <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                        </a>
-                      </div>
-                      <div class="card-body" id="igazito">
-                        <h5 class="card-title font-weight-bold"><a>Papír szívószál</a></h5>
-                        <p class="mb-2 raktar">Raktáron</p>
-                        <p class="card-text">
-                         Csak fehér színben elérhető. Minőségi és védi a környezetet.
-                        </p>
-                        <hr class="my-4" />
-                        <p class="lead"><strong>50Ft/szál</strong></p>
-                        <input type="number" class="btn link-secondary kosargomb" placeholder="db" id="szivo">
-                        <input type="submit" class="btn link-secondary  kosargomb" value="Kosárba" onclick="ad('_szivo', szivo.value)">
-                      </div>
+                        <div class="bg-image hover-overlay ripple">
+                            <img src="img/egyeb/szivoszal5.jpg" class="img-fluid">
+                            <a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                            </a>
+                        </div>
+                        <div class="card-body" id="igazito">
+                            <h5 class="card-title font-weight-bold"><a>Papír szívószál</a></h5>
+                            <p class="mb-2 raktar">Raktáron</p>
+                            <p class="card-text">
+                                Csak fehér színben elérhető. Minőségi és védi a környezetet.
+                            </p>
+                            <hr class="my-4" />
+                            <div class="d-flex justify-content-between align-items-center">
+                                <p class="lead"><strong>50Ft/szál</strong></p>
+                                <div class="d-flex align-items-center">
+                                    <input type="number" class="btn link-secondary mr-2 mb-2" placeholder="db"
+                                        id="szivo">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <input type="submit" class="btn link-secondary  mt-2 kosar" value="Kosárba"
+                                    onclick="ad('_szivo', szivo.value)">
+                            </div>
+                        </div>
                     </div>
-                  </section>
+                </section>
             </div>
             <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center align-items-end mb-5">
                 <section class="mx-auto my-5" style="max-width: 23rem;">
                     <div class="card">
-                      <div class="bg-image hover-overlay ripple">
-                        <img src="img/egyeb/micro2.avif" class="img-fluid">
-                        <a href="#!">
-                          <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                        </a>
-                      </div>
-                      <div class="card-body" id="igazito">
-                        <h5 class="card-title font-weight-bold"><a>Melegítés</a></h5>
-                        <p class="mb-2 raktar">Raktáron</p>
-                        <p class="card-text">
-                         Melegítsd meg az ételed, ha kíhűlt vagy hidegen hoztatd el.
-                        </p>
-                        <hr class="my-4" />
-                        <p class="lead"><strong>200Ft/melegítés</strong></p>
-                        <input type="number" class="btn link-secondary kosargomb" placeholder="db" id="micro">
-                        <input type="submit" class="btn link-secondary  kosargomb" value="Kosárba" onclick="ad('_micro', micro.value)">
-                      </div>
+                        <div class="bg-image hover-overlay ripple">
+                            <img src="img/egyeb/micro2.avif" class="img-fluid">
+                            <a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                            </a>
+                        </div>
+                        <div class="card-body" id="igazito">
+                            <h5 class="card-title font-weight-bold"><a>Melegítés</a></h5>
+                            <p class="mb-2 raktar">Raktáron</p>
+                            <p class="card-text">
+                                Melegítsd meg az ételed, ha kíhűlt vagy hidegen hoztatd el.
+                            </p>
+                            <hr class="my-4" />
+                            <div class="d-flex justify-content-between align-items-center">
+                                <p class="lead"><strong>200Ft/melegítés</strong></p>
+                                <div class="d-flex align-items-center">
+                                    <input type="number" class="btn link-secondary mr-2 mb-2" placeholder="db"
+                                        id="micro">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <input type="submit" class="btn link-secondary  mt-2 kosar" value="Kosárba"
+                                    onclick="ad('_micro', micro.value)">
+                            </div>
+                        </div>
                     </div>
-                  </section>
+                </section>
             </div>
             <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center align-items-end mb-5">
                 <section class="mx-auto my-5" style="max-width: 23rem;">
                     <div class="card">
-                      <div class="bg-image hover-overlay ripple">
-                        <img src="img/egyeb/zsepi2.jpg" class="img-fluid">
-                        <a href="#!">
-                          <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                        </a>
-                      </div>
-                      <div class="card-body" id="igazito">
-                        <h5 class="card-title font-weight-bold"><a>Zsebkendő</a></h5>
-                        <p class="mb-2 raktar">Raktáron</p>
-                        <p class="card-text">
-                         Ha otthon hagytad a zsebkendődet és nincs a barátodnál.
-                        </p>
-                        <hr class="my-4" />
-                        <p class="lead"><strong>100Ft/csomag</strong></p>
-                        <input type="number" class="btn link-secondary kosargomb" placeholder="db" id="zsepi">
-                        <input type="submit" class="btn link-secondary  kosargomb" value="Kosárba" onclick="ad('_zsepi', zsepi.value)">
-                      </div>
+                        <div class="bg-image hover-overlay ripple">
+                            <img src="img/egyeb/zsepi2.jpg" class="img-fluid">
+                            <a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                            </a>
+                        </div>
+                        <div class="card-body" id="igazito">
+                            <h5 class="card-title font-weight-bold"><a>Zsebkendő</a></h5>
+                            <p class="mb-2 raktar">Raktáron</p>
+                            <p class="card-text">
+                                Ha otthon hagytad a zsebkendődet és nincs a barátodnál.
+                            </p>
+                            <hr class="my-4" />
+                            <div class="d-flex justify-content-between align-items-center">
+                                <p class="lead"><strong>100Ft/csomag</strong></p>
+                                <div class="d-flex align-items-center">
+                                    <input type="number" class="btn link-secondary mr-2 mb-26" placeholder="db"
+                                        id="zsepi">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <input type="submit" class="btn link-secondary  mt-2 kosar" value="Kosárba"
+                                    onclick="ad('_zsepi', zsepi.value)">
+                            </div>
+                        </div>
                     </div>
-                  </section>
+                </section>
             </div>
         </div>
     </div>
 
-        <div class="mt-5">
+    <div class="mt-5">
 
-            <footer class="text-center text-lg-start text-white" style="background-color: #1c2331">
+        <footer class="text-center text-lg-start text-white" style="background-color: #1c2331">
 
-                <section class="d-flex justify-content-between p-4" style="background-color: #6351ce">
+            <section class="d-flex justify-content-between p-4" style="background-color: #6351ce">
 
-                    <div class="me-5">
+                <div class="me-5">
 
-                    </div>
+                </div>
 
-                </section>
-
-
-                <section class="">
-                    <div class="container text-center text-md-start mt-5">
-
-                        <div class="row mt-3">
-
-                            <div class="col-md-4 col-lg-5 col-xl-4 mx-auto mb-4">
-
-                                <h6 class="text-uppercase fw-bold">Kandó büfé</h6>
-                                <hr class="mb-4 mt-0 d-inline-block mx-auto"
-                                    style="width: 60px; background-color: #7c4dff; height: 2px" />
-                                <br>
-                                <a href="https://www.kkszki.hu/" target="_blank"><img style="margin-bottom: 10px;"
-                                        src="img/kando.png" alt="Kandó logó"></a>
-                                <p>
-                                    Az újonnan megy nyílt Kandó Büfé, amit a 9.A 2.csoportja készített!
-                                </p>
-                            </div>
+            </section>
 
 
+            <section class="">
+                <div class="container text-center text-md-start mt-5">
 
-                            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4 text-center">
+                    <div class="row mt-3">
 
-                                <h6 class="text-uppercase fw-bold">Főbb kategóriáink</h6>
-                                <hr class="mb-4 mt-0 d-inline-block mx-auto"
-                                    style="width: 60px; background-color: #7c4dff; height: 2px" />
-                                <p>
-                                    <a href="#melege" class="text-white">Meleg ételek</a>
-                                </p>
-                                <p>
-                                    <a href="#hidege" class="text-white">Hideg ételek</a>
-                                </p>
-                                <p>
-                                    <a href="#udito" class="text-white">Üdítők</a>
-                                </p>
-                                <p>
-                                    <a href="#melegi" class="text-white">Meleg italok</a>
-                                </p>
-                                <p>
-                                    <a href="#nasi" class="text-white">Nasik</a>
-                                </p>
-                                <p>
-                                    <a href="egyeb.html" class="text-white">Egyéb</a>
-                                </p>
-                            </div>
+                        <div class="col-md-4 col-lg-5 col-xl-4 mx-auto mb-4">
+
+                            <h6 class="text-uppercase fw-bold">Kandó büfé</h6>
+                            <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                                style="width: 60px; background-color: #7c4dff; height: 2px" />
+                            <br>
+                            <a href="https://www.kkszki.hu/" target="_blank"><img style="margin-bottom: 10px;"
+                                    src="img/kando.png" alt="Kandó logó"></a>
+                            <p>
+                                Az újonnan megy nyílt Kandó Büfé, amit a 9.A 2.csoportja készített!
+                            </p>
+                        </div>
 
 
 
-                            <div class="col-md-5 col-lg-4 col-xl-4 mx-auto mb-md-0 mb-4 text-center">
+                        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4 text-center">
 
-                                <h6 class="text-uppercase fw-bold">Elérhetőségek</h6>
-                                <hr class="mb-4 mt-0 d-inline-block mx-auto"
-                                    style="width: 60px; background-color: #7c4dff; height: 2px" />
-                                <p><i class="fas fa-home mr-3">Miskolc, Palóczy László utca 3, 3525</i></p>
-                                <a href="https://mail.google.com/" target="_blank">
-                                    <p><i class="fas fa-envelope mr-3">kando@kkszki.hu</i></p>
-                                </a>
-                                <p><i class="fas fa-phone mr-3">+06 46 500 930</i></p>
-                            </div>
+                            <h6 class="text-uppercase fw-bold">Főbb kategóriáink</h6>
+                            <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                                style="width: 60px; background-color: #7c4dff; height: 2px" />
+                            <p>
+                                <a href="#melege" class="text-white">Meleg ételek</a>
+                            </p>
+                            <p>
+                                <a href="#hidege" class="text-white">Hideg ételek</a>
+                            </p>
+                            <p>
+                                <a href="#udito" class="text-white">Üdítők</a>
+                            </p>
+                            <p>
+                                <a href="#melegi" class="text-white">Meleg italok</a>
+                            </p>
+                            <p>
+                                <a href="#nasi" class="text-white">Nasik</a>
+                            </p>
+                            <p>
+                                <a href="egyeb.html" class="text-white">Egyéb</a>
+                            </p>
+                        </div>
 
+
+
+                        <div class="col-md-5 col-lg-4 col-xl-4 mx-auto mb-md-0 mb-4 text-center">
+
+                            <h6 class="text-uppercase fw-bold">Elérhetőségek</h6>
+                            <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                                style="width: 60px; background-color: #7c4dff; height: 2px" />
+                            <p><i class="fas fa-home mr-3">Miskolc, Palóczy László utca 3, 3525</i></p>
+                            <a href="https://mail.google.com/" target="_blank">
+                                <p><i class="fas fa-envelope mr-3">kando@kkszki.hu</i></p>
+                            </a>
+                            <p><i class="fas fa-phone mr-3">+06 46 500 930</i></p>
                         </div>
 
                     </div>
-                </section>
 
-
-
-                <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-                    © Kandó 9.A
                 </div>
+            </section>
 
-            </footer>
 
 
-        </div>
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+                © Kandó 9.A
+            </div>
 
-        <script>
-            var _szalveta = 700
-            var _alu = 200
-            var _evo = 600
-            var _micro = 200
-            var _szivo = 50
-            var _zsepi = 100
-            function ad(nev,ertek) {
-                localStorage.setItem(nev,Number(ertek));
-            }
-        </script>
+        </footer>
+
+
+    </div>
+
+    <script>
+        var _szalveta = 700
+        var _alu = 200
+        var _evo = 600
+        var _micro = 200
+        var _szivo = 50
+        var _zsepi = 100
+        function ad(nev, ertek) {
+            localStorage.setItem(nev, Number(ertek));
+        }
+    </script>
 </body>
 
 </html>
