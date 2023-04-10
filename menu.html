@@ -490,7 +490,7 @@
   <script>
    function searchCards() {
   let input = document.getElementById("search-input").value.toLowerCase();
-  console.log(input); // kiírja a keresési mezőbe írt szöveget a console-ba
+  console.log(input); 
   let cards = document.querySelectorAll(".card");
   let titles = document.querySelectorAll(".card-title, .cimek");
   let hrs = document.querySelectorAll("hr");
@@ -547,7 +547,7 @@
   }
 }
 
-// Eseménykezelő hozzáadása az input mezőhöz
+
 document.getElementById("search-input").addEventListener("keyup", searchCards);
 
   </script>
