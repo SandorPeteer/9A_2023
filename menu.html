@@ -488,22 +488,23 @@
   </div>
 
   <script>
-    // Termék keresés
-    var searchInput = document.querySelector('#search-input');
-    var productCards = document.querySelectorAll('.card');
+   function searchCards() {
+  let input = document.getElementById("search-input").value.toLowerCase();
+  console.log(input); 
+  let cards = document.querySelectorAll(".card");
 
-    searchInput.addEventListener('input', function () {
-      var searchTerm = searchInput.value.trim().toLowerCase();
-      productCards.forEach(function (card) {
-        var title = card.querySelector('.card-title1').textContent.trim().toLowerCase();
-        var description = card.querySelector('.card-text').textContent.trim().toLowerCase();
-        if (title.indexOf(searchTerm) !== -1 || description.indexOf(searchTerm) !== -1) {
-          card.style.display = 'block';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    }); 0
+  cards.forEach((card) => {
+    let text = card.textContent.toLowerCase();
+    if (text.indexOf(input) > -1) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+}
+
+
+document.getElementById("search-input").addEventListener("keyup", searchCards);
   </script>
 
 </body>
