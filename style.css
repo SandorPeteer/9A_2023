@@ -22,10 +22,6 @@ body {
   background: linear-gradient(#1b0a27,#1d042e,#141414)
 }
 
-.ms-n5 {
-  margin-left: -50px;
-}
-
 .dark-mode {
   background-color:rgb(33, 37, 41) ;
   color: rgb(240, 244, 248);
