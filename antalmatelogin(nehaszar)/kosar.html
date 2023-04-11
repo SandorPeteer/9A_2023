@@ -7,9 +7,29 @@
     <title>Document</title>
 </head>
 <body>
-    <p>kosár.</p>
+    
+    <div id="kosar">
+    
+    </div>
     <script>
-        
+         window.addEventListener("DOMContentLoaded", function() {
+            leker();
+         });
+
+        const kosar = document.getElementById("kosar");
+
+        function leker(){
+        for (let key in localStorage) {
+        if (localStorage.hasOwnProperty(key)) {
+        if (key !== "debug" && key !== "hamburger") {
+            let value = localStorage.getItem(key);
+            let p = document.createElement("p");
+            p.textContent = `${key}: ${value}`;
+            kosar.appendChild(p);
+            }
+        }
+    }
+}
     </script>
 </body>
 </html>
