@@ -1,510 +1,421 @@
 <!DOCTYPE html>
-<html lang="hu" data-bs-theme="auto">
+<html lang="hu">
 
 <head>
-  <script src="https://getbootstrap.com/docs/5.3/assets/js/color-modes.js"></script>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous">
-    </script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
-    </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js"
-    integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i" crossorigin="anonymous">
-    </script>
-  <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/navbar-fixed/">
-  <link href="https://getbootstrap.com/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meleg italok</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 
+    <style>
+        body {
+            background: linear-gradient(#528791, #3c195e);
+        }
 
-  <title>9A webshop</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-    }
+        .nav2 {
+            background: radial-gradient(#190a22, #05042e, #141414);
+        }
 
-    body {
-      min-height: 75rem;
-      padding-top: 4.5rem;
-    }
+        .btn {
+            width: 100px;
+            border: 2px solid white;
+            border-radius: 30px;
+            background-color: rgba(0, 0, 0, 0.096);
+            color: white;
+        }
 
-    .box {
-      padding: 10px;
-      background-color: lightgrey;
-      color: rgb(255, 255, 255);
-      position: relative;
-      z-index: 1;
-      font-size: large;
-    }
+        .btn:hover {
+            transform: scale(1.04);
+            transition: 0.4s;
+            color: white;
+            border: 2px solid white;
+        }
 
-    .image-container {
-      display: inline-block;
-      overflow: hidden;
-      box-shadow: 0 0 1px rgba(0, 0, 0, 0.664);
-      transition: 0.3s ease-out;
-    }
+        #active {
+            background-color: rgba(255, 255, 255, 0.438);
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+        }
 
-    .image-container:hover {
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.664);
-    }
+        .fo {
+            border: 3px solid white;
+            border-radius: 30px;
+            background: linear-gradient(rgba(255, 255, 255, 0.733), rgba(17, 17, 17, 0.342));
+        }
 
-    .image-container img {
-      display: block;
-      transition: 0.3s ease-out;
-      max-width: 40vh;
-      min-width: 40vh;
-      max-height: 20vh;
-      min-height: 20vh;
-      object-fit: cover;
-    }
+        .raktar {
+            color: green;
+        }
 
-    .image-container:hover img {
-      transform: scale(1.05);
-    }
+        .kosar {
+            border-color: #1c2331;
+            background-color: #ffffff38;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+        }
 
-    .bd-placeholder-img {
-      font-size: 1.125rem;
-      text-anchor: middle;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      user-select: none;
-    }
+        .kosar:hover {
+            border-color: #1c233148;
+            color: rgb(255, 255, 255);
+            transition: 0.3s;
+        }
 
-    @media (min-width: 768px) {
+        .card:hover {
+            box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+            -moz-box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+            -webkit-box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+            -o-box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+            transition: 0.3s;
+            transform: scale(1.03);
+        }
 
-      .bd-placeholder-img-lg {
-        font-size: 3.5rem;
-      }
-    }
+        .img:hover {
+            transition: 0.3s;
+            transform: scale(1.05);
+        }
+    </style>
 
-    .b-example-divider {
-      width: 100%;
-      height: 3rem;
-      background-color: rgba(0, 0, 0, .1);
-      border: solid rgba(0, 0, 0, .15);
-      border-width: 1px 0;
-      box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-    }
-
-    .b-example-vr {
-      flex-shrink: 0;
-      width: 1.5rem;
-      height: 100vh;
-    }
-
-    .bi {
-      vertical-align: -.125em;
-      fill: currentColor;
-    }
-
-    .nav-scroller {
-      position: relative;
-      z-index: 2;
-      height: 2.75rem;
-      overflow-y: hidden;
-    }
-
-    .nav-scroller .nav {
-      display: flex;
-      flex-wrap: nowrap;
-      padding-bottom: 1rem;
-      margin-top: -1px;
-      overflow-x: auto;
-      text-align: center;
-      white-space: nowrap;
-      -webkit-overflow-scrolling: touch;
-    }
-
-    .btn-bd-primary {
-      --bd-violet-bg: #712cf9;
-      --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
-      --bs-btn-font-weight: 600;
-      --bs-btn-color: var(--bs-white);
-      --bs-btn-bg: var(--bd-violet-bg);
-      --bs-btn-border-color: var(--bd-violet-bg);
-      --bs-btn-hover-color: var(--bs-white);
-      --bs-btn-hover-bg: #6528e0;
-      --bs-btn-hover-border-color: #6528e0;
-      --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-      --bs-btn-active-color: var(--bs-btn-hover-color);
-      --bs-btn-active-bg: #5a23c8;
-      --bs-btn-active-border-color: #5a23c8;
-    }
-
-    .bd-mode-toggle {
-      z-index: 1500;
-    }
-
-    body {
-      font-family: "Times New Roman", Georgia, Serif;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-family: "Playfair Display";
-      letter-spacing: 5px;
-    }
-
-    .meret {
-      max-width: 100vh;
-      min-width: 100vh;
-      max-height: 100vh;
-      min-height: 100vh;
-      object-fit: cover;
-    }
-  </style>
-  <link href="navbar-fixed.css" rel="stylesheet">
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark p-3">
+        <div class="container-fluid">
+            <a href="menu.html"><img src="img/bufe_logo.png" alt="Logo" style="width:90px;"
+                    class="rounded-pill navbar-brand"></a>
 
-  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-    <symbol id="check2" viewBox="0 0 16 16">
-      <path
-        d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
-    </symbol>
-    <symbol id="circle-half" viewBox="0 0 16 16">
-      <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
-    </symbol>
-    <symbol id="moon-stars-fill" viewBox="0 0 16 16">
-      <path
-        d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
-      <path
-        d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
-    </symbol>
-    <symbol id="sun-fill" viewBox="0 0 16 16">
-      <path
-        d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
-    </symbol>
-  </svg>
-
-  <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
-    <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button"
-      aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
-      <svg class="bi my-1 theme-icon-active" width="1em" height="1em">
-        <use href="#circle-half"></use>
-      </svg>
-      <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
-    </button>
-    <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
-      <li>
-        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light"
-          aria-pressed="false">
-          <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
-            <use href="#sun-fill"></use>
-          </svg>
-          Light
-          <svg class="bi ms-auto d-none" width="1em" height="1em">
-            <use href="#check2"></use>
-          </svg>
-        </button>
-      </li>
-      <li>
-        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark"
-          aria-pressed="false">
-          <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
-            <use href="#moon-stars-fill"></use>
-          </svg>
-          Dark
-          <svg class="bi ms-auto d-none" width="1em" height="1em">
-            <use href="#check2"></use>
-          </svg>
-        </button>
-      </li>
-      <li>
-        <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto"
-          aria-pressed="true">
-          <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
-            <use href="#circle-half"></use>
-          </svg>
-          Auto
-          <svg class="bi ms-auto d-none" width="1em" height="1em">
-            <use href="#check2"></use>
-          </svg>
-        </button>
-      </li>
-    </ul>
-  </div>
-
-
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <div class="container-fluid">
-      <img src="https://sandorpeteer.github.io/9A_2023_BUFE_SHOP/vita/kandologo.png" alt="logo" width="60">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav me-auto mb-2 mb-md-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">Főoldal</a>
-          </li>
-        </ul>
-        <form class="d-flex" role="search">
-
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-      </div>
-    </div>
-  </nav>
-
-
-  <main class="container">
-    <div class="image-container">
-      <a href="etelek.html">
-        <img src="https://sandorpeteer.github.io/9A_2023_BUFE_SHOP/img/etel/etel.png" alt="Ételek"></a>
-      <div style="background-color: #FFB700;  color: black;" class="box text-center"> Ételek </div>
-    </div>
-
-
-
-    <div class="image-container">
-      <a href="innivalok.html">
-        <img src="https://sandorpeteer.github.io/9A_2023_BUFE_SHOP/bendewebshop/img/Xixo-pica.jpg" alt="Innivalók">
-      </a>
-      <div style="background-color:  #FFF700; color: black;" class="box text-center">Innivalók</div>
-    </div>
-
-    <div class="image-container">
-      <img src="https://sandorpeteer.github.io/9A_2023_BUFE_SHOP/img/nasi/chips.jpg" alt="Nasik">
-      <div style="background-color: #C7FF00;  color: black;" class="box text-center">Nasi</div>
-    </div>
-
-    <div class="image-container">
-      <img src="https://sandorpeteer.github.io/9A_2023_BUFE_SHOP/img/egyeb/egyeb.jpg" alt="Egyebek">
-      <div style="background-color: #88FF00;  color: black;" class="box text-center">
-        <a href="egyeb.html">Egyebek</a>
-      </div>
-    </div>
-    <br><br><br><br>
-
-    <div>
-      <div class="polaroid">
-          <img src="img/A_small_cup_of_coffee.JPG" width="235px" alt="kave" data-bs-toggle="modal"
-              data-bs-target="#myModal">
-          <div class="container">
-              <p>Kávé</p>
-          </div>
-      </div>
-  </div>
-
-  <!-- The Modal -->
-  <div class="modal" id="myModal">
-      <div class="modal-dialog">
-          <div class="modal-content">
-
-              <!-- Modal Header -->
-              <div class="modal-header">
-                  <h4 class="modal-title">Kávé</h4>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-              </div>
-
-              <!-- Modal body -->
-              <div class="modal-body">
-                  <div class="center">
-                      <img src="img/A_small_cup_of_coffee.JPG" alt="kave" width="255px" class="modal-title">
-                      <br><br>
-                      <div class="boxbar">
-                          <label> <input type="radio" name="Tej"> Tej </label>
-                          <label> <input type="radio" name="Cukor"> Cukor </label>
-                      </div>
-                      <div>
-                          <br>
-                          <h4>Darab:</h4>
-                          <input type="button" name="kave" value="-" class="pluszminuszcit" onclick="dbkave.value = Number(dbkave.value) - 1">
-                          <input type="text" name="kave" class="textareacit" id="dbkave" value="0">
-                          <input type="button" name="kave" class="pluszminuszcit" value="+" onclick="dbkave.value = Number(dbkave.value) + 1">
-                          <br>
-                          <input type="submit" value="Kosárba" class="pluszminuszbar" onclick="ad('_kave', dbkave.value)">
-                          <br><br>
-                          <p>Ár: <span id="kavear">0Ft</span></p>
-                      </div>
-                  </div>
-              </div>
-
-              <!-- Modal footer -->
-              <div class="modal-footer">
-                  <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Bezár</button>
-              </div>
-
-          </div>
-      </div>
-  </div>
-
-  <div>
-    <div class="polaroid">
-        <img src="img/Cappuccino_at_Sightglass_Coffee.jpg" width="235px" alt="cappocino" data-bs-toggle="modal"
-            data-bs-target="#myModal">
-        <div class="container">
-            <p>Kávé</p>
-        </div>
-    </div>
-</div>
-
-<!-- The Modal -->
-<div class="modal" id="myModal">
-    <div class="modal-dialog">
-        <div class="modal-content">
-
-            <!-- Modal Header -->
-            <div class="modal-header">
-                <h4 class="modal-title">Cappocino</h4>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            <div class="collapse navbar-collapse justify-content-center" style="margin-left: 26.5%;">
+                <form class="d-flex w-50">
+                    <div class="input-group">
+                        <input class="form-control border-end-0 border rounded-pill" type="search" placeholder="Kereső"
+                            id="example-search-input">
+                    </div>
+                </form>
             </div>
 
-            <!-- Modal body -->
-            <div class="modal-body">
-                <div class="center">
-                    <img src="img/Cappuccino_at_Sightglass_Coffee.jpg" alt="cappocino" width="255px" class="modal-title">
-                    <br><br>
-                    <div class="boxbar">
-                        <label> <input type="radio" name="Tej"> Tej </label>
-                        <label> <input type="radio" name="Cukor"> Cukor </label>
+
+            <div class="collapse navbar-collapse justify-content-end">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html">
+                            <img class="img-thumbnail" id="cart" src="img/cart.png" alt="kosar"
+                                style="height: 50px; width: 50px;">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="profil.html">
+                            <img class="img-thumbnail" id="profil" src="img/profilepicture.png" alt="kosar"
+                                style="height: 50px; width: 50px;">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="dark()"><img src="img/dark.png" id="dark"
+                                class="img-thumbnail" alt="Sötét mód"
+                                style="height: 50px; width: 50px; border-radius: 50%;"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid p-4 s text-center d-flex justify-content-center nav2">
+        <a href="menu.html" style="margin-right: 0.3%;"><button class="btn">Ajánlatok</button></a>
+        <a href="egyeb.html" style="margin-left: 0.3%;"><button class="btn" id="active">Meleg italok</button></a>
+    </div>
+
+    <h2 class="text-center" style="color: white; margin-top: 2%;">Meleg italok</h2>
+    <div class="container-fluid mt-5 mb-3 fo" style=" max-width: 85%; max-height: 70%;">
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center align-items-end mb-5">
+                <section class="mx-auto my-5" style="max-width: 23rem;">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple">
+                            <img src="img/A_small_cup_of_coffee.JPG" class="img-fluid">
+                            <a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                            </a>
+                        </div>
+                        <div class="card-body" id="igazito">
+                            <h5 class="card-title font-weight-bold"><a>Kávé</a></h5>
+                            <p class="mb-2 raktar">Raktáron</p>
+                            <p class="card-text">
+                                Mindenféle színben, mintázatban elérhető, jó minőségű papírszalvéta.
+                            </p>
+                            <hr class="my-4" />
+                            <div class="d-flex justify-content-between align-items-center">
+                                <p class="lead"><strong>700Ft/csomag</strong></p>
+                                <div class="d-flex align-items-center">
+                                    <input type="number" class="btn link-secondary mr-2 mb-2" placeholder="db"
+                                        id="szalveta">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <input type="submit" class="btn link-secondary mt-2 kosar" value="Kosárba"
+                                    name="Kosárba" onclick="ad('_szalveta', szalveta.value)">
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <br>
-                        <h4>Darab:</h4>
-                        <input type="button" name="cappocino" value="-" class="pluszminuszcit" onclick="dbcapp.value = Number(dbcapp.value) - 1">
-                        <input type="text" name="cappocino" class="textareacit" id="dbcapp" value="0">
-                        <input type="button" name="cappocino class="pluszminuszcit" value="+" onclick="dbcapp.value = Number(dbcapp.value) + 1">
-                        <br>
-                        <input type="submit" value="Kosárba" class="pluszminuszbar" onclick="ad('_kave', dbcapp.value)">
-                        <br><br>
-                        <p>Ár: <span id="cappar">0Ft</span></p>
+                </section>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center align-items-end mb-5">
+                <section class="mx-auto my-5" style="max-width: 23rem;">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple">
+                            <img src="img/egyeb/alufolia.jpg" class="img-fluid">
+                            <a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                            </a>
+                        </div>
+                        <div class="card-body" id="igazito">
+                            <h5 class="card-title font-weight-bold"><a>Alufólia</a></h5>
+                            <p class="mb-2 raktar">Raktáron</p>
+                            <p class="card-text">
+                                Csomagold el nem elfogyasztott ételed, mint hogy galacsint gyúrsz belőle.
+                            </p>
+                            <hr class="my-4" />
+                            <div class="d-flex justify-content-between align-items-center">
+                                <p class="lead"><strong>200Ft/csomagolás</strong></p>
+                                <div class="d-flex align-items-center">
+                                    <input type="number" class="btn link-secondary mr-2 mb-2" placeholder="db"
+                                        placeholder="db" id="alu">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <input type="submit" class="btn link-secondary mt-2 kosar" value="Kosárba"
+                                    onclick="ad('_alu', alu.value)">
+                            </div>
+                        </div>
                     </div>
+                </section>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center align-items-end mb-5">
+                <section class="mx-auto my-5" style="max-width: 23rem;">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple">
+                            <img src="img/egyeb/evoeszkoz3.jpg" class="img-fluid">
+                            <a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                            </a>
+                        </div>
+                        <div class="card-body" id="igazito">
+                            <h5 class="card-title font-weight-bold"><a>Fa evőeszköz</a></h5>
+                            <p class="mb-2 raktar">Raktáron</p>
+                            <p class="card-text">
+                                Fogyaszd ebéded jó minőségű fa evőeszközzel. (villa, kés, kanál)
+                            </p>
+                            <hr class="my-4" />
+                            <div class="d-flex justify-content-between align-items-center">
+                                <p class="lead"><strong>600Ft/csomag</strong></p>
+                                <div class="d-flex align-items-center">
+                                    <input type="number" class="btn link-secondary mr-2 mb-2" placeholder="db" id="evo">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <input type="submit" class="btn link-secondary mt-2 kosar" value="Kosárba"
+                                    onclick="ad('_evo', evo.value)">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center align-items-end mb-5">
+                <section class="mx-auto my-5" style="max-width: 23rem;">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple">
+                            <img src="img/egyeb/szivoszal5.jpg" class="img-fluid">
+                            <a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                            </a>
+                        </div>
+                        <div class="card-body" id="igazito">
+                            <h5 class="card-title font-weight-bold"><a>Papír szívószál</a></h5>
+                            <p class="mb-2 raktar">Raktáron</p>
+                            <p class="card-text">
+                                Csak fehér színben elérhető. Minőségi és védi a környezetet.
+                            </p>
+                            <hr class="my-4" />
+                            <div class="d-flex justify-content-between align-items-center">
+                                <p class="lead"><strong>50Ft/szál</strong></p>
+                                <div class="d-flex align-items-center">
+                                    <input type="number" class="btn link-secondary mr-2 mb-2" placeholder="db"
+                                        id="szivo">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <input type="submit" class="btn link-secondary  mt-2 kosar" value="Kosárba"
+                                    onclick="ad('_szivo', szivo.value)">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center align-items-end mb-5">
+                <section class="mx-auto my-5" style="max-width: 23rem;">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple">
+                            <img src="img/egyeb/micro2.avif" class="img-fluid">
+                            <a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                            </a>
+                        </div>
+                        <div class="card-body" id="igazito">
+                            <h5 class="card-title font-weight-bold"><a>Melegítés</a></h5>
+                            <p class="mb-2 raktar">Raktáron</p>
+                            <p class="card-text">
+                                Melegítsd meg az ételed, ha kíhűlt vagy hidegen hoztatd el.
+                            </p>
+                            <hr class="my-4" />
+                            <div class="d-flex justify-content-between align-items-center">
+                                <p class="lead"><strong>200Ft/melegítés</strong></p>
+                                <div class="d-flex align-items-center">
+                                    <input type="number" class="btn link-secondary mr-2 mb-2" placeholder="db"
+                                        id="micro">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <input type="submit" class="btn link-secondary  mt-2 kosar" value="Kosárba"
+                                    onclick="ad('_micro', micro.value)">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center align-items-end mb-5">
+                <section class="mx-auto my-5" style="max-width: 23rem;">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple">
+                            <img src="img/egyeb/zsepi2.jpg" class="img-fluid">
+                            <a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                            </a>
+                        </div>
+                        <div class="card-body" id="igazito">
+                            <h5 class="card-title font-weight-bold"><a>Zsebkendő</a></h5>
+                            <p class="mb-2 raktar">Raktáron</p>
+                            <p class="card-text">
+                                Ha otthon hagytad a zsebkendődet és nincs a barátodnál.
+                            </p>
+                            <hr class="my-4" />
+                            <div class="d-flex justify-content-between align-items-center">
+                                <p class="lead"><strong>100Ft/csomag</strong></p>
+                                <div class="d-flex align-items-center">
+                                    <input type="number" class="btn link-secondary mr-2 mb-26" placeholder="db"
+                                        id="zsepi">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <input type="submit" class="btn link-secondary  mt-2 kosar" value="Kosárba"
+                                    onclick="ad('_zsepi', zsepi.value)">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-5">
+
+        <footer class="text-center text-lg-start text-white" style="background-color: #1c2331">
+
+            <section class="d-flex justify-content-between p-4" style="background-color: #6351ce">
+
+                <div class="me-5">
+
                 </div>
+
+            </section>
+
+
+            <section class="">
+                <div class="container text-center text-md-start mt-5">
+
+                    <div class="row mt-3">
+
+                        <div class="col-md-4 col-lg-5 col-xl-4 mx-auto mb-4">
+
+                            <h6 class="text-uppercase fw-bold">Kandó büfé</h6>
+                            <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                                style="width: 60px; background-color: #7c4dff; height: 2px" />
+                            <br>
+                            <a href="https://www.kkszki.hu/" target="_blank"><img style="margin-bottom: 10px;"
+                                    src="img/kando.png" alt="Kandó logó"></a>
+                            <p>
+                                Az újonnan megy nyílt Kandó Büfé, amit a 9.A 2.csoportja készített!
+                            </p>
+                        </div>
+
+
+
+                        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4 text-center">
+
+                            <h6 class="text-uppercase fw-bold">Főbb kategóriáink</h6>
+                            <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                                style="width: 60px; background-color: #7c4dff; height: 2px" />
+                            <p>
+                                <a href="#melege" class="text-white">Meleg ételek</a>
+                            </p>
+                            <p>
+                                <a href="#hidege" class="text-white">Hideg ételek</a>
+                            </p>
+                            <p>
+                                <a href="#udito" class="text-white">Üdítők</a>
+                            </p>
+                            <p>
+                                <a href="#melegi" class="text-white">Meleg italok</a>
+                            </p>
+                            <p>
+                                <a href="#nasi" class="text-white">Nasik</a>
+                            </p>
+                            <p>
+                                <a href="egyeb.html" class="text-white">Egyéb</a>
+                            </p>
+                        </div>
+
+
+
+                        <div class="col-md-5 col-lg-4 col-xl-4 mx-auto mb-md-0 mb-4 text-center">
+
+                            <h6 class="text-uppercase fw-bold">Elérhetőségek</h6>
+                            <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                                style="width: 60px; background-color: #7c4dff; height: 2px" />
+                            <p><i class="fas fa-home mr-3">Miskolc, Palóczy László utca 3, 3525</i></p>
+                            <a href="https://mail.google.com/" target="_blank">
+                                <p><i class="fas fa-envelope mr-3">kando@kkszki.hu</i></p>
+                            </a>
+                            <p><i class="fas fa-phone mr-3">+06 46 500 930</i></p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+
+
+
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+                © Kandó 9.A
             </div>
 
-            <!-- Modal footer -->
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Bezár</button>
-            </div>
+        </footer>
 
-        </div>
+
     </div>
-</div>
 
-<div class="card">
-  <img src="img/lead_L_121298_forro-csoki02.jpg" alt="forrócsoki" class="kep">
-  <div class="container">
-    <div> 
-          <input type="text" name="t" id="hálás"> <br> <br>
-          <input class="button" type="button" name="t" value="-" onclick="hálás.value=Number(hálás.value) - 1">
-          <input class="button" type="button"  value="+" value="h" onclick="hálás.value=Number(hálás.value) + 1"> <br>
-          <input type="submit" value="kosárba" onclick="ad('_cappuccino', hálás.value)"> 
-    </div>
-    <h4><b>Forrócsoki</b></h4> 
-    <p>800 Ft</p> 
-  </div>
-</div>
-</div>
-
-
-<div class="card">
-  <img src="img/tejeskave-ineedcoffee-web.jpg" alt="tejeskávé" class="kep">
-  <div class="container">
-    <div> 
-          <input type="text" name="t" id="zálás"> <br> <br>
-          <input class="button" type="button" name="t" value="-" onclick="zálás.value=Number(zálás.value) - 1">
-          <input class="button" type="button"  value="+" value="h" onclick="zálás.value=Number(zálás.value) + 1"> <br>
-          <input type="submit" value="kosárba" onclick="ad('_cappuccino', zálás.value)"> 
-    </div>
-    <h4><b>Tejeskávé</b></h4> 
-    <p>700 Ft</p> 
-  </div>
-</div>
-</div>
-
-<div class="card">
-  <img src="img/tea.jpg" alt="Tea" class="kep">
-  <div class="container">
-    <div> 
-          <input type="text" name="t" id="málás"> <br> <br>
-          <input class="button" type="button" name="t" value="-" onclick="málás.value=Number(málás.value) - 1">
-          <input class="button" type="button"  value="+" value="h" onclick="málás.value=Number(málás.value) + 1"> <br>
-          <input type="submit" value="kosárba" onclick="ad('_tea', málás.value)"> 
-    </div>
-    <h4><b>Tea</b></h4> 
-    <p>500 Ft</p> 
-  </div>
-</div>
-</div>
-</main>
-
-
-  <script src="https://getbootstrap.com/docs/5.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous">
-      const toggleButton = document.getElementById("toggleButton");
-      const image = document.getElementById("image");
-
-      let position = "first";
-
-      toggleButton.addEventListener("click", function () {
-
-        if (position === "first") {
-          toggleButton.style.position = "absolute";
-          toggleButton.style.top = "-1px";
-          toggleButton.style.left = "240px";
-          image.src = "img/jobbra.jpg";
-          position = "second";
-        } else {
-          toggleButton.style.position = "initial";
-          toggleButton.style.top = "initial";
-          toggleButton.style.left = "initial";
-          image.src = "img/oda.jpg";
-          position = "first";
+    <script>
+        var _szalveta = 700
+        var _alu = 200
+        var _evo = 600
+        var _micro = 200
+        var _szivo = 50
+        var _zsepi = 100
+        function ad(nev, ertek) {
+            localStorage.setItem(nev, Number(ertek));
         }
-      });
-
-
-      const Button = document.querySelector('.sidebarfunction');
-      const sidebar = document.querySelector('.sidebar');
-
-      Button.addEventListener('click', function () {
-        if (sidebar.style.transform === 'translateX(0%)') {
-          sidebar.style.transform = 'translateX(-100%)';
-        } else {
-          sidebar.style.transform = 'translateX(0%)';
-        }
-      });
-
-      function myFunction() {
-        document.getElementById("myDropdown").classList.toggle("show");
-      }
-
-      window.onclick = function (event) {
-        if (!event.target.matches('.dropbtn')) {
-          var dropdowns = document.getElementsByClassName("dropdown-content");
-          var i;
-          for (i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains('show')) {
-              openDropdown.classList.remove('show');
-            }
-          }
-        }
-      }
-      var _kave = 300;
-      var _cappuccino = 400;
-      var _forocsoki = 600;
-      var _tejeskave = 400;
-      var _tea = 500;
-      function ad(nev, ertek) {
-        localStorage.setItem(nev, Number(ertek));
-      }
     </script>
-
 </body>
 
 </html>
