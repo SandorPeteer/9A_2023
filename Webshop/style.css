@@ -184,3 +184,85 @@ p {
   padding: 15px;
   margin-left: 2vw;
 }
+body {
+  margin: 0;
+  background-color: rgb(240, 244, 248);
+  color: black;
+}
+
+
+#menu {
+  height: 100%;
+
+  border-radius: 5%;
+}
+
+#cart:hover,  #profil:hover, #dark:hover{
+  transform: scale(1.15);
+  transition: 0.5s;
+  
+}
+
+
+.footer {
+  background: linear-gradient(#1b0a27,#1d042e,#141414)
+}
+
+.dark-mode {
+  background-color:rgb(33, 37, 41) ;
+  color: rgb(240, 244, 248);
+}
+.cimek {
+  margin-left: 1.5%;
+  font-weight: bold;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  float: left;
+  vertical-align: middle;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  border-left: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 21.6%;
+}
+
+.kartyak {
+  border-radius: 30px;
+}
+
+.nav2 {
+  background: radial-gradient(#190a22, #05042e, #141414);
+}
+
+.btn {
+  width: 100px;
+  border: 2px solid white;
+  border-radius: 30px;
+  background-color: rgba(0, 0, 0, 0.096);
+  color: white;
+}
+
+.btn:hover {
+  transform: scale(1.04);
+  transition: 0.4s;
+  color: white;
+  border: 2px solid white;
+}
+
+#active {
+  background-color: rgba(255, 255, 255, 0.438);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+
+
+.card {
+  border: 3px solid rgb(255, 255, 255);
+  background-color: #1c2331;
+  color: white;
+  display: inline-block;
+  overflow: hidden;
+  transition: 0.3s ease-out;
+}
+
