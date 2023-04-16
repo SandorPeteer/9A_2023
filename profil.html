@@ -133,12 +133,23 @@
                             <img class="img-thumbnail" id="profil" src="img/profilepicture.png" alt="kosar"
                                 style="height: 50px; width: 50px;">
                                 <script>
-                                   var vn = localStorage.getItem('vezeteknev');
+                                    var vn = localStorage.getItem('vezeteknev');
                                     var kn = localStorage.getItem('keresztnev');
 
-                                    document.write(vn)
-                                    document.write(" ")
-                                    document.write(kn)
+                                    if (vn == null) {
+
+                                        
+                                        document.write("Nincs bejelenkezve")
+                                        
+
+                                    } else {
+
+                                        
+                                        document.write(vn)
+                                        document.write(" ")
+                                        document.write(kn)
+                                        
+                                    }
 
                                 </script>
                         </a>
@@ -171,7 +182,7 @@
             var vn = localStorage.getItem('vezeteknev');
              var kn = localStorage.getItem('keresztnev');
 
-             if(vn == ""){
+             if(vn == null){
 
             document.write("<h3>")
             document.write("Nincs bejelenkezve")
@@ -195,7 +206,7 @@
         <script>
             var em = localStorage.getItem('email');
              
-            if(em == ""){
+            if(em == null){
 
                 document.write("<h3>")
              document.write("Nincs bejelenkezve")
@@ -215,7 +226,7 @@
     
     <br>
         <script>
-    if(vn == ""){
+    if(vn == null){
     
         document.write("<div class='bej' style='width: 220px; height: 60px; background-color: rgb(202, 206, 218);''>")
         document.write("Van profilja? ")
