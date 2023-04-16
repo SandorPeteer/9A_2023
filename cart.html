@@ -84,7 +84,7 @@
 <body>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark p-3">
         <div class="container-fluid">
-            <a href="menu.html"><img src="img/bufe_logo.png" alt="Logo" style="width:90px;"
+            <a href="index.html"><img src="img/bufe_logo.png" alt="Logo" style="width:90px;"
                     class="rounded-pill navbar-brand"></a>
 
             <div class="collapse navbar-collapse justify-content-center" style="margin-left: 26.5%;">
@@ -108,6 +108,15 @@
                         <a class="nav-link" href="profil.html">
                             <img class="img-thumbnail" id="profil" src="img/profilepicture.png" alt="kosar"
                                 style="height: 50px; width: 50px;">
+                                <script>
+                                    var vn = localStorage.getItem('vezeteknev');
+                                     var kn = localStorage.getItem('keresztnev');
+ 
+                                     document.write(vn)
+                                     document.write(" ")
+                                     document.write(kn)
+ 
+                                 </script>
                         </a>
                     </li>
                     <li class="nav-item">
