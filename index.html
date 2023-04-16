@@ -128,11 +128,22 @@
                 style="height: 50px; width: 50px;">
                 <script>
                   var vn = localStorage.getItem('vezeteknev');
-                   var kn = localStorage.getItem('keresztnev');
+                                    var kn = localStorage.getItem('keresztnev');
 
-                   document.write(vn)
-                   document.write(" ")
-                   document.write(kn)
+                                    if (vn == null) {
+
+                                        
+                                        document.write("Nincs bejelenkezve")
+                                        
+
+                                    } else {
+
+                                        
+                                        document.write(vn)
+                                        document.write(" ")
+                                        document.write(kn)
+                                        
+                                    }
 
                </script>
             </a>
