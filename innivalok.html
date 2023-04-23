@@ -5,773 +5,377 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Innivalók</title>
+    <title>Egyéb</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-        </script>
     <link rel="stylesheet" href="https://sandorpeteer.github.io/9A_2023_BUFE_SHOP/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
     <style>
-        @import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap);
-
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
         body {
-            min-height: 75rem;
-            padding-top: 4.5rem;
+            background: linear-gradient(#528791, #3c195e);
         }
 
-        .box {
-            padding: 10px;
-            background-color: lightgrey;
+        .btn {
+            width: 100px;
+            border: 2px solid white;
+            border-radius: 30px;
+            background-color: rgba(0, 0, 0, 0.096);
+            color: white;
+        }
+
+        .btn:hover {
+            transform: scale(1.04);
+            transition: 0.4s;
+            color: white;
+            border: 2px solid white;
+        }
+
+        #active {
+            background-color: rgba(255, 255, 255, 0.438);
             color: rgb(255, 255, 255);
-            position: relative;
-            z-index: 1;
-            font-size: large;
+            font-weight: bold;
         }
 
-        .image-container {
-            display: inline-block;
-            overflow: hidden;
-            box-shadow: 0 0 1px rgba(0, 0, 0, 0.664);
-            transition: 0.3s ease-out;
+        .fo {
+            border: 3px solid white;
+            border-radius: 30px;
+            background: linear-gradient(rgba(255, 255, 255, 0.733), rgba(17, 17, 17, 0.342));
         }
 
-        .image-container:hover {
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.664);
+        .raktar {
+            color: green;
         }
 
-        .container {
-            margin: auto;
+        .kosar {
+            border-color: #1c2331;
+            background-color: #ffffff38;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
         }
 
-
-        .image-container img {
-            display: block;
-            transition: 0.3s ease-out;
-            max-width: 30vh;
-            min-width: 30vh;
-            max-height: 15vh;
-            min-height: 15vh;
-            object-fit: cover;
+        .kosar:hover {
+            border-color: #1c233148;
+            color: rgb(255, 255, 255);
+            transition: 0.3s;
         }
 
-        .image-container:hover img {
+        .card:hover {
+            box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+            -moz-box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+            -webkit-box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+            -o-box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+            transition: 0.3s;
+            transform: scale(1.03);
+        }
+
+        .img:hover {
+            transition: 0.3s;
             transform: scale(1.05);
         }
 
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
-        }
-
-        @media (min-width: 768px) {
-
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
-        }
-
-        .b-example-divider {
-            width: 100%;
-            height: 3rem;
-            background-color: rgba(0, 0, 0, .1);
-            border: solid rgba(0, 0, 0, .15);
-            border-width: 1px 0;
-            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-        }
-
-        .b-example-vr {
-            flex-shrink: 0;
-            width: 1.5rem;
-            height: 100vh;
-        }
-
-        .bi {
-            vertical-align: -.125em;
-            fill: currentColor;
-        }
-
-        .nav-scroller {
-            position: relative;
-            z-index: 2;
-            height: 2.75rem;
-            overflow-y: hidden;
-        }
-
-        .nav-scroller .nav {
-            display: flex;
-            flex-wrap: nowrap;
-            padding-bottom: 1rem;
-            margin-top: -1px;
-            overflow-x: auto;
-            text-align: center;
-            white-space: nowrap;
-            -webkit-overflow-scrolling: touch;
-        }
-
-        .btn-bd-primary {
-            --bd-violet-bg: #712cf9;
-            --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
-            --bs-btn-font-weight: 600;
-            --bs-btn-color: var(--bs-white);
-            --bs-btn-bg: var(--bd-violet-bg);
-            --bs-btn-border-color: var(--bd-violet-bg);
-            --bs-btn-hover-color: var(--bs-white);
-            --bs-btn-hover-bg: #6528e0;
-            --bs-btn-hover-border-color: #6528e0;
-            --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-            --bs-btn-active-color: var(--bs-btn-hover-color);
-            --bs-btn-active-bg: #5a23c8;
-            --bs-btn-active-border-color: #5a23c8;
-        }
-
-        .bd-mode-toggle {
-            z-index: 1500;
-        }
-
-        body {
-            font-family: "Times New Roman", Georgia, Serif;
-        }
-
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            font-family: "Playfair Display";
-            letter-spacing: 5px;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        .food-card {
-            background: #fff;
-            border-radius: 5px;
-            overflow: hidden;
-            margin-bottom: 30px;
-            -webkit-transition: 0.1s;
-            transition: 0.1s;
-            -webkit-box-shadow: 0 5px 20px rgba(210, 197, 197, 0.35);
-            box-shadow: 0 5px 20px rgba(216, 209, 209, 0.35);
-        }
-
-        .food-card:hover {
-            -webkit-box-shadow: 0 2px 10px rgba(150, 0, 0, 0.431);
-            box-shadow: 0 2px 10px rgba(150, 0, 0, 0.432);
-        }
-
-        .food-card .food-card_img {
-            display: block;
-            position: relative;
-        }
-
-        .food-card .food-card_img img {
-            width: 100%;
-            height: 300px;
-            -o-object-fit: cover;
-            object-fit: cover;
-        }
-
-        .food-card .food-card_img i {
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            color: #fff;
-            font-size: 25px;
-            -webkit-transition: all 0.1s;
-            transition: all 0.1s;
-        }
-
-        .food-card .food-card_img i:hover {
-            top: 18px;
-            right: 28px;
-            font-size: 29px;
-        }
-
-        .food-card .food-card_content {
-            padding: 15px;
-        }
-
-        .food-card .food-card_content .food-card_title-section {
-            height: 100px;
-            overflow: hidden;
-        }
-
-        .food-card .food-card_content .food-card_title-section .food-card_title {
-            font-size: 24px;
-            color: #333;
-            font-weight: 500;
-            display: block;
-            line-height: 1.3;
-            margin-bottom: 8px;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-
-        .food-card .food-card_content .food-card_title-section .food-card_author {
-            font-size: 15px;
-            display: block;
-        }
-
-        .food-card .food-card_content .food-card_bottom-section .space-between {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-            justify-content: space-between;
-            min-height: 100%;
-        }
-
-        .food-card .food-card_content .food-card_bottom-section .food-card_subscribers {
-            margin-left: 17px;
-        }
-
-        .food-card .food-card_content .food-card_bottom-section .food-card_subscribers img,
-        .food-card .food-card_content .food-card_bottom-section .food-card_subscribers .food-card_subscribers-count {
-            height: 45px;
-            width: 45px;
-            border-radius: 45px;
-            border: 3px solid #fff;
-            margin-left: -17px;
-            float: left;
-            background: #f5f5f5;
-        }
-
-        .food-card .food-card_content .food-card_bottom-section .food-card_subscribers .food-card_subscribers-count {
-            position: relative;
-        }
-
-        .food-card .food-card_content .food-card_bottom-section .food-card_subscribers .food-card_subscribers-count span {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-            font-size: 13px;
-        }
-
-        .food-card .food-card_content .food-card_bottom-section .food-card_price {
-            font-size: 28px;
-            font-weight: 500;
-            color: #F47A00;
-        }
-
-        .food-card .food-card_content .food-card_bottom-section .food-card_order-count {
-            width: 130px;
-        }
-
-        .food-card .food-card_content .food-card_bottom-section .food-card_order-count input {
-            background: #f5f5f5;
-            border-color: #f5f5f551;
-            -webkit-box-shadow: none;
-            box-shadow: none;
-            text-align: center;
-        }
-
-        .food-card .food-card_content .food-card_bottom-section .food-card_order-count button {
-            border-color: #f5f5f5;
-            border-width: 3px;
-            -webkit-box-shadow: none;
-            box-shadow: none;
-        }
-
-        .add-bin {
-            background-color: peachpuff;
-        }
-
         .valami {
+            padding: .4rem;
+            border: solid lightblue .5px;
+            margin: .2rem;
             border-radius: 25px;
-            border: 2px solid #000000;
-            padding: 5px;
-            width: auto;
-            margin: 2px;
+            width: 8rem;
+            float: left;
         }
 
-        .valamicoke {
-            border-radius: 25px;
-            border: 2px solid #000000;
-            padding: 5px;
-            width: auto;
-            margin: 2px;
-        }
-
-        @media (min-width: 992px) {
-            .food-card--vertical {
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
-                position: relative;
-                height: 235px;
-            }
-
-            .food-card--vertical .food-card_img img {
-                width: 200px;
-                height: 100%;
-                -o-object-fit: cover;
-                object-fit: cover;
-            }
-        }
-
-        footer {
-            width: 100%;
-        }
-
-        .filterDiv {
-            display: none;
-        }
-
-        /* The "show" class is added to the filtered elements */
-        .show {
-            display: block;
-        }
-
-        /* Style the buttons */
-        .btn {
-            border: none;
-            outline: none;
-            padding: 12px 16px;
-            background-color: #f1f1f1;
-            cursor: pointer;
-        }
-
-        /* Add a light grey background on mouse-over */
-        .btn:hover {
-            background-color: #ddd;
-        }
-
-        /* Add a dark background to the active button */
-        .btn.active {
-            background-color: #666;
-            color: white;
+        .valamicontainer {
+            border: solid white;
         }
     </style>
+
 </head>
 
 <body>
-
-
-
-
-
-
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark p-3">
         <div class="container-fluid">
-            <img src="https://sandorpeteer.github.io/9A_2023_BUFE_SHOP/vita/kandologo.png" alt="logo" width="60">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <a href="https://sandorpeteer.github.io/9A_2023_BUFE_SHOP/index.html">
+                <img src="https://sandorpeteer.github.io/9A_2023_BUFE_SHOP/img/bufe_logo.png" alt="Logo"
+                    style="width:90px;" class="rounded-pill navbar-brand"></a>
+
+            <div class="collapse navbar-collapse justify-content-center" style="margin-left: 26.5%;">
+                <form class="d-flex w-50">
+                    <div class="input-group">
+                        <input class="form-control border-end-0 border rounded-pill" type="search" placeholder="Kereső"
+                            id="example-search-input">
+                    </div>
+                </form>
+            </div>
+
+
+            <div class="collapse navbar-collapse justify-content-end">
+                <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link"
-                            href="https://sandorpeteer.github.io/9A_2023_BUFE_SHOP/menu.html">Főoldal</a>
+                        <a class="nav-link" href="https://sandorpeteer.github.io/9A_2023_BUFE_SHOP/cart.html">
+                            <img class="img-thumbnail" id="cart"
+                                src="https://sandorpeteer.github.io/9A_2023_BUFE_SHOP/img/cart.png" alt="kosar"
+                                style="height: 50px; width: 50px;">
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page"
-                            href="https://sandorpeteer.github.io/9A_2023_BUFE_SHOP/innivalok.html">Innivalók</a>
+                        <a class="nav-link" href="https://sandorpeteer.github.io/9A_2023_BUFE_SHOP/profil.html">
+                            <img class="img-thumbnail" id="profil"
+                                src="https://sandorpeteer.github.io/9A_2023_BUFE_SHOP/img/profilepicture.png"
+                                alt="kosar" style="height: 50px; width: 50px;">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="dark()"><img
+                                src="https://sandorpeteer.github.io/9A_2023_BUFE_SHOP/img/dark.png" id="dark"
+                                class="img-thumbnail" alt="Sötét mód"
+                                style="height: 50px; width: 50px; border-radius: 50%;"></a>
                     </li>
                 </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
             </div>
         </div>
     </nav>
 
-    <main class="container">
 
-       
-        <div id="myBtnContainer">
-            <button class="btn active" onclick="filterSelection('all')"> Minden</button>
-            <button class="btn" onclick="filterSelection('cars')"> Hideg italok</button>
-            <button class="btn" onclick="filterSelection('colors')"> Meleg italok</button>
-            <button class="btn" onclick="filterSelection('fruits')"> Energiaitalok</button>
+    <h2 class="text-center" style="color: white; margin-top: 2%;">Italok</h2>
+    <div class="container-fluid mt-5 mb-3 fo" style=" max-width: 85%; max-height: 70%;">
+        <div class="row">
+
         </div>
-        <hr>
-
-        <div class="filterDiv cars">
-            <div class="row">
-                <div class="col-sm-6 col-md-6 col-lg-6">
-                    <div class="food-card food-card--vertical">
-                        <div class="food-card_img">
-                            <img src="https://sandorpeteer.github.io/9A_2023_BUFE_SHOP/bendewebshop/img/citromxixo.jpg"
-                                alt="Xixo" title="Xixo">
-                            <a href="#!"><i class="fa-solid fa-heart"></i></a>
-                        </div>
-                        <div class="food-card_content">
-                            <div class="food-card_title-section">
-                                <a href="#!" class="food-card_title">Xixo</a>
-                            </div>
-                            <div class="food-card_bottom-section">
-                                <div class="space-between">
-                                    <div class="valami">
-                                        <label> <input type="radio" name="xixoiz">Barack</label>
-                                    </div>
-                                    <div class="valami">
-                                        <label> <input type="radio" name="xixoiz">Zöld</label>
-                                    </div>
-                                    <div class="valami">
-                                        <label> <input type="radio" name="xixoiz">Ribizli</label>
-                                    </div>
-                                    <div class="valami">
-                                        <label> <input type="radio" name="xixoiz">Citrom</label>
-                                    </div>
-                                    <div class="valami">
-                                        <label> <input type="radio" name="xixoiz">Eper</label>
-                                    </div>
-                                </div>
-                                <hr>
-                                <div class="space-between">
-                                    <div class="food-card_price">
-                                        <span class="ar_xixo">...</span>
-                                    </div>
-                                    <div class="food-card_order-count">
-                                        <div class="input-group mb-3">
-                                            <div class="input-group-prepend">
-                                                <button class="btn btn-outline-secondary minus-btn" type="button"
-                                                    id="button-addon1"
-                                                    onclick="xixo.value = Number(xixo.value) - 1; ad('xixo',xixo.value)"><i
-                                                        class="fa fa-minus"></i></button>
-                                            </div>
-                                            <input type="text" id="xixo" class="form-control input-manulator"
-                                                placeholder="" aria-label="darab" aria-describedby="button-addon1"
-                                                value="1">
-                                            <div class="input-group-append">
-                                                <button class="btn btn-outline-secondary add-btn" type="button"
-                                                    id="button-addon1"
-                                                    onclick="xixo.value = Number(xixo.value) + 1; ad('xixo',xixo.value)"><i
-                                                        class="fa fa-plus"></i></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="food-card-button">
-                                        <input type="submit" class="add-bin" value="Kérem"
-                                            onclick="ad('xixo',xixo.value)" data-bs-toggle="modal" data-bs-target="#e1">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="filterDiv colors">
-            <div class="row">
-
-                <div class="col-sm-6 col-md-6 col-lg-6">
-                    <div class="food-card food-card--vertical">
-                        <div class="food-card_img">
-                            <img src="https://sandorpeteer.github.io/9A_2023_BUFE_SHOP/img/ital/cocacola2.jpg"
-                                alt="Kóla" title="Kóla">
-                            <a href="#!"><i class="fa-solid fa-heart"></i></a>
-                        </div>
-                        <div class="food-card_content">
-                            <div class="food-card_title-section">
-                                <a href="#!" class="food-card_title">Kóla</a>
-                            </div>
-                            <div class="food-card_bottom-section">
-                                <div class="space-between">
-                                    <div class="valamicoke">
-                                        <label> <input type="radio" name="kolaiz">Original</label>
-                                    </div>
-                                    <div class="valamicoke">
-                                        <label> <input type="radio" name="kolaiz">Vanillia</label>
-                                    </div>
-                                    <div class="valamicoke">
-                                        <label> <input type="radio" name="kolaiz">Zéró</label>
-                                    </div>
-                                    <div class="valamicoke">
-                                        <label> <input type="radio" name="kolaiz">Citrom</label>
-                                    </div>
-                                </div>
-                                <hr>
-                                <div class="space-between">
-                                    <div class="food-card_price">
-                                        <span class="ar_cola">...</span>
-                                    </div>
-                                    <div class="food-card_order-count">
-                                        <div class="input-group mb-3">
-
-                                            <div class="input-group-prepend">
-                                                <button class="btn btn-outline-secondary minus-btn" type="button"
-                                                    id="button-addon1"
-                                                    onclick="cola.value = Number(cola.value) - 1; ad('cola',cola.value)"><i
-                                                        class="fa fa-minus"></i></button>
-                                            </div>
-
-                                            <input type="text" id="cola" class="form-control input-manulator"
-                                                placeholder="" aria-label="darab" aria-describedby="button-addon1"
-                                                value="1">
-                                            <div class="input-group-append">
-                                                <button class="btn btn-outline-secondary add-btn" type="button"
-                                                    id="button-addon1"
-                                                    onclick="cola.value = Number(cola.value) + 1; ad('cola',cola.value)"><i
-                                                        class="fa fa-plus"></i></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="food-card-button">
-                                        <input type="submit" class="add-bin" value="Kérem"
-                                            onclick="ad('cola',cola.value)" data-bs-toggle="modal" data-bs-target="#e1">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="filterDiv cars">
-            <div class="row">
-
-                <div class="col-sm-6 col-md-6 col-lg-6">
-                    <div class="food-card food-card--vertical">
-                        <div class="food-card_img">
-                            <img src="https://sandorpeteer.github.io/9A_2023_BUFE_SHOP/img/ital/Fanta.png" alt=""
-                                title="">
-                            <a href="#!"><i class="fa-solid fa-heart"></i></a>
-                        </div>
-                        <div class="food-card_content">
-                            <div class="food-card_title-section">
-                                <a href="#!" class="food-card_title">Fanta</a>
-                            </div>
-                            <div class="food-card_bottom-section">
-                                <div class="space-between">
-
-                                </div>
-                                <hr>
-                                <div class="space-between">
-                                    <div class="food-card_price">
-                                        <span class="ar_cola">...</span>
-                                    </div>
-                                    <div class="food-card_order-count">
-                                        <div class="input-group mb-3">
-                                            <div class="input-group-prepend">
-                                                <button class="btn btn-outline-secondary minus-btn" type="button"
-                                                    id="button-addon1"
-                                                    onclick="cola.value = Number(cola.value) - 1; ad('cola',cola.value)"><i
-                                                        class="fa fa-minus"></i></button>
-                                            </div>
-                                            <input type="text" id="cola" class="form-control input-manulator"
-                                                placeholder="" aria-label="darab" aria-describedby="button-addon1"
-                                                value="1">
-                                            <div class="input-group-append">
-                                                <button class="btn btn-outline-secondary add-btn" type="button"
-                                                    id="button-addon1"
-                                                    onclick="cola.value = Number(cola.value) + 1; ad('cola',cola.value)"><i
-                                                        class="fa fa-plus"></i></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="food-card-button">
-                                        <input type="submit" class="add-bin" value="Kérem"
-                                            onclick="ad('cola',cola.value)" data-bs-toggle="modal" data-bs-target="#e1">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </main>
-
-
-    <div class="mt-5">
-
-        <footer class="text-center text-lg-start text-white" style="background-color: #1c2331">
-
-            <section class="d-flex justify-content-between p-4" style="background-color: #6351ce">
-
-                <div class="me-5">
-
-                </div>
-
-            </section>
-
-
-            <section class="">
-                <div class="container text-center text-md-start mt-5">
-
-                    <div class="row mt-3">
-
-                        <div class="col-md-4 col-lg-5 col-xl-4 mx-auto mb-4">
-
-                            <h6 class="text-uppercase fw-bold">Kandó büfé</h6>
-                            <hr class="mb-4 mt-0 d-inline-block mx-auto"
-                                style="width: 60px; background-color: #7c4dff; height: 2px" />
-                            <br>
-                            <a href="https://www.kkszki.hu/" target="_blank"><img style="margin-bottom: 10px;"
-                                    src="https://sandorpeteer.github.io/9A_2023_BUFE_SHOP/img/kando.png"
-                                    alt="Kandó logó"></a>
-                            <p>
-                                Az újonnan megy nyílt Kandó Büfé, amit a 9.A 2.csoportja készített!
-                            </p>
-                        </div>
-
-
-
-                        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4 text-center">
-
-                            <h6 class="text-uppercase fw-bold">Termékek</h6>
-                            <hr class="mb-4 mt-0 d-inline-block mx-auto"
-                                style="width: 60px; background-color: #7c4dff; height: 2px" />
-                            <p>
-                                <a href="#melege" class="text-white">Meleg ételek</a>
-                            </p>
-                            <p>
-                                <a href="#hidege" class="text-white">Hideg ételek</a>
-                            </p>
-                            <p>
-                                <a href="#udito" class="text-white">Üdítők</a>
-                            </p>
-                            <p>
-                                <a href="#melegi" class="text-white">Meleg italok</a>
-                            </p>
-                            <p>
-                                <a href="#nasi" class="text-white">Nasik</a>
-                            </p>
-                            <p>
-                                <a href="egyeb.html" class="text-white">Egyéb</a>
-                            </p>
-                        </div>
-
-
-
-                        <div class="col-md-5 col-lg-4 col-xl-4 mx-auto mb-md-0 mb-4 text-center">
-
-                            <h6 class="text-uppercase fw-bold">Elérhetőségek</h6>
-                            <hr class="mb-4 mt-0 d-inline-block mx-auto"
-                                style="width: 60px; background-color: #7c4dff; height: 2px" />
-                            <p><i class="fas fa-home mr-3">Miskolc, Palóczy László utca 3, 3525</i></p>
-                            <a href="https://mail.google.com/" target="_blank">
-                                <p><i class="fas fa-envelope mr-3">kando@kkszki.hu</i></p>
-                            </a>
-                            <p><i class="fas fa-phone mr-3">+06 46 500 930</i></p>
-                        </div>
-
-                    </div>
-
-                </div>
-            </section>
-
-
-
-            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-                © Kandó 9.A
-            </div>
-
-        </footer>
     </div>
 
+    </section>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-4 d-flex ">
+            <section class="mx-auto my-5" style="max-width: 23rem; max-height: 40rem;">
+                <div class="card">
+                    <div class="bg-image hover-overlay ripple">
+                        <img src="https://sandorpeteer.github.io/9A_2023_BUFE_SHOP/bendewebshop/img/citromxixo.jpg"
+                            class="img-fluid" width="318px">
+                        <a href="#!">
+                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                        </a>
+                    </div>
+                    <div class="card-body" id="igazito">
+                        <h5 class="card-title font-weight-bold"><a>Xixo</a></h5>
+                        <p class="mb-2 raktar">Raktáron
+                        <p class="card-text">
+                            izek:
+                            <br>
+                        <div class="valamicontainer">
+                            <div class="valami">
+                                <label> <input type="radio" name="xixoizek" id="barack"> Barack </label>
+                            </div>
+                            <div class="valami">
+                                <label> <input type="radio" name="xixoizek" id="zold"> Zöld tea </label>
+                            </div>
+                            <div class="valami">
+                                <label><input type="radio" name="xixoizek" id="ribizli"> Ribizli </label>
+                            </div>
+                            <div class="valami">
+                                <label> <input type="radio" name="xixoizek" id="citrom"> Citrom </label>
+                            </div>
+                            <div class="valami">
+                                <label> <input type="radio" name="xixoizek" id="eper"> Eper </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <hr class="my-4" />
+                        <div class="d-flex justify-content-between align-items-center">
+                            <p class="lead"><strong>500Ft</strong></p>
+                            <div class="d-flex align-items-center">
+                                <input type="number" class="btn link-secondary mr-2 mb-2" placeholder="db" id="kave">
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <input type="submit" class="btn link-secondary mt-2 kosar" value="Kosárba" name="Kosárba"
+                                onclick="ad('_kave', kave.value)">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4 d-flex  ">
+            <section class="mx-auto my-5" style="max-width: 20rem; max-height: 30rem;">
+                <div class="card">
+                    <div class="bg-image hover-overlay ripple">
+                        <img src="https://sandorpeteer.github.io/9A_2023_BUFE_SHOP/img/ital/cocacola2.jpg"
+                            class="img-fluid" width="318px">
+                        <a href="#!">
+                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                        </a>
+                    </div>
+                    <div class="card-body" id="igazito">
+                        <h5 class="card-title font-weight-bold"><a>Coca cola</a></h5>
+                        <p class="mb-2 raktar">Raktáron
+                        <p class="card-text">
+                            izek:
+                            <br>
+                        <div class="valamicontainer">
+                            <div class="valami">
+                                <label> <input type="radio" name="colaizek" id="original"> Original </label>
+                            </div>
+                            <div class="valami">
+                                <label> <input type="radio" name="colaizek" id="zero"> Zéró </label>
+                            </div>
+                            <div class="valami">
+                                <label><input type="radio" name="colaizek" id="vanillia"> Vanillia </label>
+                            </div>
+                            <div class="valami">
+                                <label> <input type="radio" name="colaizek" id="citrom"> Citrom </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <hr class="my-4" />
+                        <div class="d-flex justify-content-between align-items-center">
+                            <p class="lead"><strong>400Ft</strong></p>
+                            <div class="d-flex align-items-center">
+                                <input type="number" class="btn link-secondary mr-2 mb-2" placeholder="db"
+                                    placeholder="db" id="capp">
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <input type="submit" class="btn link-secondary mt-2 kosar" value="Kosárba"
+                                onclick="ad('_capp', capp.value)">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4 d-flex  ">
+            <section class="mx-auto my-5" style="max-width: 20rem; max-height: 60rem;">
+                <div class="card">
+                    <div class="bg-image hover-overlay ripple">
+                        <img src="https://sandorpeteer.github.io/9A_2023_BUFE_SHOP/img/ital/Fanta.png" width="318px">
+                        <a href="#!">
+                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                        </a>
+                    </div>
+                    <div class="card-body" id="igazito">
+                        <h5 class="card-title font-weight-bold"><a>Fanta</a></h5>
+                        <p class="mb-2 raktar">Raktáron
+                        <p class="card-text">
+                            izek:
+                            <br>
+                        <div class="valamicontainer">
+                            <div class="valami">
+                                <label> <input type="radio" name="xixoizek" id="barack"> Barack </label>
+                            </div>
+                            <div class="valami">
+                                <label> <input type="radio" name="xixoizek" id="zold"> Zöld tea </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <hr class="my-4" />
+                        <div class="d-flex justify-content-between align-items-center">
+                            <p class="lead"><strong>600Ft</strong></p>
+                            <div class="d-flex align-items-center">
+                                <input type="number" class="btn link-secondary mr-2 mb-2" placeholder="db" id="tejes">
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <input type="submit" class="btn link-secondary mt-2 kosar" value="Kosárba"
+                                onclick="ad('_tejes', tejes.value)">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
 
 
-    <script>
-        var _xixo = 300;
-        var _cola = 400;
+
+
+        <div class="mt-5">
+
+            <footer class="text-center text-lg-start text-white" style="background-color: #1c2331">
+
+                <section class="d-flex justify-content-between p-4" style="background-color: #6351ce">
+
+                    <div class="me-5">
+
+                    </div>
+
+                </section>
+
+
+                <section class="">
+                    <div class="container text-center text-md-start mt-5">
+
+                        <div class="row mt-3">
+
+                            <div class="col-md-4 col-lg-5 col-xl-4 mx-auto mb-4">
+
+                                <h6 class="text-uppercase fw-bold">Kandó büfé</h6>
+                                <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                                    style="width: 60px; background-color: #7c4dff; height: 2px" />
+                                <br>
+                                <a href="https://www.kkszki.hu/" target="_blank"><img style="margin-bottom: 10px;"
+                                        src="https://sandorpeteer.github.io/9A_2023_BUFE_SHOP/img/kando.png"
+                                        alt="Kandó logó"></a>
+                                <p>
+                                    Az újonnan megy nyílt Kandó Büfé, amit a 9.A 2.csoportja készített!
+                                </p>
+                            </div>
 
 
 
-        function ar_update() {
+                            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4 text-center">
+
+                                <h6 class="text-uppercase fw-bold">Főbb kategóriáink</h6>
+                                <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                                    style="width: 60px; background-color: #7c4dff; height: 2px" />
+                                <p>
+                                    <a href="#melege" class="text-white">Meleg ételek</a>
+                                </p>
+                                <p>
+                                    <a href="#hidege" class="text-white">Hideg ételek</a>
+                                </p>
+                                <p>
+                                    <a href="#udito" class="text-white">Üdítők</a>
+                                </p>
+                                <p>
+                                    <a href="#melegi" class="text-white">Meleg italok</a>
+                                </p>
+                                <p>
+                                    <a href="#nasi" class="text-white">Nasik</a>
+                                </p>
+                                <p>
+                                    <a href="https://sandorpeteer.github.io/9A_2023_BUFE_SHOP/egyeb.html"
+                                        class="text-white">Egyéb</a>
+                                </p>
+                            </div>
 
 
-            if (localStorage.getItem('xixo') != null) {
-                const collection = document.getElementsByClassName("ar_xixo");
-                collection[0].innerHTML = _xixo * Number(localStorage.getItem('xixo')) + "HUF";
-                collection[1].innerHTML = _xixo * Number(localStorage.getItem('xixo')) + "HUF";
-                collection[0].style.color = "#F47A00";
-                document.getElementById('xixo').value = localStorage.getItem('xixo');
-                document.getElementById('kosarban').innerHTML = Number(localStorage.getItem('cola')) + Number(localStorage.getItem('xixo'));
-            } else {
-                const collection = document.getElementsByClassName("ar_xixo");
-                collection[0].innerHTML = _xixo + "HUF";
-                collection[1].innerHTML = _xixo + "HUF";
-                collection[0].style.color = "grey";
-            }
-            if (localStorage.getItem('cola') != null) {
-                const collection = document.getElementsByClassName("ar_cola");
-                collection[0].innerHTML = _cola * Number(localStorage.getItem('cola')) + "HUF";
-                collection[1].innerHTML = _cola * Number(localStorage.getItem('cola')) + "HUF";
-                collection[0].style.color = "#F47A00";
-                document.getElementById('cola').value = localStorage.getItem('cola');
-                document.getElementById('kosarban').innerHTML = Number(localStorage.getItem('cola')) + Number(localStorage.getItem('xixo'));
-            } else {
-                const collection = document.getElementsByClassName("ar_cola");
-                collection[0].innerHTML = _cola + "HUF";
-                collection[1].innerHTML = _cola + "HUF";
-                collection[0].style.color = "grey";
-            }
 
-        }
+                            <div class="col-md-5 col-lg-4 col-xl-4 mx-auto mb-md-0 mb-4 text-center">
 
-        filterSelection("all")
-        function filterSelection(c) {
-            var x, i;
-            x = document.getElementsByClassName("filterDiv");
-            if (c == "all") c = "";
-            for (i = 0; i < x.length; i++) {
-                w3RemoveClass(x[i], "show");
-                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-            }
-        }
+                                <h6 class="text-uppercase fw-bold">Elérhetőségek</h6>
+                                <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                                    style="width: 60px; background-color: #7c4dff; height: 2px" />
+                                <p><i class="fas fa-home mr-3">Miskolc, Palóczy László utca 3, 3525</i></p>
+                                <a href="https://mail.google.com/" target="_blank">
+                                    <p><i class="fas fa-envelope mr-3">kando@kkszki.hu</i></p>
+                                </a>
+                                <p><i class="fas fa-phone mr-3">+06 46 500 930</i></p>
+                            </div>
 
-        function w3AddClass(element, name) {
-            var i, arr1, arr2;
-            arr1 = element.className.split(" ");
-            arr2 = name.split(" ");
-            for (i = 0; i < arr2.length; i++) {
-                if (arr1.indexOf(arr2[i]) == -1) { element.className += " " + arr2[i]; }
-            }
-        }
+                        </div>
 
-        function w3RemoveClass(element, name) {
-            var i, arr1, arr2;
-            arr1 = element.className.split(" ");
-            arr2 = name.split(" ");
-            for (i = 0; i < arr2.length; i++) {
-                while (arr1.indexOf(arr2[i]) > -1) {
-                    arr1.splice(arr1.indexOf(arr2[i]), 1);
-                }
-            }
-            element.className = arr1.join(" ");
-        }
+                    </div>
+                </section>
 
-        // Add active class to the current button (highlight it)
-        var btnContainer = document.getElementById("myBtnContainer");
-        var btns = btnContainer.getElementsByClassName("btn");
-        for (var i = 0; i < btns.length; i++) {
-            btns[i].addEventListener("click", function () {
-                var current = document.getElementsByClassName("active");
-                current[0].className = current[0].className.replace(" active", "");
-                this.className += " active";
-            });
-        }
-    </script>
+
+
+                <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+                    © Kandó 9.A
+                </div>
+
+            </footer>
+
+
+        </div>
+
 </body>
 
 </html>
