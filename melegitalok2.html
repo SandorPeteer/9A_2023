@@ -78,6 +78,12 @@
             transition: 0.3s;
             transform: scale(1.05);
         }
+        .kep{
+            max-width: 50vw;
+            min-width: 20vw;
+            max-height: 40vh;
+            min-height: 20vh;
+        }
     </style>
 
 </head>
@@ -85,7 +91,7 @@
 <body>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark p-3">
         <div class="container-fluid">
-            <a href="index.html"><img src="img/bufe_logo.png" alt="Logo" style="width:90px;"
+            <a href="menu.html"><img src="img/bufe_logo.png" alt="Logo" style="width:90px;"
                     class="rounded-pill navbar-brand"></a>
 
             <div class="collapse navbar-collapse justify-content-center" style="margin-left: 26.5%;">
@@ -108,7 +114,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="profil.html">
-                            <img class="img-thumbnail" id="profil" src="img/profilepicture.png" alt="kosar"
+                            <img class="img-thumbnail" id="profil" src="img/profilepicture.png" alt="profil"
                                 style="height: 50px; width: 50px;">
                                 <script>
                                     var vn = localStorage.getItem('vezeteknev');
@@ -133,17 +139,17 @@
 
     <div class="container-fluid p-4 s text-center d-flex justify-content-center nav2">
         <a href="menu.html" style="margin-right: 0.3%;"><button class="btn">Ajánlatok</button></a>
-        <a href="egyeb.html" style="margin-left: 0.3%;"><button class="btn" id="active">Egyéb</button></a>
+        <a href="egyeb.html" style="margin-left: 0.3%;"><button class="btn" id="active">Melegitalok</button></a>
     </div>
 
     <h2 class="text-center" style="color: white; margin-top: 2%;">Melegitalok</h2>
     <div class="container-fluid mt-5 mb-3 fo" style=" max-width: 85%; max-height: 70%;">
         <div class="row">
             <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center align-items-end mb-5">
-                <section class="mx-auto my-5" style="max-width: 23rem; max-height: 40rem;">
+                <section class="mx-auto my-5" style="max-width: 23rem;">
                     <div class="card">
                         <div class="bg-image hover-overlay ripple">
-                            <img src="img/ital/A_small_cup_of_coffee.JPG" class="img-fluid">
+                            <img src="img/ital/A_small_cup_of_coffee.JPG" class="img-fluid kep">
                             <a href="#!">
                                 <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
                             </a>
@@ -176,10 +182,10 @@
                 </section>
             </div>
             <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center align-items-end mb-5">
-                <section class="mx-auto my-5" style="max-width: 20rem; max-height: 30rem;">
+                <section class="mx-auto my-5" style="max-width: 23rem;">
                     <div class="card">
                         <div class="bg-image hover-overlay ripple">
-                            <img src="img/ital/Cappuccino_at_Sightglass_Coffee.jpg" class="img-fluid">
+                            <img src="img/ital/Cappuccino_at_Sightglass_Coffee.jpg" class="img-fluid kep">
                             <a href="#!">
                                 <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
                             </a>
@@ -212,10 +218,10 @@
                 </section>
             </div>
             <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center align-items-end mb-5">
-                <section class="mx-auto my-5" style="max-width: 20rem; max-height: 60rem;">
+                <section class="mx-auto my-5" style="max-width: 23rem;">
                     <div class="card">
                         <div class="bg-image hover-overlay ripple">
-                            <img src="img/ital/tejeskave-ineedcoffee-web.jpg" class="img-fluid">
+                            <img src="img/ital/tejeskave-ineedcoffee-web.jpg" class="img-fluid kep">
                             <a href="#!">
                                 <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
                             </a>
@@ -250,7 +256,7 @@
                 <section class="mx-auto my-5" style="max-width: 23rem;">
                     <div class="card">
                         <div class="bg-image hover-overlay ripple">
-                            <img src="img/ital/tea.jpg" class="img-fluid">
+                            <img src="img/ital/tea.jpg" class="img-fluid kep">
                             <a href="#!">
                                 <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
                             </a>
@@ -260,6 +266,7 @@
                             <p class="mb-2 raktar">Raktáron</p>
                             <p class="card-text">
                                 Ízek:
+                                <br>
                                 epres <input type="radio" name="tej" id="tej">
                                 citromos  <input type="radio" name="hab" id="hab">
                                 barackos <input type="radio" name="cukor" id="cukor">
@@ -285,7 +292,7 @@
                 <section class="mx-auto my-5" style="max-width: 23rem;">
                     <div class="card">
                         <div class="bg-image hover-overlay ripple">
-                            <img src="img/ital/lead_L_121298_forro-csoki02.jpg" class="img-fluid">
+                            <img src="img/ital/lead_L_121298_forro-csoki02.jpg" class="img-fluid kep">
                             <a href="#!">
                                 <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
                             </a>
@@ -322,7 +329,7 @@
                 <section class="mx-auto my-5" style="max-width: 23rem;">
                     <div class="card">
                         <div class="bg-image hover-overlay ripple">
-                            <img src="img/ital/kakao-3.jpg" class="img-fluid">
+                            <img src="img/ital/kakao-3.jpg" class="img-fluid kep">
                             <a href="#!">
                                 <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
                             </a>
@@ -448,6 +455,7 @@
         var _tejes = 600
         var _tea = 150
         var _forro = 600
+        var _kakao = 300
         function ad(nev, ertek) {
             localStorage.setItem(nev, Number(ertek));
         }
