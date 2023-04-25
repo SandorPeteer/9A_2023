@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
-   
+
 
     <style>
         body {
@@ -78,6 +78,14 @@
             transition: 0.3s;
             transform: scale(1.05);
         }
+
+        .img-fluid {
+            max-width: 30vw;
+            min-width: 20vw;
+            max-height: 40vh;
+            min-height: 20vh;
+        }
+
     </style>
 
 </head>
@@ -110,15 +118,15 @@
                         <a class="nav-link" href="profil.html">
                             <img class="img-thumbnail" id="profil" src="img/profilepicture.png" alt="profil"
                                 style="height: 50px; width: 50px;">
-                                <script>
-                                    var vn = localStorage.getItem('vezeteknev');
-                                     var kn = localStorage.getItem('keresztnev');
- 
-                                     document.write(vn)
-                                     document.write(" ")
-                                     document.write(kn)
- 
-                                 </script>
+                            <script>
+                                var vn = localStorage.getItem('vezeteknev');
+                                var kn = localStorage.getItem('keresztnev');
+
+                                document.write(vn)
+                                document.write(" ")
+                                document.write(kn)
+
+                            </script>
                         </a>
                     </li>
                     <li class="nav-item">
@@ -152,12 +160,12 @@
                             <h5 class="card-title font-weight-bold"><a>Kávé</a></h5>
                             <p class="mb-2 raktar">Raktáron</p>
                             <p class="card-text">
-                             +dolgok:
-                             <br>
-                             tej  <input type="radio" name="tej" id="tej">
-                             tejszínhab  <input type="radio" name="hab" id="hab">
-                             cukor <input type="radio" name="cukor" id="cukor">
-                             tejszín <input type="radio" name="tejszín" id="tejszin">
+                                +dolgok:
+                                <br>
+                                tej <input type="radio" name="tej" id="tej">
+                                tejszínhab <input type="radio" name="hab" id="hab">
+                                cukor <input type="radio" name="cukor" id="cukor">
+                                tejszín <input type="radio" name="tejszín" id="tejszin">
                             </p>
                             <hr class="my-4" />
                             <div class="d-flex justify-content-between align-items-center">
@@ -189,11 +197,11 @@
                             <p class="mb-2 raktar">Raktáron</p>
                             <p class="card-text">
                                 +dolgok:
-                             <br>
-                             tej  <input type="radio" name="tej" id="tej">
-                             tejszínhab  <input type="radio" name="hab" id="hab">
-                             cukor <input type="radio" name="cukor" id="cukor">
-                             tejszín <input type="radio" name="tejszín" id="tejszin">
+                                <br>
+                                tej <input type="radio" name="tej" id="tej">
+                                tejszínhab <input type="radio" name="hab" id="hab">
+                                cukor <input type="radio" name="cukor" id="cukor">
+                                tejszín <input type="radio" name="tejszín" id="tejszin">
                             </p>
                             <hr class="my-4" />
                             <div class="d-flex justify-content-between align-items-center">
@@ -226,8 +234,8 @@
                             <p class="card-text">
                                 +dolgok:
                                 <br>
-                                tej  <input type="radio" name="tej" id="tej">
-                                tejszínhab  <input type="radio" name="hab" id="hab">
+                                tej <input type="radio" name="tej" id="tej">
+                                tejszínhab <input type="radio" name="hab" id="hab">
                                 cukor <input type="radio" name="cukor" id="cukor">
                                 tejszín <input type="radio" name="tejszín" id="tejszin">
                             </p>
@@ -235,7 +243,8 @@
                             <div class="d-flex justify-content-between align-items-center">
                                 <p class="lead"><strong>600Ft</strong></p>
                                 <div class="d-flex align-items-center">
-                                    <input type="number" class="btn link-secondary mr-2 mb-2" placeholder="db" id="tejes">
+                                    <input type="number" class="btn link-secondary mr-2 mb-2" placeholder="db"
+                                        id="tejes">
                                 </div>
                             </div>
                             <div class="d-flex justify-content-center">
@@ -262,7 +271,7 @@
                                 Ízek:
                                 <br>
                                 epres <input type="radio" name="tej" id="tej">
-                                citromos  <input type="radio" name="hab" id="hab">
+                                citromos <input type="radio" name="hab" id="hab">
                                 barackos <input type="radio" name="cukor" id="cukor">
                                 málnás <input type="radio" name="malnas" id="malnas">
                             </p>
@@ -270,8 +279,7 @@
                             <div class="d-flex justify-content-between align-items-center">
                                 <p class="lead"><strong>150Ft</strong></p>
                                 <div class="d-flex align-items-center">
-                                    <input type="number" class="btn link-secondary mr-2 mb-2" placeholder="db"
-                                        id="tea">
+                                    <input type="number" class="btn link-secondary mr-2 mb-2" placeholder="db" id="tea">
                                 </div>
                             </div>
                             <div class="d-flex justify-content-center">
@@ -297,8 +305,8 @@
                             <p class="card-text">
                                 +dolgok:
                                 <br>
-                                tej  <input type="radio" name="tej" id="tej">
-                                tejszínhab  <input type="radio" name="hab" id="hab">
+                                tej <input type="radio" name="tej" id="tej">
+                                tejszínhab <input type="radio" name="hab" id="hab">
                                 cukor <input type="radio" name="cukor" id="cukor">
                                 tejszín <input type="radio" name="tejszín" id="tejszin">
                             </p>
@@ -334,8 +342,8 @@
                             <p class="card-text">
                                 +dolgok:
                                 <br>
-                                tej  <input type="radio" name="tej" id="tej">
-                                tejszínhab  <input type="radio" name="hab" id="hab">
+                                tej <input type="radio" name="tej" id="tej">
+                                tejszínhab <input type="radio" name="hab" id="hab">
                                 cukor <input type="radio" name="cukor" id="cukor">
                                 tejszín <input type="radio" name="tejszín" id="tejszin">
                             </p>
@@ -355,93 +363,94 @@
                     </div>
                 </section>
             </div>
-     <div class="mt-5">
+            <div class="mt-5">
 
-        <footer class="text-center text-lg-start text-white" style="background-color: #1c2331">
+                <footer class="text-center text-lg-start text-white" style="background-color: #1c2331">
 
-            <section class="d-flex justify-content-between p-4" style="background-color: #6351ce">
+                    <section class="d-flex justify-content-between p-4" style="background-color: #6351ce">
 
-                <div class="me-5">
+                        <div class="me-5">
 
-                </div>
-
-            </section>
-
-
-            <section class="">
-                <div class="container text-center text-md-start mt-5">
-
-                    <div class="row mt-3">
-
-                        <div class="col-md-4 col-lg-5 col-xl-4 mx-auto mb-4">
-
-                            <h6 class="text-uppercase fw-bold">Kandó büfé</h6>
-                            <hr class="mb-4 mt-0 d-inline-block mx-auto"
-                                style="width: 60px; background-color: #7c4dff; height: 2px" />
-                            <br>
-                            <a href="https://www.kkszki.hu/" target="_blank"><img style="margin-bottom: 10px;"
-                                    src="img/kando.png" alt="Kandó logó"></a>
-                            <p>
-                                Az újonnan megy nyílt Kandó Büfé, amit a 9.A 2.csoportja készített!
-                            </p>
                         </div>
 
+                    </section>
 
 
-                        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4 text-center">
+                    <section class="">
+                        <div class="container text-center text-md-start mt-5">
 
-                            <h6 class="text-uppercase fw-bold">Főbb kategóriáink</h6>
-                            <hr class="mb-4 mt-0 d-inline-block mx-auto"
-                                style="width: 60px; background-color: #7c4dff; height: 2px" />
-                            <p>
-                                <a href="#melege" class="text-white">Meleg ételek</a>
-                            </p>
-                            <p>
-                                <a href="#hidege" class="text-white">Hideg ételek</a>
-                            </p>
-                            <p>
-                                <a href="#udito" class="text-white">Üdítők</a>
-                            </p>
-                            <p>
-                                <a href="https://sandorpeteer.github.io/9A_2023_BUFE_SHOP/melegitalok2.html" class="text-white">Meleg italok</a>
-                            </p>
-                            <p>
-                                <a href="#nasi" class="text-white">Nasik</a>
-                            </p>
-                            <p>
-                                <a href="egyeb.html" class="text-white">Egyéb</a>
-                            </p>
+                            <div class="row mt-3">
+
+                                <div class="col-md-4 col-lg-5 col-xl-4 mx-auto mb-4">
+
+                                    <h6 class="text-uppercase fw-bold">Kandó büfé</h6>
+                                    <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                                        style="width: 60px; background-color: #7c4dff; height: 2px" />
+                                    <br>
+                                    <a href="https://www.kkszki.hu/" target="_blank"><img style="margin-bottom: 10px;"
+                                            src="img/kando.png" alt="Kandó logó"></a>
+                                    <p>
+                                        Az újonnan megy nyílt Kandó Büfé, amit a 9.A 2.csoportja készített!
+                                    </p>
+                                </div>
+
+
+
+                                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4 text-center">
+
+                                    <h6 class="text-uppercase fw-bold">Főbb kategóriáink</h6>
+                                    <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                                        style="width: 60px; background-color: #7c4dff; height: 2px" />
+                                    <p>
+                                        <a href="#melege" class="text-white">Meleg ételek</a>
+                                    </p>
+                                    <p>
+                                        <a href="#hidege" class="text-white">Hideg ételek</a>
+                                    </p>
+                                    <p>
+                                        <a href="#udito" class="text-white">Üdítők</a>
+                                    </p>
+                                    <p>
+                                        <a href="https://sandorpeteer.github.io/9A_2023_BUFE_SHOP/melegitalok2.html"
+                                            class="text-white">Meleg italok</a>
+                                    </p>
+                                    <p>
+                                        <a href="#nasi" class="text-white">Nasik</a>
+                                    </p>
+                                    <p>
+                                        <a href="egyeb.html" class="text-white">Egyéb</a>
+                                    </p>
+                                </div>
+
+
+
+                                <div class="col-md-5 col-lg-4 col-xl-4 mx-auto mb-md-0 mb-4 text-center">
+
+                                    <h6 class="text-uppercase fw-bold">Elérhetőségek</h6>
+                                    <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                                        style="width: 60px; background-color: #7c4dff; height: 2px" />
+                                    <p><i class="fas fa-home mr-3">Miskolc, Palóczy László utca 3, 3525</i></p>
+                                    <a href="https://mail.google.com/" target="_blank">
+                                        <p><i class="fas fa-envelope mr-3">kando@kkszki.hu</i></p>
+                                    </a>
+                                    <p><i class="fas fa-phone mr-3">+06 46 500 930</i></p>
+                                </div>
+
+                            </div>
+
                         </div>
-
-
-
-                        <div class="col-md-5 col-lg-4 col-xl-4 mx-auto mb-md-0 mb-4 text-center">
-
-                            <h6 class="text-uppercase fw-bold">Elérhetőségek</h6>
-                            <hr class="mb-4 mt-0 d-inline-block mx-auto"
-                                style="width: 60px; background-color: #7c4dff; height: 2px" />
-                            <p><i class="fas fa-home mr-3">Miskolc, Palóczy László utca 3, 3525</i></p>
-                            <a href="https://mail.google.com/" target="_blank">
-                                <p><i class="fas fa-envelope mr-3">kando@kkszki.hu</i></p>
-                            </a>
-                            <p><i class="fas fa-phone mr-3">+06 46 500 930</i></p>
-                        </div>
-
-                    </div>
-
-                </div>
-            </section>
+                    </section>
+            </div>
         </div>
     </div>
-</div>
 
 
 
-            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-                © Kandó 9.A
-            </div>
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        © Kandó 9.A
+    </div>
 
-        </footer>
+    </footer>
 
     <script>
         var _kave = 500
