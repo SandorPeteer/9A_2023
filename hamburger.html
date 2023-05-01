@@ -91,7 +91,7 @@
                 <form class="d-flex w-50">
                     <div class="input-group">
                         <input class="form-control border-end-0 border rounded-pill" type="search" placeholder="Kereső"
-                            id="example-search-input">
+                            id="search-input">
                 </form>
             </div>
 
@@ -352,6 +352,68 @@
                 alert("Hozzáadva a kosárhoz!")
             }
 
+            function searchCards() {
+    let input = document.getElementById("search-input").value.toLowerCase();
+    console.log(input);
+    let cards = document.querySelectorAll(".card");
+    let titles = document.querySelectorAll(".card-title, .cimek");
+    let hrs = document.querySelectorAll("hr");
+  
+    cards.forEach((card) => {
+      let text = card.textContent.toLowerCase();
+      if (text.indexOf(input) > -1) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  
+    titles.forEach((title) => {
+      let text = title.textContent.toLowerCase();
+      if (text.indexOf(input) > -1) {
+        title.style.display = "block";
+      } else {
+        title.style.display = "none";
+      }
+    });
+  
+    hrs.forEach((hr) => {
+      hr.style.display = "none";
+    });
+  
+    if (input === "") {
+      cards.forEach((card) => {
+        card.style.display = "block";
+      });
+      titles.forEach((title) => {
+        title.style.display = "block";
+      });
+      hrs.forEach((hr) => {
+        hr.style.display = "block";
+      });
+    } else {
+      cards.forEach((card) => {
+        let text = card.textContent.toLowerCase();
+        if (text.indexOf(input) > -1) {
+          card.style.display = "block";
+        }
+      });
+      titles.forEach((title) => {
+        let text = title.textContent.toLowerCase();
+        if (text.indexOf(input) > -1) {
+          title.style.display = "block";
+          let hr = title.nextElementSibling;
+          if (hr.tagName === "HR") {
+            hr.style.display = "block";
+          }
+        }
+      });
+    }
+  }
+  
+  
+  document.getElementById("search-input").addEventListener("keyup", searchCards);
+      
         </script>
 </body>
 
