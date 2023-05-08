@@ -30,7 +30,7 @@ function dark() {
     }
   });
 }
-
+document.addEventListener("DOMContentLoaded", function profil() {
 var vn = localStorage.getItem('vezeteknev');
 var kn = localStorage.getItem('keresztnev');
 const pn = document.getElementById("profilnev");
@@ -49,5 +49,6 @@ pn.innerHTML="Nincs bejelentkezve";
   document.write(kn)
 
 }
+});
 
 
