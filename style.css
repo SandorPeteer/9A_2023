@@ -11,18 +11,25 @@ body {
   border-radius: 5%;
 }
 
-#cart:hover,  #profil:hover, #dark:hover{
+#cart:hover,
+#profil:hover,
+#dark:hover {
   transform: scale(1.15);
   transition: 0.5s;
-  
+
 }
 
 
 .footer {
-  background: linear-gradient(#1b0a27,#1d042e,#141414)
+  background: linear-gradient(#1b0a27, #1d042e, #141414)
 }
 
 .dark-mode {
-  background-color:rgb(33, 37, 41) ;
+  background-color: rgb(33, 37, 41);
   color: rgb(240, 244, 248);
+}
+
+.img-thumbnail {
+  float: left;
+  
 }
