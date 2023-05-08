@@ -9,44 +9,45 @@ function dark() {
   cards.forEach(card => {
     if (body.classList.contains("dark-mode")) {
       card.style.backgroundColor = "white";
-      card.style.color="rgb(33, 37, 41)";
+      card.style.color = "rgb(33, 37, 41)";
     } else {
       card.style.backgroundColor = "rgb(33, 37, 41)";
-      card.style.color="white";
+      card.style.color = "white";
     }
   });
   bords.forEach(bords => {
     if (body.classList.contains("dark-mode")) {
-      bords.style.borderColor="white";
+      bords.style.borderColor = "white";
     } else {
-        bords.style.borderColor="rgb(33, 37, 41)";
+      bords.style.borderColor = "rgb(33, 37, 41)";
     }
   });
   hrs.forEach(hrs => {
     if (body.classList.contains("dark-mode")) {
-      hrs.style.color="white";
+      hrs.style.color = "white";
     } else {
-        hrs.style.color="rgb(33, 37, 41)";
+      hrs.style.color = "rgb(33, 37, 41)";
     }
   });
 }
 
 var vn = localStorage.getItem('vezeteknev');
-                                var kn = localStorage.getItem('keresztnev');
+var kn = localStorage.getItem('keresztnev');
+const pn = document.getElementById("profilnev");
 
-                                if (vn == null) {
+if (vn == null) {
 
-
-                                    document.write("Nincs bejelenkezve")
-
-
-                                } else {
+pn.innerHTML="Nincs bejelentkezve";
+  
 
 
-                                    document.write(vn)
-                                    document.write(" ")
-                                    document.write(kn)
+} else {
 
-                                }
 
- 
+  document.write(vn)
+  document.write(" ")
+  document.write(kn)
+
+}
+
+
