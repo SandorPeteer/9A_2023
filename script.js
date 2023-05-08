@@ -31,4 +31,22 @@ function dark() {
   });
 }
 
+var vn = localStorage.getItem('vezeteknev');
+                                var kn = localStorage.getItem('keresztnev');
+
+                                if (vn == null) {
+
+
+                                    document.write("Nincs bejelenkezve")
+
+
+                                } else {
+
+
+                                    document.write(vn)
+                                    document.write(" ")
+                                    document.write(kn)
+
+                                }
+
  
