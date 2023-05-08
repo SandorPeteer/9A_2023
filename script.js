@@ -37,7 +37,7 @@ const pn = document.getElementById("profilnev");
 
 if (vn == null) {
 
-pn.innerHTML="<p> Nincs bejelentkezve </p>";
+pn.innerHTML="Nincs bejelentkezve";
   
 
 
