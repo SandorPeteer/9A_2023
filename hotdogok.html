@@ -134,153 +134,153 @@
                             <h5 class="card-title font-weight-bold"><a>Sima hotdog</a></h5>
                             <p class="mb-2 raktar">Raktáron</p>
                             <p class="card-text">
-                               Kifli, virsli, választható szósz
+                                Kifli, virsli, választható szósz
                             </p>
                             <hr class="my-4" />
                             <div class="d-flex justify-content-between align-items-center">
                                 <p class="lead"><strong>500 Ft</strong></p>
                                 <div class="d-flex align-items-center">
-                                    <input type="number" class="btn link-secondary mr-2 mb-2" placeholder="db"
-                                        id="szalveta">
+                                    <input type="number" class="btn link-secondary mr-2 mb-2" placeholder="db" min="1"
+                                        max="5" id="hotd">
                                 </div>
                             </div>
                             <div class="d-flex justify-content-center">
                                 <input type="submit" class="btn link-secondary mt-2 kosar" value="Kosárba"
-                                    name="Kosárba" onclick="">
+                                    name="Kosárba" onclick="ad('_hotdog', document.getElementById('hotd').value)">
                             </div>
                         </div>
                     </div>
                 </section>
             </div>
             <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center align-items-end mb-5">
-              <section class="mx-auto my-5" style="max-width: 23rem;">
-                  <div class="card">
-                      <div class="bg-image hover-overlay ripple">
-                          <img src="img/am-hotdog.jpg" class="img-fluid">
-                          <a href="#!">
-                              <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                          </a>
-                      </div>
-                      <div class="card-body" id="igazito">
-                          <h5 class="card-title font-weight-bold"><a>Amerikai hotdog</a></h5>
-                          <p class="mb-2 raktar">Raktáron</p>
-                          <p class="card-text">
-                             Kifli, virsli, szósz, hagyma, uborka, sajt
-                          </p>
-                          <hr class="my-4" />
-                          <div class="d-flex justify-content-between align-items-center">
-                              <p class="lead"><strong>750 Ft</strong></p>
-                              <div class="d-flex align-items-center">
-                                  <input type="number" class="btn link-secondary mr-2 mb-2" placeholder="db"
-                                      id="szalveta">
-                              </div>
-                          </div>
-                          <div class="d-flex justify-content-center">
-                              <input type="submit" class="btn link-secondary mt-2 kosar" value="Kosárba"
-                                  name="Kosárba" onclick="">
-                          </div>
-                      </div>
-                  </div>
-              </section>
-          </div>
-          
-          <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center align-items-end mb-5">
-            <section class="mx-auto my-5" style="max-width: 23rem;">
-                <div class="card">
-                    <div class="bg-image hover-overlay ripple">
-                        <img src="img/sajtos-hot-dog.jpg" class="img-fluid">
-                        <a href="#!">
-                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                        </a>
-                    </div>
-                    <div class="card-body" id="igazito">
-                        <h5 class="card-title font-weight-bold"><a>Sajtos hotdog</a></h5>
-                        <p class="mb-2 raktar">Raktáron</p>
-                        <p class="card-text">
-                           Sima hotdog + sajt
-                        </p>
-                        <hr class="my-4" />
-                        <div class="d-flex justify-content-between align-items-center">
-                            <p class="lead"><strong>600 Ft</strong></p>
-                            <div class="d-flex align-items-center">
-                                <input type="number" class="btn link-secondary mr-2 mb-2" placeholder="db"
-                                    id="szalveta">
+                <section class="mx-auto my-5" style="max-width: 23rem;">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple">
+                            <img src="img/am-hotdog.jpg" class="img-fluid">
+                            <a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                            </a>
+                        </div>
+                        <div class="card-body" id="igazito">
+                            <h5 class="card-title font-weight-bold"><a>Amerikai hotdog</a></h5>
+                            <p class="mb-2 raktar">Raktáron</p>
+                            <p class="card-text">
+                                Kifli, virsli, szósz, hagyma, uborka, sajt
+                            </p>
+                            <hr class="my-4" />
+                            <div class="d-flex justify-content-between align-items-center">
+                                <p class="lead"><strong>750 Ft</strong></p>
+                                <div class="d-flex align-items-center">
+                                    <input type="number" class="btn link-secondary mr-2 mb-2" placeholder="db" min="1"
+                                        max="5" id="ahotd">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <input type="submit" class="btn link-secondary mt-2 kosar" value="Kosárba"
+                                    name="Kosárba" onclick="ad('_ahotdog', document.getElementById('ahotd').value)">
                             </div>
                         </div>
-                        <div class="d-flex justify-content-center">
-                            <input type="submit" class="btn link-secondary mt-2 kosar" value="Kosárba"
-                                name="Kosárba" onclick="">
+                    </div>
+                </section>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center align-items-end mb-5">
+                <section class="mx-auto my-5" style="max-width: 23rem;">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple">
+                            <img src="img/sajtos-hot-dog.jpg" class="img-fluid">
+                            <a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                            </a>
                         </div>
-                    </div>
-                </div>
-            </section>
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-6 d-flex justify-content-center align-items-end mb-5">
-            <section class="mx-auto my-5" style="max-width: 23rem;">
-                <div class="card">
-                    <div class="bg-image hover-overlay ripple">
-                        <img src="img/v-hotdog.jpg" class="img-fluid">
-                        <a href="#!">
-                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                        </a>
-                    </div>
-                    <div class="card-body" id="igazito">
-                        <h5 class="card-title font-weight-bold"><a>Vegán hotdog</a></h5>
-                        <p class="mb-2 raktar">Raktáron</p>
-                        <p class="card-text">
-                           Ízletes növény alapú virsli zöldségekkel
-                        </p>
-                        <hr class="my-4" />
-                        <div class="d-flex justify-content-between align-items-center">
-                            <p class="lead"><strong>600 Ft</strong></p>
-                            <div class="d-flex align-items-center">
-                                <input type="number" class="btn link-secondary mr-2 mb-2" placeholder="db"
-                                    id="szalveta">
+                        <div class="card-body" id="igazito">
+                            <h5 class="card-title font-weight-bold"><a>Sajtos hotdog</a></h5>
+                            <p class="mb-2 raktar">Raktáron</p>
+                            <p class="card-text">
+                                Sima hotdog + sajt
+                            </p>
+                            <hr class="my-4" />
+                            <div class="d-flex justify-content-between align-items-center">
+                                <p class="lead"><strong>600 Ft</strong></p>
+                                <div class="d-flex align-items-center">
+                                    <input type="number" class="btn link-secondary mr-2 mb-2" placeholder="db" min="1"
+                                        max="5" id="shotd">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <input type="submit" class="btn link-secondary mt-2 kosar" value="Kosárba"
+                                    name="Kosárba" onclick="ad('_shotdog', document.getElementById('shotd').value)">
                             </div>
                         </div>
-                        <div class="d-flex justify-content-center">
-                            <input type="submit" class="btn link-secondary mt-2 kosar" value="Kosárba"
-                                name="Kosárba" onclick="">
+                    </div>
+                </section>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6 d-flex justify-content-center align-items-end mb-5">
+                <section class="mx-auto my-5" style="max-width: 23rem;">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple">
+                            <img src="img/v-hotdog.jpg" class="img-fluid">
+                            <a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                            </a>
                         </div>
-                    </div>
-                </div>
-            </section>
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-6 d-flex justify-content-center align-items-end mb-5">
-            <section class="mx-auto my-5" style="max-width: 23rem;">
-                <div class="card">
-                    <div class="bg-image hover-overlay ripple">
-                        <img src="img/a-hotdog.jpg" class="img-fluid">
-                        <a href="#!">
-                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                        </a>
-                    </div>
-                    <div class="card-body" id="igazito">
-                        <h5 class="card-title font-weight-bold"><a>Alacsony kalóriás hotdog</a></h5>
-                        <p class="mb-2 raktar">Raktáron</p>
-                        <p class="card-text">
-                           Ízletes alacsony kalóriás hotdog
-                        </p>
-                        <hr class="my-4" />
-                        <div class="d-flex justify-content-between align-items-center">
-                            <p class="lead"><strong>700 Ft</strong></p>
-                            <div class="d-flex align-items-center">
-                                <input type="number" class="btn link-secondary mr-2 mb-2" placeholder="db"
-                                    id="szalveta">
+                        <div class="card-body" id="igazito">
+                            <h5 class="card-title font-weight-bold"><a>Vegán hotdog</a></h5>
+                            <p class="mb-2 raktar">Raktáron</p>
+                            <p class="card-text">
+                                Ízletes növény alapú virsli zöldségekkel
+                            </p>
+                            <hr class="my-4" />
+                            <div class="d-flex justify-content-between align-items-center">
+                                <p class="lead"><strong>600 Ft</strong></p>
+                                <div class="d-flex align-items-center">
+                                    <input type="number" class="btn link-secondary mr-2 mb-2" placeholder="db" min="1"
+                                        max="5" id="vhotd">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <input type="submit" class="btn link-secondary mt-2 kosar" value="Kosárba"
+                                    name="Kosárba" onclick="ad('_vhotdog', document.getElementById('vhotd').value)">
                             </div>
                         </div>
-                        <div class="d-flex justify-content-center">
-                            <input type="submit" class="btn link-secondary mt-2 kosar" value="Kosárba"
-                                name="Kosárba" onclick="">
+                    </div>
+                </section>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6 d-flex justify-content-center align-items-end mb-5">
+                <section class="mx-auto my-5" style="max-width: 23rem;">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple">
+                            <img src="img/a-hotdog.jpg" class="img-fluid">
+                            <a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                            </a>
+                        </div>
+                        <div class="card-body" id="igazito">
+                            <h5 class="card-title font-weight-bold"><a>Alacsony kalóriás hotdog</a></h5>
+                            <p class="mb-2 raktar">Raktáron</p>
+                            <p class="card-text">
+                                Ízletes alacsony kalóriás hotdog
+                            </p>
+                            <hr class="my-4" />
+                            <div class="d-flex justify-content-between align-items-center">
+                                <p class="lead"><strong>700 Ft</strong></p>
+                                <div class="d-flex align-items-center">
+                                    <input type="number" class="btn link-secondary mr-2 mb-2" placeholder="db" min="1"
+                                        max="5" id="akhotd">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <input type="submit" class="btn link-secondary mt-2 kosar" value="Kosárba" name="Kosárba"
+                                onclick="ad('_akhotdog', document.getElementById('akhotd').value)">
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
-          </div>
+                </section>
+            </div>
         </div>
     </div>
 
-    
+
 
 
     <div class="mt-5">
@@ -367,9 +367,19 @@
             </div>
 
         </footer>
-
-
     </div>
+
+    <script>
+        var _hotdog = 500
+        var _ahotdog = 750
+        var _shotdog = 600
+        var _vhotdog = 600
+        var _akhotdog = 700
+        function ad(termek, mennyiseg) {
+            localStorage.setItem(termek, mennyiseg);
+        }
+
+    </script>
 
 </body>
 
