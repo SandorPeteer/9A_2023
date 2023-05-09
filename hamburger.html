@@ -13,72 +13,71 @@
 
   <style>
     body {
-        background: linear-gradient(#528791, #3c195e);
+      background: linear-gradient(#528791, #3c195e);
     }
 
     .nav2 {
-        background: radial-gradient(#190a22, #05042e, #141414);
+      background: radial-gradient(#190a22, #05042e, #141414);
     }
 
     .btn {
-        width: 100px;
-        border: 2px solid white;
-        border-radius: 30px;
-        background-color: rgba(0, 0, 0, 0.096);
-        color: white;
+      width: 100px;
+      border: 2px solid white;
+      border-radius: 30px;
+      background-color: rgba(0, 0, 0, 0.096);
+      color: white;
     }
 
     .btn:hover {
-        transform: scale(1.04);
-        transition: 0.4s;
-        color: white;
-        border: 2px solid white;
+      transform: scale(1.04);
+      transition: 0.4s;
+      color: white;
+      border: 2px solid white;
     }
 
     #active {
-        background-color: rgba(255, 255, 255, 0.438);
-        color: rgb(255, 255, 255);
-        font-weight: bold;
+      background-color: rgba(255, 255, 255, 0.438);
+      color: rgb(255, 255, 255);
+      font-weight: bold;
     }
 
     .fo {
-        border: 3px solid white;
-        border-radius: 30px;
-        background: linear-gradient(rgba(255, 255, 255, 0.733), rgba(17, 17, 17, 0.342));
+      border: 3px solid white;
+      border-radius: 30px;
+      background: linear-gradient(rgba(255, 255, 255, 0.733), rgba(17, 17, 17, 0.342));
     }
 
     .raktar {
-        color: green;
+      color: green;
     }
 
     .kosar {
-        border-color: #1c2331;
-        background-color: #ffffff38;
-        color: rgb(255, 255, 255);
-        font-weight: bold;
+      border-color: #1c2331;
+      background-color: #ffffff38;
+      color: rgb(255, 255, 255);
+      font-weight: bold;
     }
 
     .kosar:hover {
-        border-color: #1c233148;
-        color: rgb(255, 255, 255);
-        transition: 0.3s;
+      border-color: #1c233148;
+      color: rgb(255, 255, 255);
+      transition: 0.3s;
     }
 
     .card:hover {
-        box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
-        -moz-box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
-        -webkit-box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
-        -o-box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
-        transition: 0.3s;
-        transform: scale(1.03);
+      box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+      -moz-box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+      -webkit-box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+      -o-box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+      transition: 0.3s;
+      transform: scale(1.03);
     }
 
     .img:hover {
-        transition: 0.3s;
-        transform: scale(1.05);
+      transition: 0.3s;
+      transform: scale(1.05);
     }
-    
-</style>
+  </style>
 
 </head>
 
@@ -119,6 +118,13 @@
     </div>
   </nav>
 
+  <div class="alert alert-success alert-dismissible fade show text-center" role="alert" id="salert"
+    style="display:none; position: fixed; top: 0; width: 100%; z-index: 9999;">
+    <strong>A termék hozzá lett adva a kosárhoz!</strong>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+
+
   <h2 class="text-center" style="color: white; margin-top: 2%;">Hamburgerek</h2>
   <div class="container-fluid mt-5 mb-3 fo" style=" max-width: 85%; max-height: 70%;">
     <div class="row">
@@ -135,7 +141,8 @@
               <h5 class="card-title font-weight-bold"><a>Hamburger</a></h5>
               <p class="mb-2 raktar">Raktáron</p>
               <p class="card-text">
-                Friss bucik, grillezett, fűszeres húspogácsa jégsalátával, és különféle választható egzotikus szószokkal.
+                Friss bucik, grillezett, fűszeres húspogácsa jégsalátával, és különféle választható egzotikus
+                szószokkal.
               </p>
               <hr class="my-4" />
               <div class="d-flex justify-content-between align-items-center">
@@ -145,7 +152,8 @@
                 </div>
               </div>
               <div class="d-flex justify-content-center">
-                <input type="submit" class="btn link-secondary mt-2 kosar" value="Kosárba" name="Kosárba" onclick="ad('_hamb', document.getElementById('hamb').value)">
+                <input type="submit" class="btn link-secondary mt-2 kosar" value="Kosárba" name="Kosárba"
+                  onclick="ad('_hamb', document.getElementById('hamb').value)">
               </div>
             </div>
           </div>
@@ -153,7 +161,7 @@
       </div>
 
 
-      
+
 
       <div class="col-sm-12 col-lg-4 d-flex justify-content-center align-items-end mb-5">
         <section class="mx-auto my-5" style="max-width: 23rem;">
@@ -175,7 +183,8 @@
               <div class="d-flex justify-content-between align-items-center">
                 <p class="lead"><strong>950Ft</strong></p>
                 <div class="d-flex align-items-center">
-                  <input type="number" class="btn link-secondary mr-2 mb-2" placeholder="db" min="1" max="5" id="duplahamb">
+                  <input type="number" class="btn link-secondary mr-2 mb-2" placeholder="db" min="1" max="5"
+                    id="duplahamb">
                 </div>
               </div>
               <div class="d-flex justify-content-center">
@@ -206,7 +215,8 @@
               <div class="d-flex justify-content-between align-items-center">
                 <p class="lead"><strong>600Ft</strong></p>
                 <div class="d-flex align-items-center">
-                  <input type="number" class="btn link-secondary mr-2 mb-2" placeholder="db" min="1" max="5" id="csirkeb">
+                  <input type="number" class="btn link-secondary mr-2 mb-2" placeholder="db" min="1" max="5"
+                    id="csirkeb">
                 </div>
               </div>
               <div class="d-flex justify-content-center">
@@ -377,9 +387,20 @@
     var _csirke = 600
     var _sajt = 500
     var _filet = 850
+    
+    var sikerAlert = document.getElementById("salert");
+
     function ad(termek, mennyiseg) {
-    localStorage.setItem(termek, mennyiseg);
-  }
+      localStorage.setItem(termek, mennyiseg);
+
+      sikerAlert.style.display = "block";
+      sikerAlert.innerHTML = "<strong>Siker!</strong> A termék hozzá lett adva a kosárhoz!";
+      setTimeout(function () {
+        sikerAlert.style.display = "none";
+        spinner.style.display = "none";
+        window.location.href = 'index.html'
+      }, 2000);
+    }
 
   </script>
 </body>
