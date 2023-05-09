@@ -44,9 +44,7 @@ pn.innerHTML="Nincs bejelentkezve";
 } else {
 
 
-  document.write(vn)
-  document.write(" ")
-  document.write(kn)
+  pn.innerHTML=vn+" "+kn;
 
 }
 });
