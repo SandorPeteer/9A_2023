@@ -107,15 +107,6 @@
             <a class="nav-link" href="profil.html">
               <img class="img-thumbnail" id="profil" src="img/profilepicture.png" alt="kosar"
                 style="height: 50px; width: 50px;">
-              <script>
-                var vn = localStorage.getItem('vezeteknev');
-                var kn = localStorage.getItem('keresztnev');
-
-                document.write(vn)
-                document.write(" ")
-                document.write(kn)
-
-              </script>
             </a>
           </li>
           <li class="nav-item">
@@ -126,6 +117,13 @@
       </div>
     </div>
   </nav>
+
+  <div class="alert alert-success alert-dismissible fade show text-center" role="alert" id="salert"
+    style="display:none; position: fixed; top: 0; width: 100%; z-index: 9999;">
+    <strong>A termék hozzá lett adva a kosárhoz!</strong>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+
 
   <h2 class="text-center" style="color: white; margin-top: 2%;">Pizzák</h2>
   <div class="container-fluid mt-5 mb-3 fo" style=" max-width: 85%; max-height: 70%;">
@@ -149,11 +147,12 @@
               <div class="d-flex justify-content-between align-items-center">
                 <p class="lead"><strong>700 Ft</strong></p>
                 <div class="d-flex align-items-center">
-                  <input type="number" class="btn link-secondary mr-2 mb-2" placeholder="db" id="szalveta">
+                  <input type="number" class="btn link-secondary mr-2 mb-2" placeholder="db" min="1" max="5" id="mpizza">
                 </div>
               </div>
               <div class="d-flex justify-content-center">
-                <input type="submit" class="btn link-secondary mt-2 kosar" value="Kosárba" name="Kosárba" onclick="">
+                <input type="submit" class="btn link-secondary mt-2 kosar" value="Kosárba" name="Kosárba"
+                  onclick="ad('_mozzarella', document.getElementById('mpizza').value)">
               </div>
             </div>
           </div>
@@ -176,13 +175,14 @@
               </p>
               <hr class="my-4" />
               <div class="d-flex justify-content-between align-items-center">
-                <p class="lead"><strong>750 Ft</strong></p>
+                <p class="lead"><strong>1000 Ft</strong></p>
                 <div class="d-flex align-items-center">
-                  <input type="number" class="btn link-secondary mr-2 mb-2" placeholder="db" id="szalveta">
+                  <input type="number" class="btn link-secondary mr-2 mb-2" placeholder="db" min="1" max="5" id="szpizza">
                 </div>
               </div>
               <div class="d-flex justify-content-center">
-                <input type="submit" class="btn link-secondary mt-2 kosar" value="Kosárba" name="Kosárba" onclick="">
+                <input type="submit" class="btn link-secondary mt-2 kosar" value="Kosárba" name="Kosárba"
+                  onclick="ad('_szalamis', document.getElementById('szpizza').value)">
               </div>
             </div>
           </div>
@@ -206,13 +206,14 @@
               </p>
               <hr class="my-4" />
               <div class="d-flex justify-content-between align-items-center">
-                <p class="lead"><strong>600 Ft</strong></p>
+                <p class="lead"><strong>950 Ft</strong></p>
                 <div class="d-flex align-items-center">
-                  <input type="number" class="btn link-secondary mr-2 mb-2" placeholder="db" id="szalveta">
+                  <input type="number" class="btn link-secondary mr-2 mb-2" placeholder="db" min="1" max="5" id="spizza">
                 </div>
               </div>
               <div class="d-flex justify-content-center">
-                <input type="submit" class="btn link-secondary mt-2 kosar" value="Kosárba" name="Kosárba" onclick="">
+                <input type="submit" class="btn link-secondary mt-2 kosar" value="Kosárba" name="Kosárba"
+                  onclick="ad('_sonkas', document.getElementById('spizza').value)">
               </div>
             </div>
           </div>
@@ -235,13 +236,14 @@
               </p>
               <hr class="my-4" />
               <div class="d-flex justify-content-between align-items-center">
-                <p class="lead"><strong>600 Ft</strong></p>
+                <p class="lead"><strong>950 Ft</strong></p>
                 <div class="d-flex align-items-center">
-                  <input type="number" class="btn link-secondary mr-2 mb-2" placeholder="db" id="szalveta">
+                  <input type="number" class="btn link-secondary mr-2 mb-2" placeholder="db" min="1" max="5" id="nspizza">
                 </div>
               </div>
               <div class="d-flex justify-content-center">
-                <input type="submit" class="btn link-secondary mt-2 kosar" value="Kosárba" name="Kosárba" onclick="">
+                <input type="submit" class="btn link-secondary mt-2 kosar" value="Kosárba" name="Kosárba"
+                  onclick="ad('_negysajtos', document.getElementById('nspizza').value)">
               </div>
             </div>
           </div>
@@ -251,7 +253,7 @@
         <section class="mx-auto my-5" style="max-width: 23rem;">
           <div class="card">
             <div class="bg-image hover-overlay ripple">
-              <img src="img/etel/meleg/kukoricas.png" class="img-fluid">
+              <img src="img/etel/meleg/sonkas.png" class="img-fluid">
               <a href="#!">
                 <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
               </a>
@@ -264,13 +266,14 @@
               </p>
               <hr class="my-4" />
               <div class="d-flex justify-content-between align-items-center">
-                <p class="lead"><strong>700 Ft</strong></p>
+                <p class="lead"><strong>1250 Ft</strong></p>
                 <div class="d-flex align-items-center">
-                  <input type="number" class="btn link-secondary mr-2 mb-2" placeholder="db" id="szalveta">
+                  <input type="number" class="btn link-secondary mr-2 mb-2" placeholder="db" min="1" max="5" id="skpizza">
                 </div>
               </div>
               <div class="d-flex justify-content-center">
-                <input type="submit" class="btn link-secondary mt-2 kosar" value="Kosárba" name="Kosárba" onclick="">
+                <input type="submit" class="btn link-secondary mt-2 kosar" value="Kosárba" name="Kosárba"
+                  onclick="ad('_hotdog', document.getElementById('skpizza').value)">
               </div>
             </div>
           </div>
@@ -374,73 +377,19 @@
     var _szalamis = 950
     var _sonkas = 950
     var _kukoricas = 1250
-    function ad(nev, ertek) {
-      localStorage.setItem(nev, Number(ertek));
+    var sikerAlert = document.getElementById("salert");
 
-      alert("Hozzáadva a kosárhoz!")
-    }
+    function ad(termek, mennyiseg) {
+      localStorage.setItem(termek, mennyiseg);
 
-    function searchCards() {
-      let input = document.getElementById("search-input").value.toLowerCase();
-      console.log(input);
-      let cards = document.querySelectorAll(".card");
-      let titles = document.querySelectorAll(".card-title, .cimek");
-      let hrs = document.querySelectorAll("hr");
-
-      cards.forEach((card) => {
-        let text = card.textContent.toLowerCase();
-        if (text.indexOf(input) > -1) {
-          card.style.display = "block";
-        } else {
-          card.style.display = "none";
-        }
-      });
-
-      titles.forEach((title) => {
-        let text = title.textContent.toLowerCase();
-        if (text.indexOf(input) > -1) {
-          title.style.display = "block";
-        } else {
-          title.style.display = "none";
-        }
-      });
-
-      hrs.forEach((hr) => {
-        hr.style.display = "none";
-      });
-
-      if (input === "") {
-        cards.forEach((card) => {
-          card.style.display = "block";
-        });
-        titles.forEach((title) => {
-          title.style.display = "block";
-        });
-        hrs.forEach((hr) => {
-          hr.style.display = "block";
-        });
-      } else {
-        cards.forEach((card) => {
-          let text = card.textContent.toLowerCase();
-          if (text.indexOf(input) > -1) {
-            card.style.display = "block";
-          }
-        });
-        titles.forEach((title) => {
-          let text = title.textContent.toLowerCase();
-          if (text.indexOf(input) > -1) {
-            title.style.display = "block";
-            let hr = title.nextElementSibling;
-            if (hr.tagName === "HR") {
-              hr.style.display = "block";
-            }
-          }
-        });
-      }
+      sikerAlert.style.display = "block";
+      sikerAlert.innerHTML = "<strong>Siker!</strong> A termék hozzá lett adva a kosárhoz!";
+      setTimeout(function () {
+        sikerAlert.style.display = "none";
+      }, 2000);
     }
 
 
-    document.getElementById("search-input").addEventListener("keyup", searchCards);
 
   </script>
 </body>
