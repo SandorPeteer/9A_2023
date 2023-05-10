@@ -148,12 +148,12 @@
                                 <p class="lead"><strong>400Ft</strong></p>
                                 <div class="d-flex align-items-center">
                                     <input type="number" class="btn link-secondary mr-2 mb-2" placeholder="db" min="1"
-                                        max="5" id="epresny">
+                                        max="5" id="spogi">
                                 </div>
                             </div>
                             <div class="d-flex justify-content-center">
                                 <input type="submit" class="btn link-secondary mt-2 kosar" value="Kosárba"
-                                    name="Kosárba" onclick="ad('_epres', document.getElementById('epresny').value)">
+                                    name="Kosárba" onclick="ad('_sajtosp', document.getElementById('spogi').value)">
                             </div>
                         </div>
                     </div>
@@ -181,12 +181,12 @@
                                 <p class="lead"><strong>450Ft</strong></p>
                                 <div class="d-flex align-items-center">
                                     <input type="number" class="btn link-secondary mr-2 mb-2" placeholder="db" min="1"
-                                        max="5" id="almasny">
+                                        max="5" id="bpogi">
                                 </div>
                             </div>
                             <div class="d-flex justify-content-center">
                                 <input type="submit" class="btn link-secondary mt-2 kosar" value="Kosárba"
-                                    name="Kosárba" onclick="ad('_almas', document.getElementById('almasny').value)">
+                                    name="Kosárba" onclick="ad('_burgonyasp', document.getElementById('bpogi').value)">
                             </div>
                         </div>
                     </div>
@@ -214,12 +214,12 @@
                                 <p class="lead"><strong>500Ft</strong></p>
                                 <div class="d-flex align-items-center">
                                     <input type="number" class="btn link-secondary mr-2 mb-2" placeholder="db" min="1"
-                                        max="5" id="dinnyesny">
+                                        max="5" id="tpogi">
                                 </div>
                             </div>
                             <div class="d-flex justify-content-center">
                                 <input type="submit" class="btn link-secondary mt-2 kosar" value="Kosárba"
-                                    name="Kosárba" onclick="ad('_dinnyes', document.getElementById('dinnyesny').value)">
+                                    name="Kosárba" onclick="ad('_tepertosp', document.getElementById('tpogi').value)">
                             </div>
                         </div>
                     </div>
@@ -319,9 +319,9 @@
 
 
     <script>
-        var _epres = 80
-        var _almas = 80
-        var _dinnyes = 80
+        var _sajtosp = 400
+        var _burgonyasp = 450
+        var _tepertosp = 500
 
         var sikerAlert = document.getElementById("salert");
 
