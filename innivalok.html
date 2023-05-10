@@ -83,9 +83,10 @@
             float: left;
         }
 
-        .valamicontainer {
-            border: solid white;
-            margin-top: 25px;
+        #xixo-izek {
+            text-align: center;
+            width: 100%;
+            border-radius: 30px;
         }
     </style>
 
@@ -135,249 +136,268 @@
         </div>
     </nav>
 
+    <div class="alert alert-success alert-dismissible fade show text-center" role="alert" id="salert"
+        style="display:none; position: fixed; top: 0; width: 100%; z-index: 9999;">
+        <strong>A termék hozzá lett adva a kosárhoz!</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
 
     <h2 class="text-center" style="color: white; margin-top: 2%;">Italok</h2>
-    <div class="container-fluid mt-5 mb-3 fo" style=" max-width: 85%; max-height: 70%;">
+    <div class="container-fluid mt-5 mb-3 fo" style="max-width: 85%; max-height: 70%;">
         <div class="row">
-
-        </div>
-    </div>
-
-    </section>
-    </div>
-    <div class="row">
-        <div class="col-sm-12 col-md-6 col-lg-4 d-flex ">
-            <section class="mx-auto my-5" style="max-width: 23rem; max-height: 40rem;">
-                <div class="card">
-                    <div class="bg-image hover-overlay ripple">
-                        <img src="https://sandorpeteer.github.io/9A_2023_BUFE_SHOP/bendewebshop/img/citromxixo.jpg"
-                            class="img-fluid" width="318px">
-                        <a href="#!">
-                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                        </a>
-                    </div>
-                    <div class="card-body" id="igazito">
-                        <h5 class="card-title font-weight-bold"><a>Xixo</a></h5>
-                        <p class="mb-2 raktar">Raktáron
-                        <p class="card-text">
-                            izek:
-                            <br>
-                        <div class="valamicontainer">
-                            <div class="valami">
-                                <label> <input type="radio" name="xixoizek" id="barack"> Barack </label>
-                            </div>
-                            <div class="valami">
-                                <label> <input type="radio" name="xixoizek" id="zold"> Zöld tea </label>
-                            </div>
-                            <div class="valami">
-                                <label><input type="radio" name="xixoizek" id="ribizli"> Ribizli </label>
-                            </div>
-                            <div class="valami">
-                                <label> <input type="radio" name="xixoizek" id="citrom"> Citrom </label>
-                            </div>
-                            <div class="valami">
-                                <label> <input type="radio" name="xixoizek" id="eper"> Eper </label>
-                            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 d-flex">
+                <section class="mx-auto my-5" style="max-width: 23rem; max-height: 40rem;">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple">
+                            <img src="https://sandorpeteer.github.io/9A_2023_BUFE_SHOP/bendewebshop/img/citromxixo.jpg"
+                                class="img-fluid" width="318px">
+                            <a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                            </a>
                         </div>
-                    </div>
-                    <div class="card-body">
-                        <hr class="my-4" />
-                        <div class="d-flex justify-content-between align-items-center">
-                            <p class="lead"><strong>500Ft</strong></p>
-                            <div class="d-flex align-items-center">
-                                <input type="number" class="btn link-secondary mr-2 mb-2" placeholder="db" id="kave">
-                            </div>
-                        </div>
-                        <div class="d-flex justify-content-center">
-                            <input type="submit" class="btn link-secondary mt-2 kosar" value="Kosárba" name="Kosárba"
-                                onclick="ad('_kave', kave.value)">
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-        <div class="col-sm-12 col-md-6 col-lg-4 d-flex  ">
-            <section class="mx-auto my-5" style="max-width: 20rem; max-height: 30rem;">
-                <div class="card">
-                    <div class="bg-image hover-overlay ripple">
-                        <img src="https://sandorpeteer.github.io/9A_2023_BUFE_SHOP/img/ital/cocacola2.jpg"
-                            class="img-fluid" width="318px">
-                        <a href="#!">
-                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                        </a>
-                    </div>
-                    <div class="card-body" id="igazito">
-                        <h5 class="card-title font-weight-bold"><a>Coca cola</a></h5>
-                        <p class="mb-2 raktar">Raktáron
-                        <p class="card-text">
-                            izek:
-                            <br>
-                        <div class="valamicontainer">
-                            <div class="valami">
-                                <label> <input type="radio" name="colaizek" id="original"> Original </label>
-                            </div>
-                            <div class="valami">
-                                <label> <input type="radio" name="colaizek" id="zero"> Zéró </label>
-                            </div>
-                            <div class="valami">
-                                <label><input type="radio" name="colaizek" id="vanillia"> Vanillia </label>
-                            </div>
-                            <div class="valami">
-                                <label> <input type="radio" name="colaizek" id="citrom"> Citrom </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <hr class="my-4" />
-                        <div class="d-flex justify-content-between align-items-center">
-                            <p class="lead"><strong>400Ft</strong></p>
-                            <div class="d-flex align-items-center">
-                                <input type="number" class="btn link-secondary mr-2 mb-2" placeholder="db"
-                                    placeholder="db" id="capp">
-                            </div>
-                        </div>
-                        <div class="d-flex justify-content-center">
-                            <input type="submit" class="btn link-secondary mt-2 kosar" value="Kosárba"
-                                onclick="ad('_capp', capp.value)">
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-        <div class="col-sm-12 col-md-6 col-lg-4 d-flex  ">
-            <section class="mx-auto my-5" style="max-width: 20rem; max-height: 60rem;">
-                <div class="card">
-                    <div class="bg-image hover-overlay ripple">
-                        <img src="https://sandorpeteer.github.io/9A_2023_BUFE_SHOP/img/ital/Fanta.png" width="318px">
-                        <a href="#!">
-                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                        </a>
-                    </div>
-                    <div class="card-body" id="igazito">
-                        <h5 class="card-title font-weight-bold"><a>Fanta</a></h5>
-                        <p class="mb-2 raktar">Raktáron
-                        <p class="card-text">
-                            izek:
-                            <br>
-                        <div class="valamicontainer">
-                            <div class="valami">
-                                <label> <input type="radio" name="xixoizek" id="barack"> Barack </label>
-                            </div>
-                            <div class="valami">
-                                <label> <input type="radio" name="xixoizek" id="zold"> Zöld tea </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <hr class="my-4" />
-                        <div class="d-flex justify-content-between align-items-center">
-                            <p class="lead"><strong>600Ft</strong></p>
-                            <div class="d-flex align-items-center">
-                                <input type="number" class="btn link-secondary mr-2 mb-2" placeholder="db" id="tejes">
-                            </div>
-                        </div>
-                        <div class="d-flex justify-content-center">
-                            <input type="submit" class="btn link-secondary mt-2 kosar" value="Kosárba"
-                                onclick="ad('_tejes', tejes.value)">
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-
-
-
-
-        <div class="mt-5">
-
-            <footer class="text-center text-lg-start text-white" style="background-color: #1c2331">
-
-                <section class="d-flex justify-content-between p-4" style="background-color: #6351ce">
-
-                    <div class="me-5">
-
-                    </div>
-
-                </section>
-
-
-                <section class="">
-                    <div class="container text-center text-md-start mt-5">
-
-                        <div class="row mt-3">
-
-                            <div class="col-md-4 col-lg-5 col-xl-4 mx-auto mb-4">
-
-                                <h6 class="text-uppercase fw-bold">Kandó büfé</h6>
-                                <hr class="mb-4 mt-0 d-inline-block mx-auto"
-                                    style="width: 60px; background-color: #7c4dff; height: 2px" />
+                        <div class="card-body" id="igazito">
+                            <h5 class="card-title font-weight-bold"><a>Xixo</a></h5>
+                            <p class="mb-2 raktar">Raktáron</p>
+                            <p class="card-text">
+                                Ízek:
                                 <br>
-                                <a href="https://www.kkszki.hu/" target="_blank"><img style="margin-bottom: 10px;"
-                                        src="https://sandorpeteer.github.io/9A_2023_BUFE_SHOP/img/kando.png"
-                                        alt="Kandó logó"></a>
-                                <p>
-                                    Az újonnan megy nyílt Kandó Büfé, amit a 9.A 2.csoportja készített!
-                                </p>
+                            <div class="xixo-container">
+                                <select name="xixo" id="xixoizek" onchange="mentes(this.value)">
+                                    <option value="Üres">Válassz</option>
+                                    <option value="Barackos">Barackos</option>
+                                    <option value="Zöld">Zöld Tea</option>
+                                    <option value="Ribizli">Ribizlis</option>
+                                    <option value="Citrom">Citromos</option>
+                                    <option value="Eper">Epres</option>
+                                </select>
                             </div>
-
-
-
-                            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4 text-center">
-
-                                <h6 class="text-uppercase fw-bold">Főbb kategóriáink</h6>
-                                <hr class="mb-4 mt-0 d-inline-block mx-auto"
-                                    style="width: 60px; background-color: #7c4dff; height: 2px" />
-                                <p>
-                                    <a href="#melege" class="text-white">Meleg ételek</a>
-                                </p>
-                                <p>
-                                    <a href="#hidege" class="text-white">Hideg ételek</a>
-                                </p>
-                                <p>
-                                    <a href="#udito" class="text-white">Üdítők</a>
-                                </p>
-                                <p>
-                                    <a href="#melegi" class="text-white">Meleg italok</a>
-                                </p>
-                                <p>
-                                    <a href="#nasi" class="text-white">Nasik</a>
-                                </p>
-                                <p>
-                                    <a href="https://sandorpeteer.github.io/9A_2023_BUFE_SHOP/egyeb.html"
-                                        class="text-white">Egyéb</a>
-                                </p>
+                            </p>
+                        </div>
+                        <div class="card-body">
+                            <hr class="my-4" />
+                            <div class="d-flex justify-content-between align-items-center">
+                                <p class="lead"><strong>500Ft</strong></p>
+                                <div class="d-flex align-items-center">
+                                    <input type="number" class="btn link-secondary mr-2 mb-2" placeholder="db" min="1"
+                                        max="5" id="xixo">
+                                </div>
                             </div>
-
-
-
-                            <div class="col-md-5 col-lg-4 col-xl-4 mx-auto mb-md-0 mb-4 text-center">
-
-                                <h6 class="text-uppercase fw-bold">Elérhetőségek</h6>
-                                <hr class="mb-4 mt-0 d-inline-block mx-auto"
-                                    style="width: 60px; background-color: #7c4dff; height: 2px" />
-                                <p><i class="fas fa-home mr-3">Miskolc, Palóczy László utca 3, 3525</i></p>
-                                <a href="https://mail.google.com/" target="_blank">
-                                    <p><i class="fas fa-envelope mr-3">kando@kkszki.hu</i></p>
-                                </a>
-                                <p><i class="fas fa-phone mr-3">+06 46 500 930</i></p>
+                            <div class="d-flex justify-content-center">
+                                <input type="submit" class="btn link-secondary mt-2 kosar" value="Kosárba"
+                                    name="Kosárba" onclick="ad('_dinnyes', document.getElementById('xixo').value)">
                             </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
 
+            <div class="col-sm-12 col-md-6 col-lg-4 d-flex  ">
+                <section class="mx-auto my-5" style="max-width: 20rem; max-height: 30rem;">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple">
+                            <img src="https://sandorpeteer.github.io/9A_2023_BUFE_SHOP/img/ital/cocacola2.jpg"
+                                class="img-fluid" width="318px">
+                            <a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                            </a>
+                        </div>
+                        <div class="card-body" id="igazito">
+                            <h5 class="card-title font-weight-bold"><a>Coca cola</a></h5>
+                            <p class="mb-2 raktar">Raktáron
+                            <p class="card-text">
+                                Ízek:
+                                <br>
+                            <div class="cola-container">
+                                <select name="cola" id="colaizek">
+                                    <option value="Üres">Válassz</option>
+                                    <option value="Original">Original</option>
+                                    <option value="Zöld">Zöld Tea</option>
+                                    <option value="Zéró">Zéró</option>
+                                    <option value="Vanillia">Vanillia</option>
+                                    <option value="Citrom">Citrom</option>
+
+                                </select>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <hr class="my-4" />
+                            <div class="d-flex justify-content-between align-items-center">
+                                <p class="lead"><strong>400Ft</strong></p>
+                                <div class="d-flex align-items-center">
+                                    <input type="number" class="btn link-secondary mr-2 mb-2" placeholder="db" min="1"
+                                        max="5" id="xixo">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <input type="submit" class="btn link-secondary mt-2 kosar" value="Kosárba"
+                                    name="Kosárba" onclick="ad('_dinnyes', document.getElementById('xixo').value)">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-4 d-flex  ">
+                <section class="mx-auto my-5" style="max-width: 20rem; max-height: 60rem;">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple">
+                            <img src="https://sandorpeteer.github.io/9A_2023_BUFE_SHOP/img/ital/Fanta.png"
+                                width="318px">
+                            <a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                            </a>
+                        </div>
+                        <div class="card-body" id="igazito">
+                            <h5 class="card-title font-weight-bold"><a>Fanta</a></h5>
+                            <p class="mb-2 raktar">Raktáron
+                            <p class="card-text">
+                                ízek:
+                                <br>
+                            <div class="fanta-container">
+                                <select name="fanta" id="fantaizek">
+                                    <option value="Üres">Válassz</option>
+                                    <option value="Narancsos">Narancsos</option>
+                                    <option value="Szőlős">Szőlős</option>
+                                    <option value="Bodzás">Bodzás</option>
+
+                                </select>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <hr class="my-4" />
+                            <div class="d-flex justify-content-between align-items-center">
+                                <p class="lead"><strong>600Ft</strong></p>
+                                <div class="d-flex align-items-center">
+                                    <input type="number" class="btn link-secondary mr-2 mb-2" placeholder="db" min="1"
+                                        max="5" id="xixo">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <input type="submit" class="btn link-secondary mt-2 kosar" value="Kosárba"
+                                    name="Kosárba" onclick="ad('_dinnyes', document.getElementById('xixo').value)">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <div class="mt-5">
+
+        <footer class="text-center text-lg-start text-white" style="background-color: #1c2331">
+
+            <section class="d-flex justify-content-between p-4" style="background-color: #6351ce">
+
+                <div class="me-5">
+
+                </div>
+
+            </section>
+
+
+            <section class="">
+                <div class="container text-center text-md-start mt-5">
+
+                    <div class="row mt-3">
+
+                        <div class="col-md-4 col-lg-5 col-xl-4 mx-auto mb-4">
+
+                            <h6 class="text-uppercase fw-bold">Kandó büfé</h6>
+                            <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                                style="width: 60px; background-color: #7c4dff; height: 2px" />
+                            <br>
+                            <a href="https://www.kkszki.hu/" target="_blank"><img style="margin-bottom: 10px;"
+                                    src="https://sandorpeteer.github.io/9A_2023_BUFE_SHOP/img/kando.png"
+                                    alt="Kandó logó"></a>
+                            <p>
+                                Az újonnan megy nyílt Kandó Büfé, amit a 9.A 2.csoportja készített!
+                            </p>
+                        </div>
+
+
+
+                        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4 text-center">
+
+                            <h6 class="text-uppercase fw-bold">Főbb kategóriáink</h6>
+                            <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                                style="width: 60px; background-color: #7c4dff; height: 2px" />
+                            <p>
+                                <a href="#melege" class="text-white">Meleg ételek</a>
+                            </p>
+                            <p>
+                                <a href="#hidege" class="text-white">Hideg ételek</a>
+                            </p>
+                            <p>
+                                <a href="#udito" class="text-white">Üdítők</a>
+                            </p>
+                            <p>
+                                <a href="#melegi" class="text-white">Meleg italok</a>
+                            </p>
+                            <p>
+                                <a href="#nasi" class="text-white">Nasik</a>
+                            </p>
+                            <p>
+                                <a href="https://sandorpeteer.github.io/9A_2023_BUFE_SHOP/egyeb.html"
+                                    class="text-white">Egyéb</a>
+                            </p>
+                        </div>
+
+
+
+                        <div class="col-md-5 col-lg-4 col-xl-4 mx-auto mb-md-0 mb-4 text-center">
+
+                            <h6 class="text-uppercase fw-bold">Elérhetőségek</h6>
+                            <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                                style="width: 60px; background-color: #7c4dff; height: 2px" />
+                            <p><i class="fas fa-home mr-3">Miskolc, Palóczy László utca 3, 3525</i></p>
+                            <a href="https://mail.google.com/" target="_blank">
+                                <p><i class="fas fa-envelope mr-3">kando@kkszki.hu</i></p>
+                            </a>
+                            <p><i class="fas fa-phone mr-3">+06 46 500 930</i></p>
                         </div>
 
                     </div>
-                </section>
 
-
-
-                <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-                    © Kandó 9.A
                 </div>
+            </section>
 
-            </footer>
 
 
-        </div>
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+                © Kandó 9.A
+            </div>
 
+        </footer>
+
+
+    </div>
+
+    <script>
+            var _epres = 80;
+            var _almas = 80;
+            var _dinnyes = 80;
+
+            var sikerAlert = document.getElementById("salert");
+
+            function ad(termek, mennyiseg) {
+                localStorage.setItem(termek, mennyiseg);
+
+            sikerAlert.style.display = "block";
+            sikerAlert.innerHTML = "<strong>Siker!</strong> A termék hozzá lett adva a kosárhoz!";
+            setTimeout(function () {
+                sikerAlert.style.display = "none";
+        }, 2000);
+    }
+
+            function mentes(iz) {
+                localStorage.setItem("kivalasztott_iz", iz);
+    }
+    </script>
 </body>
 
 </html>
