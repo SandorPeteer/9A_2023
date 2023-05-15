@@ -78,7 +78,17 @@
             transform: scale(1.05);
         }
         
-                table {
+ .mod {
+            transition: all 0.2s ease-out;
+        }
+
+        .mod:hover {
+            background-color: darkblue;
+            color: aliceblue;
+            cursor: pointer;
+        }
+
+        table {
             border-collapse: separate;
             border-spacing: 10px;
         }
@@ -101,6 +111,12 @@
             text-align: center;
             border: 1px solid darkgrey;
             border-radius: 5px;
+        }
+
+        .xxx:hover {
+            background-color: red;
+            color: mistyrose;
+            cursor: pointer;
         }
     </style>
 
