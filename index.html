@@ -9,7 +9,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
 
 
     <style>
@@ -107,9 +106,9 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <form class="d-flex ms-auto w-50">
-                    <div class="input-group">
+                    <div class="input-group" style="margin-left: 25%; margin-right: 15%;">
                         <input class="form-control border-end-0 border rounded-pill" type="search" placeholder="Kereső"
-                            aria-label="Keresés">
+                            aria-label="Keresés" id="search-input">
                     </div>
                 </form>
                 <ul class="navbar-nav ms-auto">
@@ -121,13 +120,8 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="profil.html">
-                            
-                            <img class="img-thumbnail" id="profil" src="img/profilepicture.png" alt="profil"
-                                style="height: 50px; width: 50px;">
-                            <div id="profilnev">profilnev</div>
-                                
-
-                            
+                            <img class="img-thumbnail" id="profil" src="img/profilepicture.png" alt="profil" style="height: 50px; width: 50px;">
+                            <div id="profilnev" style="margin-top: 10%;"></div>
                         </a>
                     </li>
                     <li class="nav-item">
@@ -255,7 +249,7 @@
         <div class="container-fluid " style=" max-width: 85%; max-height: 70%;">
             <div class="row">
                 <div class="col-sm-4 d-flex justify-content-center align-items-end mb-5">
-                    <a href="szendvicsek.html">
+                    <a href="#">
                         <div class="card" style="width:350px; height: 210px;">
                             <img class="card-img-top" id="kepkartya" src="img/szenya.jpg" alt="Szendvicsek"
                                 title="Szendvicsek" style="width:100%; height:75%;">
@@ -266,7 +260,7 @@
                     </a>
                 </div>
                 <div class="col-sm-4 d-flex justify-content-center align-items-end mb-5">
-                    <a href="fank.html">
+                    <a href="#">
                         <div class="card" style="width:350px; height: 210px;">
                             <img class="card-img-top" id="kepkartya" src="img/hanukai-fank-1.jpg" alt="Fánkok"
                                 title="Fánkok" style="width:100%;  height:75%;">
@@ -281,7 +275,7 @@
 
 
                 <div class="col-sm-4 d-flex justify-content-center align-items-end mb-5">
-                    <a href="pogacsa.html">
+                    <a href="#">
                         <div class="card" style="width:350px; height: 210px;">
                             <img class="card-img-top" id="kepkartya" src="img/pogacsa.jpg" alt="Pogácsák"
                                 title="Pogácsák" style="width:100%;  height:75%;">
@@ -304,7 +298,7 @@
         <div class="container-fluid" style=" max-width: 85%; max-height: 70%;">
             <div class="row">
                 <div class="col-sm-4 d-flex justify-content-center align-items-end mb-5">
-                    <a href="edesseg.html">
+                    <a href="#">
                         <div class="card" style="width:350px; height: 210px;">
                             <img class="card-img-top" id="kepkartya" src="img/edessegek.jpg" alt="Édesek" title="Édesek"
                                 style="width:100%; height:75%;">
@@ -316,7 +310,7 @@
                 </div>
 
                 <div class="col-sm-4 d-flex justify-content-center align-items-end mb-5">
-                    <a href="sedesseg.html">
+                    <a href="#">
                         <div class="card" style="width:350px; height: 210px;">
                             <img class="card-img-top" id="kepkartya" src="img/savanyuedesseg.jpg" alt="Savanyúságok"
                                 title="Savanyúságok" style="width:100%;  height:75%;">
@@ -332,7 +326,7 @@
 
 
                 <div class="col-sm-4 d-flex justify-content-center align-items-end mb-5">
-                    <a href="ragcsak.html">
+                    <a href="#">
                         <div class="card" style="width:350px; height: 210px;">
                             <img class="card-img-top" id="kepkartya" src="img/chipsek.jpg" alt="Sósak" title="Sósak"
                                 style="width:100%;  height:75%;">
@@ -526,6 +520,7 @@
                 });
                 titles.forEach((title) => {
                     title.style.display = "block";
+                    title.style.textAlign = "center"; // Címek középre igazítása
                 });
                 hrs.forEach((hr) => {
                     hr.style.display = "block";
@@ -550,8 +545,56 @@
             }
         }
 
-
         document.getElementById("search-input").addEventListener("keyup", searchCards);
+
+        function dark() {
+
+            const body = document.body;
+            body.classList.toggle("dark-mode");
+
+            const cards = document.querySelectorAll(".card-body");
+            const bords = document.querySelectorAll(".cimek");
+            const hrs = document.querySelectorAll(".hr");
+            cards.forEach(card => {
+                if (body.classList.contains("dark-mode")) {
+                    card.style.backgroundColor = "white";
+                    card.style.color = "rgb(33, 37, 41)";
+                } else {
+                    card.style.backgroundColor = "rgb(33, 37, 41)";
+                    card.style.color = "white";
+                }
+            });
+            bords.forEach(bords => {
+                if (body.classList.contains("dark-mode")) {
+                    bords.style.borderColor = "white";
+                } else {
+                    bords.style.borderColor = "rgb(33, 37, 41)";
+                }
+            });
+            hrs.forEach(hrs => {
+                if (body.classList.contains("dark-mode")) {
+                    hrs.style.color = "white";
+                } else {
+                    hrs.style.color = "rgb(33, 37, 41)";
+                }
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", function profil() {
+            var vn = localStorage.getItem('vezeteknev');
+            var kn = localStorage.getItem('keresztnev');
+            const pn = document.getElementById("profilnev");
+
+            if (vn == null) {
+
+                pn.innerHTML = "Nincs bejelentkezve";
+            } else {
+
+
+                pn.innerHTML = vn + " " + kn;
+
+            }
+        });
     </script>
 
 
