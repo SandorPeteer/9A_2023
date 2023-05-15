@@ -12,10 +12,10 @@
     <script src="script.js"></script>
 
     <style>
-
         body {
             background: linear-gradient(#528791, #3c195e);
         }
+
         .nav2 {
             background: radial-gradient(#190a22, #05042e, #141414);
         }
@@ -70,18 +70,18 @@
             -webkit-box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
             -o-box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
             transition: 0.3s;
-            transform: scale(1.05);  
+            transform: scale(1.05);
         }
 
         .img:hover {
             transition: 0.3s;
-            transform: scale(1.05); 
+            transform: scale(1.05);
         }
     </style>
 
 </head>
 
-<body>
+<body onload="kosar_frissit()">
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark p-3">
         <div class="container-fluid">
             <a href="index.html"><img src="img/bufe_logo.png" alt="Logo" style="width:90px;"
@@ -108,15 +108,15 @@
                         <a class="nav-link" href="profil.html">
                             <img class="img-thumbnail" id="profil" src="img/profilepicture.png" alt="kosar"
                                 style="height: 50px; width: 50px;">
-                                <script>
-                                    var vn = localStorage.getItem('vezeteknev');
-                                     var kn = localStorage.getItem('keresztnev');
- 
-                                     document.write(vn)
-                                     document.write(" ")
-                                     document.write(kn)
- 
-                                 </script>
+                            <script>
+                                var vn = localStorage.getItem('vezeteknev');
+                                var kn = localStorage.getItem('keresztnev');
+
+                                document.write(vn)
+                                document.write(" ")
+                                document.write(kn)
+
+                            </script>
                         </a>
                     </li>
                     <li class="nav-item">
@@ -131,213 +131,236 @@
 
     <h2 class="text-center" style="color: white; margin-top: 2%;">Kosár</h2>
     <div class="container-fluid mt-5 mb-3 fo" style=" max-width: 85%; max-height: 70%;">
+
+        <div class="kosar"></div>
+
         <div class="row">
-           
-<script>
 
-    var melegsz = localStorage.getItem("_melegsz");
-                
-     if(melegsz > 0){
-                
-                
-                
-                
-        document.write("melegszendvics mennyiség: ")
-        document.write(melegsz)
-    document.write("<br>");
-    document.write("melegszendvics ár: ")
-    document.write(melegsz*700)
-    }
-</script>
-                
+            <script>
 
+                var melegsz = localStorage.getItem("_melegsz");
 
-
-<script>
-
-    var burger = localStorage.getItem("_hamb");
-    
-    if(burger > 0){
-    
-    
-    
-        document.write("<br>");
-        document.write("<br>");
-    document.write("hamburger mennyiség: ")
-    document.write(burger)
-    document.write("<br>");
-    document.write("hamburger ár: ")
-    document.write(burger*950)
-    }
-</script>
+                if (melegsz > 0) {
 
 
 
 
-<script>
-
-    var hotd = localStorage.getItem("_hotd");
-    
-    if(hotd > 0){
-    
-    
-    
-        document.write("<br>");
-        document.write("<br>");
-    document.write("Hotdog mennyiség: ")
-    document.write(hotd)
-    document.write("<br>");
-    document.write("Hotdog ár: ")
-    document.write(hotd*600)
-    }
-</script>
-
-
-
-<script>
-
-    var piritos = localStorage.getItem("_piritos");
-    
-    if(piritos > 0){
-    
-    
-    
-        document.write("<br>");
-        document.write("<br>");
-    document.write("piritós mennyiség: ")
-    document.write(piritos)
-    document.write("<br>");
-    document.write("piritós ár: ")
-    document.write(piritos*750)
-    }
-    </script>
+                    document.write("melegszendvics mennyiség: ")
+                    document.write(melegsz)
+                    document.write("<br>");
+                    document.write("melegszendvics ár: ")
+                    document.write(melegsz * 700)
+                }
+            </script>
 
 
 
 
-<script>
+            <script>
 
-    var pizza = localStorage.getItem("_pizza");
-    
-    if(pizza > 0){
-    
-    
-    
-        document.write("<br>");
-        document.write("<br>");
-    document.write("pizza mennyiség: ")
-    document.write(pizza)
-    document.write("<br>");
-    document.write("pizza ár: ")
-    document.write(pizza*1500)
-    }
-    </script>
+                var burger = localStorage.getItem("_hamb");
+
+                if (burger > 0) {
 
 
-            </div>
-            
-            </div>
+
+                    document.write("<br>");
+                    document.write("<br>");
+                    document.write("hamburger mennyiség: ")
+                    document.write(burger)
+                    document.write("<br>");
+                    document.write("hamburger ár: ")
+                    document.write(burger * 950)
+                }
+            </script>
+
+
+
+
+            <script>
+
+                var hotd = localStorage.getItem("_hotd");
+
+                if (hotd > 0) {
+
+
+
+                    document.write("<br>");
+                    document.write("<br>");
+                    document.write("Hotdog mennyiség: ")
+                    document.write(hotd)
+                    document.write("<br>");
+                    document.write("Hotdog ár: ")
+                    document.write(hotd * 600)
+                }
+            </script>
+
+
+
+            <script>
+
+                var piritos = localStorage.getItem("_piritos");
+
+                if (piritos > 0) {
+
+
+
+                    document.write("<br>");
+                    document.write("<br>");
+                    document.write("piritós mennyiség: ")
+                    document.write(piritos)
+                    document.write("<br>");
+                    document.write("piritós ár: ")
+                    document.write(piritos * 750)
+                }
+            </script>
+
+
+
+
+            <script>
+
+                var pizza = localStorage.getItem("_pizza");
+
+                if (pizza > 0) {
+
+
+
+                    document.write("<br>");
+                    document.write("<br>");
+                    document.write("pizza mennyiség: ")
+                    document.write(pizza)
+                    document.write("<br>");
+                    document.write("pizza ár: ")
+                    document.write(pizza * 1500)
+                }
+            </script>
+
+
         </div>
+
+    </div>
+    </div>
     </div>
 
-        <div class="mt-5">
+    <div class="mt-5">
 
-            <footer class="text-center text-lg-start text-white" style="background-color: #1c2331">
+        <footer class="text-center text-lg-start text-white" style="background-color: #1c2331">
 
-                <section class="d-flex justify-content-between p-4" style="background-color: #6351ce">
+            <section class="d-flex justify-content-between p-4" style="background-color: #6351ce">
 
-                    <div class="me-5">
+                <div class="me-5">
 
-                    </div>
+                </div>
 
-                </section>
-
-
-                <section class="">
-                    <div class="container text-center text-md-start mt-5">
-
-                        <div class="row mt-3">
-
-                            <div class="col-md-4 col-lg-5 col-xl-4 mx-auto mb-4">
-
-                                <h6 class="text-uppercase fw-bold">Kandó büfé</h6>
-                                <hr class="mb-4 mt-0 d-inline-block mx-auto"
-                                    style="width: 60px; background-color: #7c4dff; height: 2px" />
-                                <br>
-                                <a href="https://www.kkszki.hu/" target="_blank"><img style="margin-bottom: 10px;"
-                                        src="img/kando.png" alt="Kandó logó"></a>
-                                <p>
-                                    Az újonnan megy nyílt Kandó Büfé, amit a 9.A 2.csoportja készített!
-                                </p>
-                            </div>
+            </section>
 
 
+            <section class="">
+                <div class="container text-center text-md-start mt-5">
 
-                            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4 text-center">
+                    <div class="row mt-3">
 
-                                <h6 class="text-uppercase fw-bold">Főbb kategóriáink</h6>
-                                <hr class="mb-4 mt-0 d-inline-block mx-auto"
-                                    style="width: 60px; background-color: #7c4dff; height: 2px" />
-                                <p>
-                                    <a href="melegetel.html" class="text-white">Meleg ételek</a>
-                                </p>
-                                <p>
-                                    <a href="#hidege" class="text-white">Hideg ételek</a>
-                                </p>
-                                <p>
-                                    <a href="#udito" class="text-white">Üdítők</a>
-                                </p>
-                                <p>
-                                    <a href="#melegi" class="text-white">Meleg italok</a>
-                                </p>
-                                <p>
-                                    <a href="#nasi" class="text-white">Nasik</a>
-                                </p>
-                                <p>
-                                    <a href="egyeb.html" class="text-white">Egyéb</a>
-                                </p>
-                            </div>
+                        <div class="col-md-4 col-lg-5 col-xl-4 mx-auto mb-4">
+
+                            <h6 class="text-uppercase fw-bold">Kandó büfé</h6>
+                            <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                                style="width: 60px; background-color: #7c4dff; height: 2px" />
+                            <br>
+                            <a href="https://www.kkszki.hu/" target="_blank"><img style="margin-bottom: 10px;"
+                                    src="img/kando.png" alt="Kandó logó"></a>
+                            <p>
+                                Az újonnan megy nyílt Kandó Büfé, amit a 9.A 2.csoportja készített!
+                            </p>
+                        </div>
 
 
 
-                            <div class="col-md-5 col-lg-4 col-xl-4 mx-auto mb-md-0 mb-4 text-center">
+                        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4 text-center">
 
-                                <h6 class="text-uppercase fw-bold">Elérhetőségek</h6>
-                                <hr class="mb-4 mt-0 d-inline-block mx-auto"
-                                    style="width: 60px; background-color: #7c4dff; height: 2px" />
-                                <p><i class="fas fa-home mr-3">Miskolc, Palóczy László utca 3, 3525</i></p>
-                                <a href="https://mail.google.com/" target="_blank">
-                                    <p><i class="fas fa-envelope mr-3">kando@kkszki.hu</i></p>
-                                </a>
-                                <p><i class="fas fa-phone mr-3">+06 46 500 930</i></p>
-                            </div>
+                            <h6 class="text-uppercase fw-bold">Főbb kategóriáink</h6>
+                            <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                                style="width: 60px; background-color: #7c4dff; height: 2px" />
+                            <p>
+                                <a href="melegetel.html" class="text-white">Meleg ételek</a>
+                            </p>
+                            <p>
+                                <a href="#hidege" class="text-white">Hideg ételek</a>
+                            </p>
+                            <p>
+                                <a href="#udito" class="text-white">Üdítők</a>
+                            </p>
+                            <p>
+                                <a href="#melegi" class="text-white">Meleg italok</a>
+                            </p>
+                            <p>
+                                <a href="#nasi" class="text-white">Nasik</a>
+                            </p>
+                            <p>
+                                <a href="egyeb.html" class="text-white">Egyéb</a>
+                            </p>
+                        </div>
 
+
+
+                        <div class="col-md-5 col-lg-4 col-xl-4 mx-auto mb-md-0 mb-4 text-center">
+
+                            <h6 class="text-uppercase fw-bold">Elérhetőségek</h6>
+                            <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                                style="width: 60px; background-color: #7c4dff; height: 2px" />
+                            <p><i class="fas fa-home mr-3">Miskolc, Palóczy László utca 3, 3525</i></p>
+                            <a href="https://mail.google.com/" target="_blank">
+                                <p><i class="fas fa-envelope mr-3">kando@kkszki.hu</i></p>
+                            </a>
+                            <p><i class="fas fa-phone mr-3">+06 46 500 930</i></p>
                         </div>
 
                     </div>
-                </section>
 
-
-
-                <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-                    © Kandó 9.A
                 </div>
+            </section>
 
-            </footer>
 
 
-        </div>
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+                © Kandó 9.A
+            </div>
 
-        <script>
-            var _melegsz = 700
-            var _hamb = 950
-            var _hotd = 600
-            var _piritos = 750
-            var _pizza = 1500
-            function ad(nev,ertek) {
-                localStorage.setItem(nev,Number(ertek));
+        </footer>
+
+
+    </div>
+
+    <script>
+        var _melegsz = 700
+        var _hamb = 950
+        var _hotd = 600
+        var _piritos = 750
+        var _pizza = 1500
+        function ad(nev, ertek) {
+            localStorage.setItem(nev, Number(ertek));
+        }
+    </script>
+
+    <script>
+        function kosar_frissit() {
+            let tablazat = "<tr><th style='margin:auto'> Termék: </th><th> darab: </th><th> Ára: </th><th> Töröl </th></tr>"
+            let ossz = 0;
+            let darab = 0;
+            let key = "";
+            for (let i = 0; i <= localStorage.length - 1; i++) {
+                key = localStorage.key(i);
+                darab = parseInt(localStorage.getItem(key));
+                tablazat += "<tr><td>" + key + "</td>" + "<td class='mod' onclick=\"localStorage.setItem('" + key +
+                    "',Number(prompt('Mennyi legyen?'))), kosar_frissit()\">" + darab + "</td><td>" + (window[key] * darab) + " Ft" +
+                    "</td><td class='xxx' onclick='localStorage.removeItem(\"" + key + "\"), kosar_frissit()'> X </td></tr>";
+                ossz += window[key] * darab;
             }
-        </script>
+            tablazat += "<tr><th></th> <th>ÖSSZEG: </th> <th>" + ossz + " Ft" + "</th> <th></th></tr>"
+            document.getElementById('kosar').innerHTML = tablazat;
+        }
+    </script>
+
 </body>
 
 </html>
