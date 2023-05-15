@@ -77,6 +77,31 @@
             transition: 0.3s;
             transform: scale(1.05);
         }
+        
+                table {
+            border-collapse: separate;
+            border-spacing: 10px;
+        }
+
+        #kosar {
+            text-align: center;
+            background-color: white;
+            border-radius: 5px;
+            border: 1px solid grey;
+            margin-bottom: 5px;
+            margin-top: 8vh;
+        }
+
+        tr {
+            height: 30px;
+        }
+
+        td {
+            width: 100px;
+            text-align: center;
+            border: 1px solid darkgrey;
+            border-radius: 5px;
+        }
     </style>
 
 </head>
@@ -130,7 +155,6 @@
     </nav>
 
         
-                <table id="kosar"></table>
 
         
     <h2 class="text-center" style="color: white; margin-top: 2%;">Kosár</h2>
@@ -138,106 +162,7 @@
 
 
         <div class="row">
-
-            <script>
-
-                var melegsz = localStorage.getItem("_melegsz");
-
-                if (melegsz > 0) {
-
-
-
-
-                    document.write("melegszendvics mennyiség: ")
-                    document.write(melegsz)
-                    document.write("<br>");
-                    document.write("melegszendvics ár: ")
-                    document.write(melegsz * 700)
-                }
-            </script>
-
-
-
-
-            <script>
-
-                var burger = localStorage.getItem("_hamb");
-
-                if (burger > 0) {
-
-
-
-                    document.write("<br>");
-                    document.write("<br>");
-                    document.write("hamburger mennyiség: ")
-                    document.write(burger)
-                    document.write("<br>");
-                    document.write("hamburger ár: ")
-                    document.write(burger * 950)
-                }
-            </script>
-
-
-
-
-            <script>
-
-                var hotd = localStorage.getItem("_hotd");
-
-                if (hotd > 0) {
-
-
-
-                    document.write("<br>");
-                    document.write("<br>");
-                    document.write("Hotdog mennyiség: ")
-                    document.write(hotd)
-                    document.write("<br>");
-                    document.write("Hotdog ár: ")
-                    document.write(hotd * 600)
-                }
-            </script>
-
-
-
-            <script>
-
-                var piritos = localStorage.getItem("_piritos");
-
-                if (piritos > 0) {
-
-
-
-                    document.write("<br>");
-                    document.write("<br>");
-                    document.write("piritós mennyiség: ")
-                    document.write(piritos)
-                    document.write("<br>");
-                    document.write("piritós ár: ")
-                    document.write(piritos * 750)
-                }
-            </script>
-
-
-
-
-            <script>
-
-                var pizza = localStorage.getItem("_pizza");
-
-                if (pizza > 0) {
-
-
-
-                    document.write("<br>");
-                    document.write("<br>");
-                    document.write("pizza mennyiség: ")
-                    document.write(pizza)
-                    document.write("<br>");
-                    document.write("pizza ár: ")
-                    document.write(pizza * 1500)
-                }
-            </script>
+                <table id="kosar"></table>
 
 
         </div>
