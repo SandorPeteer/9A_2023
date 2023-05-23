@@ -354,12 +354,17 @@
         var sikerAlert = document.getElementById("salert");
 
         function kosar_frissit() {
+            let ignoredKeys = ['debug', 'Üres', 'vezeteknev', 'keresztnev', 'email', 'jelszo', 'jelszo2'];
+
             let tablazat = "<tr><th style='margin:auto'> Termék: </th><th> darab: </th><th> Ára: </th><th> Töröl </th></tr>"
             let ossz = 0;
             let darab = 0;
             let key = "";
             for (let i = 0; i <= localStorage.length - 1; i++) {
                 key = localStorage.key(i);
+                if (ignoredKeys.includes(key)) {
+                    continue;
+                }
                 darab = parseInt(localStorage.getItem(key));
                 tablazat += "<tr><td>" + key + "</td>" + "<td class='mod' onclick=\"localStorage.setItem('" + key +
                     "',Number(prompt('Mennyi legyen?'))), kosar_frissit()\">" + darab + "</td><td>" + (window[key] * darab) + " Ft" +
@@ -371,7 +376,7 @@
         }
         function lead() {
             sikerAlert.style.display = "block";
-            sikerAlert.innerHTML = "<strong>Siker!</strong>A rendelés sikeresen leadva!";
+            sikerAlert.innerHTML = "<strong>Siker! </strong>A rendelés sikeresen leadva!";
             setTimeout(function () {
                 sikerAlert.style.display = "none";
             }, 2000);
