@@ -30,23 +30,23 @@ function dark() {
     }
   });
 }
-document.addEventListener("DOMContentLoaded", function profil() {
-var vn = localStorage.getItem('vezeteknev');
-var kn = localStorage.getItem('keresztnev');
-const pn = document.getElementById("profilnev");
 
-if (vn == null) {
+function searchCards() {
+  let input = document.getElementById("search-input").value.toLowerCase();
+  console.log(input);
+  let cards = document.querySelectorAll(".card");
 
-pn.innerHTML="Nincs bejelentkezve";
-  
-
-
-} else {
-
-
-  pn.innerHTML=vn+" "+kn;
-
+  cards.forEach((card) => {
+    let text = card.textContent.toLowerCase();
+    if (text.indexOf(input) > -1) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
 }
-});
+
+
+document.getElementById("search-input").addEventListener("keyup", searchCards);
 
 
