@@ -6,115 +6,108 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profil</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </head>
 
 <body>
-    <!DOCTYPE html>
-    <html lang="hu">
+    <style>
+        body {
+            background: linear-gradient(#528791, #3c195e);
+        }
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Melegételek</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="script.js"></script>
+        .nav2 {
+            background: radial-gradient(#190a22, #05042e, #141414);
+        }
 
-        <style>
-            body {
-                background: linear-gradient(#528791, #3c195e);
-            }
+        .btn {
+            width: 100px;
+            border: 2px solid white;
+            border-radius: 30px;
+            background-color: rgba(0, 0, 0, 0.096);
+            color: white;
+        }
 
-            .nav2 {
-                background: radial-gradient(#190a22, #05042e, #141414);
-            }
+        .btn:hover {
+            transform: scale(1.04);
+            transition: 0.4s;
+            color: white;
+            border: 2px solid white;
+        }
 
-            .btn {
-                width: 100px;
-                border: 2px solid white;
-                border-radius: 30px;
-                background-color: rgba(0, 0, 0, 0.096);
-                color: white;
-            }
+        #active {
+            background-color: rgba(255, 255, 255, 0.438);
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+        }
 
-            .btn:hover {
-                transform: scale(1.04);
-                transition: 0.4s;
-                color: white;
-                border: 2px solid white;
-            }
+        .fo {
+            border: 3px solid white;
+            border-radius: 30px;
+            background: linear-gradient(rgba(255, 255, 255, 0.733), rgba(17, 17, 17, 0.342));
+        }
 
-            #active {
-                background-color: rgba(255, 255, 255, 0.438);
-                color: rgb(255, 255, 255);
-                font-weight: bold;
-            }
+        .raktar {
+            color: green;
+        }
 
-            .fo {
-                border: 3px solid white;
-                border-radius: 30px;
-                background: linear-gradient(rgba(255, 255, 255, 0.733), rgba(17, 17, 17, 0.342));
-            }
+        .kosargomb {
+            border-color: #1c2331;
+            background-color: #6f5fca49;
+            color: black;
+            font-weight: bold;
+        }
 
-            .raktar {
-                color: green;
-            }
+        .kosargomb:hover {
+            border-color: #1c233148;
+            color: black;
+            transition: 0.3s;
+        }
 
-            .kosargomb {
-                border-color: #1c2331;
-                background-color: #6f5fca49;
-                color: black;
-                font-weight: bold;
-            }
+        .card:hover {
+            box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+            -moz-box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+            -webkit-box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+            -o-box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+            transition: 0.3s;
+            transform: scale(1.05);
+        }
 
-            .kosargomb:hover {
-                border-color: #1c233148;
-                color: black;
-                transition: 0.3s;
-            }
+        .img:hover {
+            transition: 0.3s;
+            transform: scale(1.05);
+        }
 
-            .card:hover {
-                box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
-                -moz-box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
-                -webkit-box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
-                -o-box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
-                transition: 0.3s;
-                transform: scale(1.05);
-            }
 
-            .img:hover {
-                transition: 0.3s;
-                transform: scale(1.05);
-            }
+        .prof {
+            margin-top: 2%;
+            width: 100%;
+            height: 90%;
+            background-color: rgba(255, 255, 255, 0.452);
+        }
 
-            
-            .prof {
-                margin-top: 2%;
-                width: 100%;
-                height: 90%;
-                background-color: rgba(255, 255, 255, 0.452);
-            }
-            .bej {
-                text-align: center;
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-            }
-            
-            .kijelent {
-                color: rgb(255, 255, 255);
-                background-color: rgb(243, 29, 29);
-                border: 1px solid black;
-                border-radius: 5px;
-            }
-            .gradient-custom {
-                background: #f6d365;
-                background: -webkit-linear-gradient(to right bottom, rgba(246, 211, 101, 1), rgba(253, 160, 133, 1));
-                background: linear-gradient(to right bottom, rgba(246, 211, 101, 1), rgba(253, 160, 133, 1))
-            }
-        </style>
+        .bej {
+            text-align: center;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .kijelent {
+            color: rgb(255, 255, 255);
+            background-color: rgb(243, 29, 29);
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+
+        .gradient-custom {
+            background: #f6d365;
+            background: -webkit-linear-gradient(to right bottom, rgba(246, 211, 101, 1), rgba(253, 160, 133, 1));
+            background: linear-gradient(to right bottom, rgba(246, 211, 101, 1), rgba(253, 160, 133, 1))
+        }
+    </style>
 
     </head>
 
@@ -179,8 +172,8 @@
                                 <div class="row g-0">
                                     <div class="col-md-4 gradient-custom text-center text-white"
                                         style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
-                                        <img src="img/profilepicture.png"
-                                            alt="Avatar" class="img-fluid my-5 rounded-pill" style="width: 80px;" />
+                                        <img src="img/profilepicture.png" alt="Avatar"
+                                            class="img-fluid my-5 rounded-pill" style="width: 80px;" />
                                         <h5>Név</h5>
                                         <p class="teljesnev">Nincs bejelentkezve</p>
                                         <i class="far fa-edit mb-5"></i>
@@ -203,9 +196,10 @@
                                             <hr class="mt-0 mb-4">
                                             <div class="row pt-1">
                                                 <div class="col-12 mb-3 text-center">
-                                                   <input type="submit" name="Kijelentkezés" value="Kijelentkezés" class="kijelent">
+                                                    <input type="submit" name="Kijelentkezés" value="Kijelentkezés"
+                                                        class="kijelent">
                                                 </div>
-                                                
+
                                             </div>
                                             <div class="d-flex justify-content-start">
                                                 <a href="#!"><i class="fab fa-facebook-f fa-lg me-3"></i></a>
@@ -313,10 +307,7 @@
         </div>
 
 
+
     </body>
-
-    </html>
-
-</body>
 
 </html>
