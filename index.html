@@ -520,7 +520,7 @@
                 });
                 titles.forEach((title) => {
                     title.style.display = "block";
-                    title.style.textAlign = "center"; // Címek középre igazítása
+                    title.style.textAlign = "center";
                 });
                 hrs.forEach((hr) => {
                     hr.style.display = "block";
@@ -579,22 +579,6 @@
                 }
             });
         }
-
-        document.addEventListener("DOMContentLoaded", function profil() {
-            var vn = localStorage.getItem('vezeteknev');
-            var kn = localStorage.getItem('keresztnev');
-            const pn = document.getElementById("profilnev");
-
-            if (vn == null) {
-
-                pn.innerHTML = "Nincs bejelentkezve";
-            } else {
-
-
-                pn.innerHTML = vn + " " + kn;
-
-            }
-        });
     </script>
 
 
