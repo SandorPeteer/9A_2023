@@ -78,23 +78,22 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark p-3">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a href="index.html"><img src="img/bufe_logo.png" alt="Logo" style="width:90px;"
+            <a class="navbar-brand" href="index.html"><img src="img/bufe_logo.png" alt="logo" style="width:90px;"
                     class="rounded-pill navbar-brand"></a>
-
-            <div class="collapse navbar-collapse justify-content-center" style="margin-left: 26.5%;">
-                <form class="d-flex w-50">
-                    <div class="input-group">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <form class="d-flex ms-auto w-50">
+                    <div class="input-group" style="margin-left: 30%; margin-right: 10%;">
                         <input class="form-control border-end-0 border rounded-pill" type="search" placeholder="Kereső"
-                            id="search-input">
+                            aria-label="Keresés" id="search-input">
                     </div>
                 </form>
-            </div>
-
-
-            <div class="collapse navbar-collapse justify-content-end">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="cart.html">
                             <img class="img-thumbnail" id="cart" src="img/cart.png" alt="kosar"
@@ -103,14 +102,15 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="profil.html">
-                            <img class="img-thumbnail" id="profil" src="img/profilepicture.png" alt="kosar"
-                                style="height: 50px; width: 50px;">
+                            <img class="img-thumbnail" id="profil" src="img/profilepicture.png" alt="profil" style="height: 50px; width: 50px;">
+                            <div id="profilnev" style="margin-top: 10%;"></div>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" onclick="dark()"><img src="img/dark.png" id="dark"
-                                class="img-thumbnail" alt="Sötét mód"
-                                style="height: 50px; width: 50px; border-radius: 50%;"></a>
+                        <a class="nav-link" href="#" onclick="dark()">
+                            <img src="img/dark.png" id="dark" class="img-thumbnail" alt="Sötét mód"
+                                style="height: 50px; width: 50px;">
+                        </a>
                     </li>
                 </ul>
             </div>
