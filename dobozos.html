@@ -1,0 +1,410 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dobozos italok</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://sandorpeteer.github.io/9A_2023_BUFE_SHOP/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://sandorpeteer.github.io/9A_2023_BUFE_SHOP/script.js "></script>
+
+    <style>
+        body {
+            background: linear-gradient(#528791, #3c195e);
+        }
+
+        .btn {
+            width: 100px;
+            border: 2px solid white;
+            border-radius: 30px;
+            background-color: rgba(0, 0, 0, 0.096);
+            color: white;
+        }
+
+        .btn:hover {
+            transform: scale(1.04);
+            transition: 0.4s;
+            color: white;
+            border: 2px solid white;
+        }
+
+        #active {
+            background-color: rgba(255, 255, 255, 0.438);
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+        }
+
+        .fo {
+            border: 3px solid white;
+            border-radius: 30px;
+            background: linear-gradient(rgba(255, 255, 255, 0.733), rgba(17, 17, 17, 0.342));
+        }
+
+        .raktar {
+            color: green;
+        }
+
+        .kosar {
+            border-color: #1c2331;
+            background-color: #ffffff38;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+        }
+
+        .kosar:hover {
+            border-color: #1c233148;
+            color: rgb(255, 255, 255);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+            -moz-box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+            -webkit-box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+            -o-box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+            transition: 0.3s;
+            transform: scale(1.03);
+        }
+
+        .img:hover {
+            transition: 0.3s;
+            transform: scale(1.05);
+        }
+
+        .valami {
+            padding: .4rem;
+            border: solid lightblue .5px;
+            margin: .2rem;
+            border-radius: 25px;
+            width: 8rem;
+            float: left;
+        }
+
+        #xixo-izek {
+            text-align: center;
+            width: 100%;
+            border-radius: 30px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img src="img/bufe_logo.png" alt="logo" style="width:90px;"
+                    class="rounded-pill navbar-brand"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <form class="d-flex ms-auto w-50">
+                    <div class="input-group" style="margin-left: 25%; margin-right: 15%;">
+                        <input class="form-control border-end-0 border rounded-pill" type="search" placeholder="Kereső"
+                            aria-label="Keresés" id="search-input">
+                    </div>
+                </form>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html">
+                            <img class="img-thumbnail" id="cart" src="img/cart.png" alt="kosar"
+                                style="height: 50px; width: 50px;">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="profil.html">
+                            <img class="img-thumbnail" id="profil" src="img/profilepicture.png" alt="profil"
+                                style="height: 50px; width: 50px;">
+                            <div id="profilnev" style="margin-top: 10%;"></div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="dark()">
+                            <img src="img/dark.png" id="dark" class="img-thumbnail" alt="Sötét mód"
+                                style="height: 50px; width: 50px;">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="alert alert-success alert-dismissible fade show text-center" role="alert" id="salert"
+        style="display:none; position: fixed; top: 0; width: 100%; z-index: 9999;">
+        <strong>A termék hozzá lett adva a kosárhoz!</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+    <h2 class="text-center" style="color: white; margin-top: 2%;">Italok</h2>
+    <div class="container-fluid mt-5 mb-3 fo" style="max-width: 85%;" >
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-4 d-flex">
+                <section class="mx-auto my-5" style="max-width: 23rem; max-height: 40rem;">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple">
+                            <img src="https://sandorpeteer.github.io/9A_2023_BUFE_SHOP/img/ital/hell.jpg"
+                                class="img-fluid" width="318px">
+                            <a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                            </a>
+                        </div>
+                        <div class="card-body" id="igazito">
+                            <h5 class="card-title font-weight-bold"><a>Hell</a></h5>
+                            <p class="mb-2 raktar">Raktáron</p>
+                            <p class="card-text">
+                                Ízek:
+                                <br>
+                            <div class="hell-container">
+                                <select name="hell" id="hellizek">
+                                    <option value="Üres">Válassz</option>
+                                    <option value="Hell_Classic">Classic</option>
+                                    <option value="Almás_Hell">Almás</option>
+                                    <option value="Black_Cherry_Hell">Black Cherry</option>
+                                    <option value="Red_Grape_Hell">Red Grape</option>
+                                    <option value="Dinnyés_Hell">Dinnyés</option>
+                                </select>
+                            </div>
+                            </p>
+                        </div>
+                        <div class="card-body">
+                            <hr class="my-4" />
+                            <div class="d-flex justify-content-between align-items-center">
+                                <p class="lead"><strong>500Ft</strong></p>
+                                <div class="d-flex align-items-center">
+                                    <input type="number" class="btn link-secondary mr-2 mb-2" value="1" placeholder="db"
+                                        min="1" max="5" id="hell">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <input type="submit" class="btn link-secondary mt-2 kosar" value="Kosárba"
+                                    name="Kosárba" onclick="addToCart('hell')">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-4 d-flex">
+                <section class="mx-auto my-5" style="max-width: 20rem; max-height: 30rem;">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple">
+                            <img src="https://sandorpeteer.github.io/9A_2023_BUFE_SHOP/img/ital/hellkave.jpg"
+                                class="img-fluid" width="318px">
+                            <a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                            </a>
+                        </div>
+                        <div class="card-body" id="igazito">
+                            <h5 class="card-title font-weight-bold"><a>Hell kávé</a></h5>
+                            <p class="mb-2 raktar">Raktáron</p>
+                            <p class="card-text">
+                                Ízek:
+                                <br>
+                            <div class="kave-container">
+                                <select name="kave" id="kaveizek">
+                                    <option value="Üres">Válassz</option>
+                                    <option value="Karamellás_Kávé">Karamellás</option>
+                                    <option value="Mogyorós_Kávé">Mogyorós</option>
+                                    <option value="Double_Shot_Kávé">Double shot</option>
+                                    <option value="Latte">Latte</option>
+                                </select>
+                            </div>
+                            </p>
+                        </div>
+                        <div class="card-body">
+                            <hr class="my-4" />
+                            <div class="d-flex justify-content-between align-items-center">
+                                <p class="lead"><strong>400Ft</strong></p>
+                                <div class="d-flex align-items-center">
+                                    <input type="number" class="btn link-secondary mr-2 mb-2" value="1" placeholder="db"
+                                        min="1" max="5" id="kave">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <input type="submit" class="btn link-secondary mt-2 kosar" value="Kosárba"
+                                    name="Kosárba" onclick="addToCart('kave')">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-4 d-flex">
+                <section class="mx-auto my-5" style="max-width: 20rem; max-height: 60rem;">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple">
+                            <img src="https://sandorpeteer.github.io/9A_2023_BUFE_SHOP/img/ital/xixonarancs.jpg"
+                                width="318px">
+                            <a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                            </a>
+                        </div>
+                        <div class="card-body" id="igazito">
+                            <h5 class="card-title font-weight-bold"><a>Dobozos Xixo</a></h5>
+                            <p class="mb-2 raktar">Raktáron</p>
+                            <p class="card-text">
+                                Ízek:
+                                <br>
+                            <div class="doboz-container">
+                                <select name="doboz" id="dobozizek">
+                                    <option value="Üres">Válassz</option>
+                                    <option value="Narancsos_Xixo">Narancsos</option>
+                                    <option value="Limeos_Xixo">Limeos</option>
+                                    <option value="Dinnyés_Xixo">Dinnyés</option>
+                                </select>
+                            </div>
+                            </p>
+                        </div>
+                        <div class="card-body">
+                            <hr class="my-4" />
+                            <div class="d-flex justify-content-between align-items-center">
+                                <p class="lead"><strong>600Ft</strong></p>
+                                <div class="d-flex align-items-center">
+                                    <input type="number" class="btn link-secondary mr-2 mb-2" value="1" placeholder="db"
+                                        min="1" max="5" id="doboz">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <input type="submit" class="btn link-secondary mt-2 kosar" value="Kosárba"
+                                    name="Kosárba" onclick="addToCart('doboz')">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="mt-5">
+
+        <footer class="text-center text-lg-start text-white" style="background-color: #1c2331">
+
+            <section class="d-flex justify-content-between p-4" style="background-color: #6351ce">
+
+                <div class="me-5">
+
+                </div>
+
+            </section>
+
+
+            <section class="">
+                <div class="container text-center text-md-start mt-5">
+
+                    <div class="row mt-3">
+
+                        <div class="col-md-4 col-lg-5 col-xl-4 mx-auto mb-4">
+
+                            <h6 class="text-uppercase fw-bold">Kandó büfé</h6>
+                            <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                                style="width: 60px; background-color: #7c4dff; height: 2px" />
+                            <br>
+                            <a href="https://www.kkszki.hu/" target="_blank"><img style="margin-bottom: 10px;"
+                                    src="https://sandorpeteer.github.io/9A_2023_BUFE_SHOP/img/kando.png"
+                                    alt="Kandó logó"></a>
+                            <p>
+                                Az újonnan megy nyílt Kandó Büfé, amit a 9.A 2.csoportja készített!
+                            </p>
+                        </div>
+
+
+
+                        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4 text-center">
+
+                            <h6 class="text-uppercase fw-bold">Főbb kategóriáink</h6>
+                            <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                                style="width: 60px; background-color: #7c4dff; height: 2px" />
+                            <p>
+                                <a href="#melege" class="text-white">Meleg ételek</a>
+                            </p>
+                            <p>
+                                <a href="#hidege" class="text-white">Hideg ételek</a>
+                            </p>
+                            <p>
+                                <a href="#udito" class="text-white">Üdítők</a>
+                            </p>
+                            <p>
+                                <a href="#melegi" class="text-white">Meleg italok</a>
+                            </p>
+                            <p>
+                                <a href="#nasi" class="text-white">Nasik</a>
+                            </p>
+                            <p>
+                                <a href="https://sandorpeteer.github.io/9A_2023_BUFE_SHOP/egyeb.html"
+                                    class="text-white">Egyéb</a>
+                            </p>
+                        </div>
+
+
+
+                        <div class="col-md-5 col-lg-4 col-xl-4 mx-auto mb-md-0 mb-4 text-center">
+
+                            <h6 class="text-uppercase fw-bold">Elérhetőségek</h6>
+                            <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                                style="width: 60px; background-color: #7c4dff; height: 2px" />
+                            <p><i class="fas fa-home mr-3">Miskolc, Palóczy László utca 3, 3525</i></p>
+                            <a href="https://mail.google.com/" target="_blank">
+                                <p><i class="fas fa-envelope mr-3">kando@kkszki.hu</i></p>
+                            </a>
+                            <p><i class="fas fa-phone mr-3">+06 46 500 930</i></p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+
+
+
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+                © Kandó 9.A
+            </div>
+
+        </footer>
+
+
+    </div>
+
+    <script>
+        function addToCart(productName) {
+            var selectElement = document.getElementById(productName + "izek");
+            var flavor = selectElement.options[selectElement.selectedIndex].value;
+            var quantity = document.getElementById(productName).value;
+
+            var sikerAlert = document.getElementById("salert");
+
+            localStorage.setItem(flavor, quantity);
+
+
+            sikerAlert.style.display = "block";
+            sikerAlert.innerHTML = "<strong>Siker!</strong> A termék hozzá lett adva a kosárhoz!";
+            setTimeout(function () {
+                sikerAlert.style.display = "none";
+            }, 2000);
+        }
+
+        function searchCards() {
+            let input = document.getElementById("search-input").value.toLowerCase();
+            console.log(input);
+            let cards = document.querySelectorAll(".card");
+
+            cards.forEach((card) => {
+                let text = card.textContent.toLowerCase();
+                if (text.indexOf(input) > -1) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        }
+
+
+        document.getElementById("search-input").addEventListener("keyup", searchCards);
+
+    </script>
+</body>
+
+</html>
