@@ -380,8 +380,8 @@
 
             var sikerAlert = document.getElementById("salert");
 
-            function ad(termek, mennyiseg) {
-                localStorage.setItem(termek, mennyiseg);
+          function ad(termekKulcs, mennyiseg) {
+  localStorage.setItem(termekKulcs, mennyiseg);
 
             sikerAlert.style.display = "block";
             sikerAlert.innerHTML = "<strong>Siker!</strong> A termék hozzá lett adva a kosárhoz!";
@@ -390,9 +390,10 @@
         }, 2000);
     }
 
-            function mentes() {
-                localStorage.setItem("kivalasztott_iz", kivalasztott_iz.value);
-    }
+           function mentes(mennyiseg) {
+  var termekNev = document.querySelector('#igazito .card-title a').innerText;
+  localStorage.setItem(termekNev, mennyiseg);
+}
         
         function searchCards() {
   let input = document.getElementById("search-input").value.toLowerCase();
