@@ -421,8 +421,14 @@
         var _micro = 200
         var _szivo = 50
         var _zsepi = 100
+        var sikerAlert = document.getElementById("salert");
         function ad(nev, ertek) {
             localStorage.setItem(nev, Number(ertek));
+                sikerAlert.style.display = "block";
+                sikerAlert.innerHTML = "<strong>Siker!</strong> A termék hozzá lett adva a kosárhoz!";
+                setTimeout(function () {
+                    sikerAlert.style.display = "none";
+                }, 2000);
         }
         
        function searchCards() {
@@ -442,6 +448,8 @@
 
 
 document.getElementById("search-input").addEventListener("keyup", searchCards);
+        
+   
       
     </script>
 </body>
