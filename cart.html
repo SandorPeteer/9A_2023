@@ -169,7 +169,11 @@
             </div>
         </div>
     </nav>
-
+    <div class="alert alert-success alert-dismissible fade show text-center" role="alert" id="salert"
+        style="display:none; position: fixed; top: 0; width: 100%; z-index: 9999;">
+        <strong>A rendelés sikeresen leadva!</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
 
 
 
@@ -182,7 +186,7 @@
 
 
         </div>
-        <div class="d-flex justify-content-center align-items-center vh-10">
+        <div onclick="lead()" class="d-flex justify-content-center align-items-center vh-10">
             <button class="btn btn-success">Rendelés leadása</button>
         </div>
     </div>
@@ -362,6 +366,13 @@
             }
             tablazat += "<tr><th></th> <th>ÖSSZEG: </th> <th>" + ossz + " Ft" + "</th> <th></th></tr>"
             document.getElementById('kosar').innerHTML = tablazat;
+        }
+        function lead() {
+            sikerAlert.style.display = "block";
+            sikerAlert.innerHTML = "<strong>Siker!</strong>A rendelés sikeresen leadva!";
+            setTimeout(function () {
+                sikerAlert.style.display = "none";
+            }, 2000);
         }
     </script>
 
