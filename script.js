@@ -31,22 +31,3 @@ function dark() {
   });
 }
 
-function searchCards() {
-  let input = document.getElementById("search-input").value.toLowerCase();
-  console.log(input);
-  let cards = document.querySelectorAll(".card");
-
-  cards.forEach((card) => {
-    let text = card.textContent.toLowerCase();
-    if (text.indexOf(input) > -1) {
-      card.style.display = "block";
-    } else {
-      card.style.display = "none";
-    }
-  });
-}
-
-
-document.getElementById("search-input").addEventListener("keyup", searchCards);
-
-
