@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<html lang="hu">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -117,7 +114,8 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="profil.html">
-                            <img class="img-thumbnail" id="profil" src="img/profilepicture.png" alt="profil" style="height: 50px; width: 50px;">
+                            <img class="img-thumbnail" id="profil" src="img/profilepicture.png" alt="profil"
+                                style="height: 50px; width: 50px;">
                             <div id="profilnev" style="margin-top: 10%;"></div>
                         </a>
                     </li>
@@ -131,7 +129,7 @@
             </div>
         </div>
     </nav>
-    
+
     <div class="alert alert-success alert-dismissible fade show text-center" role="alert" id="salert"
         style="display:none; position: fixed; top: 0; width: 100%; z-index: 9999;">
         <strong>A termék hozzá lett adva a kosárhoz!</strong>
@@ -158,13 +156,13 @@
                                 Ízek:
                                 <br>
                             <div class="xixo-container">
-                                <select name="xixo" id="xixoizek" onchange="mentes(this.value)">
+                                <select name="xixo" id="xixoizek">
                                     <option value="Üres">Válassz</option>
-                                    <option value="Barackos">Barackos</option>
-                                    <option value="Zöld">Zöld Tea</option>
-                                    <option value="Ribizli">Ribizlis</option>
-                                    <option value="Citrom">Citromos</option>
-                                    <option value="Eper">Epres</option>
+                                    <option value="Barackos_Xixo">Barackos</option>
+                                    <option value="Zöld_Tea">Zöld Tea</option>
+                                    <option value="Ribizlis_Xixo">Ribizlis</option>
+                                    <option value="Citromos_Xixo">Citromos</option>
+                                    <option value="Epres_Xixo">Epres</option>
                                 </select>
                             </div>
                             </p>
@@ -174,20 +172,20 @@
                             <div class="d-flex justify-content-between align-items-center">
                                 <p class="lead"><strong>500Ft</strong></p>
                                 <div class="d-flex align-items-center">
-                                    <input type="number" class="btn link-secondary mr-2 mb-2" value="1" placeholder="db" min="1"
-                                        max="5" id="xixo">
+                                    <input type="number" class="btn link-secondary mr-2 mb-2" value="1" placeholder="db"
+                                        min="1" max="5" id="xixo">
                                 </div>
                             </div>
                             <div class="d-flex justify-content-center">
                                 <input type="submit" class="btn link-secondary mt-2 kosar" value="Kosárba"
-                                    name="Kosárba" onclick="ad('_dinnyes', document.getElementById('xixo').value)">
+                                    name="Kosárba" onclick="addToCart('xixo')">
                             </div>
                         </div>
                     </div>
                 </section>
             </div>
 
-            <div class="col-sm-12 col-md-6 col-lg-4 d-flex  ">
+            <div class="col-sm-12 col-md-6 col-lg-4 d-flex">
                 <section class="mx-auto my-5" style="max-width: 20rem; max-height: 30rem;">
                     <div class="card">
                         <div class="bg-image hover-overlay ripple">
@@ -199,41 +197,40 @@
                         </div>
                         <div class="card-body" id="igazito">
                             <h5 class="card-title font-weight-bold"><a>Coca cola</a></h5>
-                            <p class="mb-2 raktar">Raktáron
+                            <p class="mb-2 raktar">Raktáron</p>
                             <p class="card-text">
                                 Ízek:
                                 <br>
                             <div class="cola-container">
                                 <select name="cola" id="colaizek">
                                     <option value="Üres">Válassz</option>
-                                    <option value="Original">Original</option>
-                                    <option value="Zöld">Zöld Tea</option>
-                                    <option value="Zéró">Zéró</option>
-                                    <option value="Vanillia">Vanillia</option>
-                                    <option value="Citrom">Citrom</option>
-
+                                    <option value="Original_Cola">Original</option>
+                                    <option value="Zéró_Cola">Zéró</option>
+                                    <option value="Vanilliás_Cola">Vanillia</option>
+                                    <option value="Citromos_Cola">Citrom</option>
                                 </select>
                             </div>
+                            </p>
                         </div>
                         <div class="card-body">
                             <hr class="my-4" />
                             <div class="d-flex justify-content-between align-items-center">
                                 <p class="lead"><strong>400Ft</strong></p>
                                 <div class="d-flex align-items-center">
-                                    <input type="number" class="btn link-secondary mr-2 mb-2" value="1" placeholder="db" min="1"
-                                        max="5" id="xixo">
+                                    <input type="number" class="btn link-secondary mr-2 mb-2" value="1" placeholder="db"
+                                        min="1" max="5" id="cola">
                                 </div>
                             </div>
                             <div class="d-flex justify-content-center">
                                 <input type="submit" class="btn link-secondary mt-2 kosar" value="Kosárba"
-                                    name="Kosárba" onclick="ad('_dinnyes', document.getElementById('xixo').value)">
+                                    name="Kosárba" onclick="addToCart('cola')">
                             </div>
                         </div>
                     </div>
                 </section>
             </div>
 
-            <div class="col-sm-12 col-md-6 col-lg-4 d-flex  ">
+            <div class="col-sm-12 col-md-6 col-lg-4 d-flex">
                 <section class="mx-auto my-5" style="max-width: 20rem; max-height: 60rem;">
                     <div class="card">
                         <div class="bg-image hover-overlay ripple">
@@ -245,41 +242,39 @@
                         </div>
                         <div class="card-body" id="igazito">
                             <h5 class="card-title font-weight-bold"><a>Fanta</a></h5>
-                            <p class="mb-2 raktar">Raktáron
+                            <p class="mb-2 raktar">Raktáron</p>
                             <p class="card-text">
-                                ízek:
+                                Ízek:
                                 <br>
                             <div class="fanta-container">
                                 <select name="fanta" id="fantaizek">
                                     <option value="Üres">Válassz</option>
-                                    <option value="Narancsos">Narancsos</option>
-                                    <option value="Szőlős">Szőlős</option>
-                                    <option value="Bodzás">Bodzás</option>
-
+                                    <option value="Narancsos_Fanta">Narancsos</option>
+                                    <option value="Szőlős_Fanta">Szőlős</option>
+                                    <option value="Bodzás_Fanta">Bodzás</option>
                                 </select>
                             </div>
+                            </p>
                         </div>
                         <div class="card-body">
                             <hr class="my-4" />
                             <div class="d-flex justify-content-between align-items-center">
                                 <p class="lead"><strong>600Ft</strong></p>
                                 <div class="d-flex align-items-center">
-                                    <input type="number" class="btn link-secondary mr-2 mb-2" value="1" placeholder="db" min="1"
-                                        max="5" id="xixo">
+                                    <input type="number" class="btn link-secondary mr-2 mb-2" value="1" placeholder="db"
+                                        min="1" max="5" id="fanta">
                                 </div>
                             </div>
                             <div class="d-flex justify-content-center">
                                 <input type="submit" class="btn link-secondary mt-2 kosar" value="Kosárba"
-                                    name="Kosárba" onclick="ad('_dinnyes', document.getElementById('xixo').value)">
+                                    name="Kosárba" onclick="addToCart('fanta')">
                             </div>
                         </div>
                     </div>
                 </section>
             </div>
-
         </div>
     </div>
-
 
 
 
@@ -374,44 +369,40 @@
     </div>
 
     <script>
-            var _epres = 80;
-            var _almas = 80;
-            var _dinnyes = 80;
+        function addToCart(productName) {
+            var selectElement = document.getElementById(productName + "izek");
+            var flavor = selectElement.options[selectElement.selectedIndex].value;
+            var quantity = document.getElementById(productName).value;
 
             var sikerAlert = document.getElementById("salert");
 
-          function ad(termekKulcs, mennyiseg) {
-  localStorage.setItem(termekKulcs, mennyiseg);
+            localStorage.setItem(flavor, quantity);
+
 
             sikerAlert.style.display = "block";
             sikerAlert.innerHTML = "<strong>Siker!</strong> A termék hozzá lett adva a kosárhoz!";
             setTimeout(function () {
                 sikerAlert.style.display = "none";
-        }, 2000);
-    }
+            }, 2000);
+        }
 
-           function mentes(mennyiseg) {
-  var termekNev = document.querySelector('#igazito .card-title a').innerText;
-  localStorage.setItem(termekNev, mennyiseg);
-}
-        
         function searchCards() {
-  let input = document.getElementById("search-input").value.toLowerCase();
-  console.log(input);
-  let cards = document.querySelectorAll(".card");
+            let input = document.getElementById("search-input").value.toLowerCase();
+            console.log(input);
+            let cards = document.querySelectorAll(".card");
 
-  cards.forEach((card) => {
-    let text = card.textContent.toLowerCase();
-    if (text.indexOf(input) > -1) {
-      card.style.display = "block";
-    } else {
-      card.style.display = "none";
-    }
-  });
-}
+            cards.forEach((card) => {
+                let text = card.textContent.toLowerCase();
+                if (text.indexOf(input) > -1) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        }
 
 
-document.getElementById("search-input").addEventListener("keyup", searchCards);
+        document.getElementById("search-input").addEventListener("keyup", searchCards);
 
     </script>
 </body>
