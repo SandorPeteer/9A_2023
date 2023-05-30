@@ -162,7 +162,6 @@
         </nav>
 
         <h2 class="text-center" style="color: white; margin-top: 2%;">Profil</h2>
-
         <div class="prof">
             <section class="vh-100">
                 <div class="container py-5 h-100">
@@ -189,7 +188,7 @@
                                                 </div>
                                                 <div class="col-6 mb-3">
                                                     <h6>Jelszó</h6>
-                                                    <p class="text-muted">Itt lesz majd!</p>
+                                                    <p class="text-muted jelszo">Itt lesz majd!</p>
                                                 </div>
                                             </div>
                                             <h6>Továbbiak</h6>
@@ -199,7 +198,6 @@
                                                     <input type="submit" name="Kijelentkezés" value="Kijelentkezés"
                                                         class="kijelent">
                                                 </div>
-
                                             </div>
                                             <div class="d-flex justify-content-start">
                                                 <a href="#!"><i class="fab fa-facebook-f fa-lg me-3"></i></a>
@@ -214,8 +212,6 @@
                     </div>
                 </div>
             </section>
-
-
         </div>
 
         <div class="mt-5">
@@ -306,6 +302,28 @@
 
         </div>
 
+
+        <script>
+          
+            var vezeteknev = localStorage.getItem('fname');
+
+            var keresztnev = localStorage.getItem('lname');
+
+           
+           var email = localStorage.getItem('email');
+
+         
+            var teljesNev = vezeteknev && keresztnev ? vezeteknev + ' ' + keresztnev : 'Nincs bejelentkezve';
+
+            var teljesNevElem = document.querySelector('.teljesnev');
+            teljesNevElem.textContent = teljesNev;
+
+            var emailElem = document.querySelector('.emailcim');
+            emailElem.textContent = email ? email : 'ide lesz majd';
+
+            var jelszoElem = document.querySelector('.jelszo');
+            jelszoElem.textContent = jelszo ? jelszo : 'Itt lesz majd!';
+        </script>
 
 
     </body>
