@@ -166,6 +166,12 @@
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
 
+    <div class="alert alert-danger alert-dismissible fade show text-center" role="alert" id="halert"
+        style="display:none; position: fixed; top: 0; width: 100%; z-index: 9999;">
+        <strong>Nincs bejelentkezve!</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
 
 
     <h2 class="text-center" style="color: white; margin-top: 2%;">Kosár</h2>
@@ -369,9 +375,12 @@
         var Dinnyés_Xixo = 250
 
         var sikerAlert = document.getElementById("salert");
+        var hibaAlert = document.getElementById("halert");
+
+        var bejel = localStorage.getItem('Bejelentkezve');
 
         function kosar_frissit() {
-            let ignoredKeys = ['debug', 'Üres', 'fname', 'lname', 'email', 'jelszo', 'jelszo2', 'Bejelentkezve'];
+            let ignoredKeys = ['debug', 'Üres', 'fname', 'lname', 'email', 'jelszo', 'jelszo2', 'Bejelentkezve', 'vezeteknev', 'keresztnev'];
 
             let tablazat = "<tr><th style='margin:auto'> Termék: </th><th> darab: </th><th> Ára: </th><th> Töröl </th></tr>"
             let ossz = 0;
@@ -392,11 +401,20 @@
             document.getElementById('kosar').innerHTML = tablazat;
         }
         function lead() {
-            sikerAlert.style.display = "block";
-            sikerAlert.innerHTML = "<strong>Siker! </strong>A rendelés sikeresen leadva!";
-            setTimeout(function () {
-                sikerAlert.style.display = "none";
-            }, 2000);
+            if (bejel == 'Igen') {
+                sikerAlert.style.display = "block";
+                sikerAlert.innerHTML = "<strong>Siker! </strong>A rendelés sikeresen leadva!";
+                setTimeout(function () {
+                    sikerAlert.style.display = "none";
+                }, 2000);
+            }
+            else {
+                hibaAlert.style.display = "block";
+                hibaAlert.innerHTML = "<strong>Siker! </strong>A rendelés sikeresen leadva!";
+                setTimeout(function () {
+                    hibaAlert.style.display = "none";
+                }, 2000);
+            }
         }
     </script>
 
