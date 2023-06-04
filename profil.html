@@ -184,11 +184,11 @@
                                             <div class="row pt-1">
                                                 <div class="col-6 mb-3">
                                                     <h6>Email</h6>
-                                                    <p class="text-muted emailcim">ide lesz majd</p>
+                                                    <p class="text-muted emailcim">Nincs bejelentkezve</p>
                                                 </div>
                                                 <div class="col-6 mb-3">
                                                     <h6>Jelszó</h6>
-                                                    <p class="text-muted jelszo">Itt lesz majd!</p>
+                                                    <p class="text-muted jelszo">Nincs bejelentkezve</p>
                                                 </div>
                                             </div>
                                             <h6>Továbbiak</h6>
@@ -313,6 +313,7 @@
 
            
            var email = localStorage.getItem('email');
+           var jelszo = localStorage.getItem('jelszo');
 
          
             var teljesNev = vezeteknev && keresztnev ? vezeteknev + ' ' + keresztnev : 'Nincs bejelentkezve';
@@ -332,6 +333,7 @@
 
             function kijel() {
                 localStorage.setItem('Bejelentkezve', 'Nem')
+                location.reload();
             }
         </script>
 
